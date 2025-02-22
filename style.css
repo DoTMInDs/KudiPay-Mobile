@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.debit-card-content{
+    height: 0;
+    opacity: 0;
+    transition: height 200ms ease,
+                opacity 200ms ease;
+}
+.switch-input{
+    display: none;
+}
+.card-active .open-margin{
+    margin: 1rem 0;
+}
+.card-active{
+    height: 150px;
+    opacity: 1;
+    transition: height 200ms ease,
+                opacity 200ms ease;
+}
+.card-active .switch-input{
+    display: block;
+}
