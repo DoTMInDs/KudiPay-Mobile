@@ -61,7 +61,7 @@
                     <div class="">
                         <p class="no-underline p-[0.5rem] hover:bg-slate-100 flex items-center bg-slate-50 px-[0.5rem] border border-slate-200 w-[150px] ">
                             <input type="radio" name="filter" id="paid">
-                            <label for="paid" class="px-[0.5rem] text-slate-500 text-[14px]">Paid</label>
+                            <label for="paid" class="invoiceBtn px-[0.5rem] text-slate-500 text-[14px]">Paid</label>
                         </p>
                         <p class="no-underline p-[0.5rem] hover:bg-slate-100 flex items-center bg-slate-50 px-[0.5rem] border border-slate-200 w-[150px] ">
                             <input type="radio" name="filter" id="canceled">
@@ -69,7 +69,7 @@
                         </p>
                         <p class="no-underline p-[0.5rem] hover:bg-slate-100 flex items-center bg-slate-50 px-[0.5rem] border border-slate-200 w-[150px] ">
                             <input type="radio" name="filter" id="overdue">
-                            <label for="overdue" class="px-[0.5rem] text-slate-500 text-[14px]">Overdue</label>
+                            <label for="overdue" class="invoiceBtn px-[0.5rem] text-slate-500 text-[14px]">Overdue</label>
                         </p>
                     </div>
                 </div>
@@ -78,7 +78,8 @@
 
         <div class="" style="overflow-x: auto;">
             <div class="flex gap-[20px]" style="scroll-snap-type:x mandatory">
-                <div class="w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+                <!--Overdue-invoice-->
+                <div id="overdueInvoice" class="overdueInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
                     <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
                             <div class="basis-[40%]">
@@ -172,7 +173,7 @@
                         <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
                     </div>
                 </div>
-                <div class="w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+                <div id="overdueInvoice" class="overdueInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
                     <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
                             <div class="basis-[40%]">
@@ -266,7 +267,9 @@
                         <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
                     </div>
                 </div>
-                <div class="w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+
+                <!--Canceled-invoice-->
+                <div id="canceledInvoice" class="canceledInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
                     <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
                             <div class="basis-[40%]">
@@ -326,7 +329,7 @@
                                 <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
                             </div>
                             <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10000</span>
+                                <span class="uppercase text-[13px] text-throught text-[#3b5361] font-regular">GHS 10000</span>
                             </div>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
@@ -342,7 +345,7 @@
                                 <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
                             </div>
                             <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">OVERDUE</span>
+                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">CANCELED</span>
                             </div>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
@@ -360,7 +363,103 @@
                         <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
                     </div>
                 </div>
-                <div class="w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+                <div id="canceledInvoice" class="canceledInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">07-SEP-2024 22:00</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
+                            </div>
+                            <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
+                            </div>
+                            <div class="ml-[1rem]">
+                                <ul class="list-disc">
+                                    <li class="text-[13px] text-slate-400">Porridge</li>
+                                    <li class="text-[13px] text-slate-400">Koosie</li>
+                                    <li class="text-[13px] text-slate-400">Bread</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
+                            </div>
+                            <div class="basis-[40%]">
+                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    vel, iste quod sint dignissimos 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-through text-[#3b5361] font-regular">GHS 10000</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem] bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">CANCELED</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
+                            </div>
+                            <div class="basis-[40%]">
+                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-500 mt-[1rem] rounded-full">
+                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
+                    </div>
+                </div>
+
+                <!--Paid-invoice-->
+                <div id="paidInvoice1" class="paidInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
                     <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
                             <div class="basis-[40%]">
@@ -436,7 +535,101 @@
                                 <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
                             </div>
                             <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">OVERDUE</span>
+                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">PAID</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
+                            </div>
+                            <div class="basis-[40%]">
+                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-500 mt-[1rem] rounded-full">
+                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
+                    </div>
+                </div>
+                <div id="paidInvoice2" class="paidInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">07-SEP-2024 22:00</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
+                            </div>
+                            <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
+                            </div>
+                            <div class="ml-[1rem]">
+                                <ul class="list-disc">
+                                    <li class="text-[13px] text-slate-400">Porridge</li>
+                                    <li class="text-[13px] text-slate-400">Koosie</li>
+                                    <li class="text-[13px] text-slate-400">Bread</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
+                            </div>
+                            <div class="basis-[40%]">
+                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    vel, iste quod sint dignissimos 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10000</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem] bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="basis-[40%]">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
+                            </div>
+                            <div class="">
+                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">PAID</span>
                             </div>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
@@ -508,12 +701,44 @@
     </footer>
 
     <script>
-        document.getElementById('filterInvoiceBtn').addEventListener('click', function(event) {
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterBtn = document.getElementById('filterInvoiceBtn');
             const filterInvoice = document.querySelector('#filterInvoice');
-           filterInvoice.classList.toggle('filterActive');
-           if (filterInvoice.contains(event.target)){
-            event.classList.remove('filterActive');
-           }
+
+            filterBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                filterInvoice.classList.toggle('filterActive');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!filterInvoice.contains(e.target) && !filterBtn.contains(e.target)) {
+                    filterInvoice.classList.add('filterActive');
+                }
+            });
+ 
+        
+            // Filter functionality
+            const filterRadios = document.querySelectorAll('input[name="filter"]');
+            const invoices = document.querySelectorAll('.overdueInvoice, .paidInvoice, .canceledInvoice');
+        
+            filterRadios.forEach(radio => {
+                radio.addEventListener('change', function() {
+                    const filterValue = this.id;
+                    
+                    invoices.forEach(invoice => {
+                        const statusClass = filterValue === 'all' ? '' : `${filterValue}Invoice`;
+                        const shouldShow = filterValue === 'all' || invoice.classList.contains(statusClass);
+                        
+                        invoice.style.display = shouldShow ? 'block' : 'none';
+                    });
+                    
+                    filterInvoice.classList.add('filterActive');
+                });
+            });
+        
+            // Show all invoices by default
+            document.querySelector('input[value="all"]').checked = true;
         });
     </script>
     
