@@ -10,74 +10,176 @@
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 bg-slate-50 py-[0.5rem] px-[1rem] border-b border-slate-200">
+    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 bg-slate-50 py-[0.5rem] px-[1rem] border-b border-slate-200 z-[999]">
         <div class="">
             <div class="logo-brand">
                 <a href="#!" class="text-[#3b5361] flex items-center gap-[0.3rem] no-underline">
-                    <img src="files/kudiPay-logo.png" alt="" class="w-[30px]">
-                    <h1 class="font-semibold text-[16px]">KudiPay</h1>
+                    <!-- <img src="files/kudiPay-logo.png" alt="" class="w-[30px]"> -->
+                    <h1 class="font-semibold text-[16px]">Explore KudiPay</h1>
                 </a>
             </div>
         </div>
         <div class="ion-icon-wrapper text-[#3b5361] flex items-center gap-[1rem]">
             <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
-                <i class="fa-regular fa-bell"></i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="black"/>
+                </svg>                    
             </a>
             <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" stroke-width="1.5"/>
+                    <path d="M13.765 2.152C13.398 2 12.932 2 12 2C11.068 2 10.602 2 10.235 2.152C9.99214 2.25251 9.77151 2.3999 9.58569 2.58572C9.39986 2.77155 9.25248 2.99218 9.15196 3.235C9.05996 3.458 9.02296 3.719 9.00896 4.098C9.00245 4.37193 8.92657 4.63973 8.7884 4.87635C8.65024 5.11298 8.45432 5.31069 8.21896 5.451C7.97977 5.58477 7.71055 5.65567 7.43649 5.65707C7.16244 5.65847 6.89251 5.59032 6.65196 5.459C6.31596 5.281 6.07296 5.183 5.83196 5.151C5.30628 5.08187 4.77466 5.22431 4.35396 5.547C4.03996 5.79 3.80596 6.193 3.33996 7C2.87396 7.807 2.63996 8.21 2.58896 8.605C2.5546 8.86545 2.57188 9.13012 2.63983 9.38389C2.70778 9.63767 2.82505 9.87556 2.98496 10.084C3.13296 10.276 3.33996 10.437 3.66096 10.639C4.13396 10.936 4.43796 11.442 4.43796 12C4.43796 12.558 4.13396 13.064 3.66096 13.36C3.33996 13.563 3.13196 13.724 2.98496 13.916C2.82505 14.1244 2.70778 14.3623 2.63983 14.6161C2.57188 14.8699 2.5546 15.1345 2.58896 15.395C2.64096 15.789 2.87396 16.193 3.33896 17C3.80596 17.807 4.03896 18.21 4.35396 18.453C4.5624 18.6129 4.8003 18.7302 5.05407 18.7981C5.30784 18.8661 5.57251 18.8834 5.83296 18.849C6.07296 18.817 6.31596 18.719 6.65196 18.541C6.89251 18.4097 7.16244 18.3415 7.43649 18.3429C7.71055 18.3443 7.97977 18.4152 8.21896 18.549C8.70196 18.829 8.98896 19.344 9.00896 19.902C9.02296 20.282 9.05896 20.542 9.15196 20.765C9.25248 21.0078 9.39986 21.2284 9.58569 21.4143C9.77151 21.6001 9.99214 21.7475 10.235 21.848C10.602 22 11.068 22 12 22C12.932 22 13.398 22 13.765 21.848C14.0078 21.7475 14.2284 21.6001 14.4142 21.4143C14.6001 21.2284 14.7474 21.0078 14.848 20.765C14.94 20.542 14.977 20.282 14.991 19.902C15.011 19.344 15.298 18.828 15.781 18.549C16.0202 18.4152 16.2894 18.3443 16.5634 18.3429C16.8375 18.3415 17.1074 18.4097 17.348 18.541C17.684 18.719 17.927 18.817 18.167 18.849C18.4274 18.8834 18.6921 18.8661 18.9459 18.7981C19.1996 18.7302 19.4375 18.6129 19.646 18.453C19.961 18.211 20.194 17.807 20.66 17C21.126 16.193 21.36 15.79 21.411 15.395C21.4453 15.1345 21.428 14.8699 21.3601 14.6161C21.2921 14.3623 21.1749 14.1244 21.015 13.916C20.867 13.724 20.66 13.563 20.339 13.361C20.1049 13.2184 19.9108 13.0187 19.7749 12.7807C19.639 12.5427 19.5658 12.2741 19.562 12C19.562 11.442 19.866 10.936 20.339 10.64C20.66 10.437 20.868 10.276 21.015 10.084C21.1749 9.87556 21.2921 9.63767 21.3601 9.38389C21.428 9.13012 21.4453 8.86545 21.411 8.605C21.359 8.211 21.126 7.807 20.661 7C20.194 6.193 19.961 5.79 19.646 5.547C19.4375 5.38709 19.1996 5.26981 18.9459 5.20187C18.6921 5.13392 18.4274 5.11664 18.167 5.151C17.927 5.183 17.684 5.281 17.347 5.459C17.1065 5.59014 16.8368 5.6582 16.5629 5.6568C16.2891 5.6554 16.02 5.58459 15.781 5.451C15.5456 5.31069 15.3497 5.11298 15.2115 4.87635C15.0734 4.63973 14.9975 4.37193 14.991 4.098C14.977 3.718 14.941 3.458 14.848 3.235C14.7474 2.99218 14.6001 2.77155 14.4142 2.58572C14.2284 2.3999 14.0078 2.25251 13.765 2.152Z" stroke="black" stroke-width="1.5"/>
+                </svg>
             </a>
             <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
-                <i class="fa-solid fa-ellipsis-vertical"></i>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
             </a>
         </div>
     </nav>
 
     <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[80px]">
-        <div class="">
-            <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[24px]">KudiPay</h1>
-            <p class="text-[14px] font-regular text-[#3b5361] md:text-[18px] mt-[0.2rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, soluta sapiente omnis cum animi autem suscipit quas praesentium placeat distinctio quo eum 
-                temporibus minima blanditiis dolor? Aut voluptatem amet odio.</p>
-        </div>
-        <div class="img-bg">
-            <img src="files/main-bg1.png" alt="" class="w-full mt-[1rem]">
-        </div>
-       <div class="mb-[60px]">
-            <div class="mt-[1rem]">
-                <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[24px]">Pay using our platform 
-                    and get an instant Invoice</h1>
-                <p class="text-[14px] font-regular text-[#3b5361] md:text-[18px] mt-[0.2rem]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, soluta sapiente omnis cum animi autem suscipit quas praesentium placeat distinctio quo eum 
-                    temporibus minima blanditiis dolor? Aut voluptatem amet odio.</p>
+       <div class="">
+            <div class="my-[0.5rem]">
+                <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[18px]">My Invoices</h1>
             </div>
-            <div class="img-bg">
-                <img src="files/main-bg2.png" alt="" class="w-full mt-[1rem]">
+            <div class="" style="overflow-x: scroll;">
+                <div class="inline-flex gap-[10px] ">
+                    <div class="snap-center snap-mandatory relative p-[0.5rem] snap-x w-[250px] rounded-[15px] border border-slate-400 rounded h-[150px] bg-slate-50">
+                        <a href="#!" class="no-underline relative">
+                            <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold uppercase flex gap-[0.3rem] items-center text-[#3b5361] text-[13px]">
+                                    <i class="fa fa-regilar fa-file-lines"></i>
+                                    Invoice ID:
+                                </span> 
+                                <span class="uppercase font-semibold text-blue-400 underline text-[13px]">FF201ED810001</span> 
+                            </div>
+                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold text-[#3b5361] text-[13px]">Description: </span> 
+                                <span class="font-semibold text-slate-500 text-[13px]">School fees</span> 
+                            </div>
+                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold text-[#3b5361] text-[13px]">Amount: </span> 
+                                <span class="font-bold text-slate-700 text-[15px]">GHS 10000</span> 
+                            </div>
+                            <div class="flex items-center  justify-between w-[100%] ">
+                                <div class="">
+                                    <p class="text-amber-600 uppercase font-semibold">Overdue</p>
+                                </div>
+                                <div class="w-[40px] h-[40px] bg-amber-600 rounded-full flex justify-center items-center text-[#fefefe]">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="snap-center snap-mandatory relative p-[0.5rem] snap-x w-[250px] rounded-[15px] border border-slate-400 rounded h-[150px] bg-slate-50">
+                        <a href="#!" class="no-underline relative">
+                            <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold uppercase flex gap-[0.3rem] items-center text-[#3b5361] text-[13px]">
+                                    <i class="fa fa-regilar fa-file-lines"></i>
+                                    Invoice ID:
+                                </span> 
+                                <span class="uppercase font-semibold text-blue-400 underline text-[13px]">FF201ED810001</span> 
+                            </div>
+                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold text-[#3b5361] text-[13px]">Description: </span> 
+                                <span class="font-semibold text-slate-500 text-[13px]">School fees</span> 
+                            </div>
+                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold text-[#3b5361] text-[13px]">Amount: </span> 
+                                <span class="font-bold text-gray-200 line-through text-[15px]">GHS 10000</span> 
+                            </div>
+                            <div class="flex items-center  justify-between w-[100%] ">
+                                <div class="">
+                                    <p class="text-gray-200 uppercase font-semibold">Canceled</p>
+                                </div>
+                                <div class="w-[40px] h-[40px] bg-gray-200 rounded-full flex justify-center items-center text-[#fefefe]">
+                                    <i class="fa-solid fa-ban"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="snap-center snap-mandatory relative p-[0.5rem] snap-x w-[250px] rounded-[15px] border border-slate-400 rounded h-[150px] bg-slate-50">
+                        <a href="#!" class="no-underline relative">
+                            <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold uppercase flex gap-[0.3rem] items-center text-[#3b5361] text-[13px]">
+                                    <i class="fa fa-regilar fa-file-lines"></i>
+                                    Invoice ID:
+                                </span> 
+                                <span class="uppercase font-semibold text-blue-400 underline text-[13px]">FF201ED810001</span> 
+                            </div>
+                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold text-[#3b5361] text-[13px]">Description: </span> 
+                                <span class="font-semibold text-slate-500 text-[13px]">School fees</span> 
+                            </div>
+                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                <span class="font-semibold text-[#3b5361] text-[13px]">Amount: </span> 
+                                <span class="font-bold text-gray-400 text-[15px]">GHS 10000</span> 
+                            </div>
+                            <div class="flex items-center  justify-between w-[100%] ">
+                                <div class="">
+                                    <p class="text-teal-600 uppercase font-semibold">Paid</p>
+                                </div>
+                                <div class="w-[40px] h-[40px] bg-teal-600 rounded-full flex justify-center items-center text-[#fefefe]">
+                                    <i class="fa-solid fa-circle-check"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                   
+                </div>
             </div>
        </div>
     </main>
+
+    <div class="fixed bottom-[80px] right-[20px] w-[40px] h-[40px] rounded-full bg-teal-600 flex justify-center items-center">
+       <a href="#!" class="no-underline ">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 9H18L13 4V9ZM6 22C5.45 22 4.97933 21.8043 4.588 21.413C4.19667 21.0217 4.00067 20.5507 4 20V17H20V20C20 20.55 19.8043 21.021 19.413 21.413C19.0217 21.805 18.5507 22.0007 18 22H6ZM1 15V13H23V15H1ZM4 11V4C4 3.45 4.196 2.97933 4.588 2.588C4.98 2.19667 5.45067 2.00067 6 2H14L20 8V11H4Z" fill="white"/>
+            </svg>
+       </a>
+        <!-- <div  class="takePhoto">
+            <form id="take" action="" method="POST"> 
+                <input type="file" id= "cap" name="personalPhoto" accept="image/*" capture ="camera" id="camera"><p>
+            </form>
+        </div>           -->
+    </div>
 
     <footer class="bg-slate-50 border-t border-slate-200 fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
         <div class="w-full flex justify-between items-center px-[2rem]">
             <div class="menu-icons">
                 <a href="index.html" class="no-underline text-[#3b5361] flex flex-col items-center">
-                    <i class="fa-solid text-[18px] fa-home"></i>
-                    <small class="text-[10px] font-medium">Home</small>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.00003 13H4.00003V20C4.00003 21.103 4.89703 22 6.00003 22H18C19.103 22 20 21.103 20 20V13H21C21.1978 13 21.3911 12.9413 21.5555 12.8314C21.7199 12.7215 21.848 12.5654 21.9237 12.3827C21.9994 12.2 22.0192 11.9989 21.9806 11.805C21.942 11.611 21.8468 11.4329 21.707 11.293L12.707 2.293C12.5195 2.10553 12.2652 2.00021 12 2.00021C11.7349 2.00021 11.4806 2.10553 11.293 2.293L2.29303 11.293C2.15322 11.4329 2.05802 11.611 2.01945 11.805C1.98088 11.9989 2.00068 12.2 2.07635 12.3827C2.15202 12.5654 2.28016 12.7215 2.44457 12.8314C2.60898 12.9413 2.80228 13 3.00003 13ZM10 20V15H14V20H10ZM12 4.414L18 10.414V15L18.001 20H16V15C16 13.897 15.103 13 14 13H10C8.89703 13 8.00003 13.897 8.00003 15V20H6.00003V10.414L12 4.414Z" fill="black"/>
+                    </svg>                        
+                    <small class="text-[10px] font-medium pt-[0.3rem]">Home</small>
                 </a>
             </div>
             <div class="menu-icons">
                 <a href="invoice.html" class="no-underline text-[#3b5361] flex flex-col items-center ">
-                    <i class="fa-solid text-[18px] fa-file"></i>
-                    <small class="text-[10px] font-medium">Invoices</small>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.5 9.75C13.5 9.55109 13.421 9.36032 13.2803 9.21967C13.1397 9.07902 12.9489 9 12.75 9H6.75C6.55109 9 6.36032 9.07902 6.21967 9.21967C6.07902 9.36032 6 9.55109 6 9.75C6 9.94891 6.07902 10.1397 6.21967 10.2803C6.36032 10.421 6.55109 10.5 6.75 10.5H12.75C12.9489 10.5 13.1397 10.421 13.2803 10.2803C13.421 10.1397 13.5 9.94891 13.5 9.75ZM12.5 12.75C12.5 12.5511 12.421 12.3603 12.2803 12.2197C12.1397 12.079 11.9489 12 11.75 12H6.75C6.55109 12 6.36032 12.079 6.21967 12.2197C6.07902 12.3603 6 12.5511 6 12.75C6 12.9489 6.07902 13.1397 6.21967 13.2803C6.36032 13.421 6.55109 13.5 6.75 13.5H11.75C11.9489 13.5 12.1397 13.421 12.2803 13.2803C12.421 13.1397 12.5 12.9489 12.5 12.75ZM12.75 15C12.9489 15 13.1397 15.079 13.2803 15.2197C13.421 15.3603 13.5 15.5511 13.5 15.75C13.5 15.9489 13.421 16.1397 13.2803 16.2803C13.1397 16.421 12.9489 16.5 12.75 16.5H6.75C6.55109 16.5 6.36032 16.421 6.21967 16.2803C6.07902 16.1397 6 15.9489 6 15.75C6 15.5511 6.07902 15.3603 6.21967 15.2197C6.36032 15.079 6.55109 15 6.75 15H12.75Z" fill="black"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6 21.75H19C19.7293 21.75 20.4288 21.4603 20.9445 20.9445C21.4603 20.4288 21.75 19.7293 21.75 19V13.5C21.75 13.3011 21.671 13.1103 21.5303 12.9697C21.3897 12.829 21.1989 12.75 21 12.75H17.75V4.943C17.75 3.52 16.141 2.692 14.983 3.519L14.808 3.644C14.4248 3.91602 13.9663 4.06182 13.4964 4.06111C13.0264 4.06039 12.5684 3.91319 12.186 3.64C11.5476 3.18567 10.7835 2.94153 10 2.94153C9.21645 2.94153 8.45238 3.18567 7.814 3.64C7.43162 3.91319 6.97359 4.06039 6.50364 4.06111C6.03369 4.06182 5.57521 3.91602 5.192 3.644L5.017 3.519C3.859 2.692 2.25 3.519 2.25 4.943V18C2.25 18.9946 2.64509 19.9484 3.34835 20.6516C4.05161 21.3549 5.00544 21.75 6 21.75ZM8.686 4.86C9.06995 4.58744 9.52915 4.44102 10 4.44102C10.4709 4.44102 10.9301 4.58744 11.314 4.86C11.9507 5.31512 12.7136 5.56021 13.4962 5.56111C14.2788 5.562 15.0423 5.31866 15.68 4.865L15.855 4.74C15.8923 4.71341 15.9363 4.6976 15.982 4.6943C16.0277 4.691 16.0735 4.70034 16.1143 4.7213C16.1551 4.74225 16.1893 4.77402 16.2132 4.81312C16.2372 4.85222 16.2499 4.89715 16.25 4.943V19C16.25 19.45 16.358 19.875 16.55 20.25H6C5.40326 20.25 4.83097 20.0129 4.40901 19.591C3.98705 19.169 3.75 18.5967 3.75 18V4.943C3.75012 4.89715 3.76284 4.85222 3.78678 4.81312C3.81072 4.77402 3.84495 4.74225 3.88573 4.7213C3.9265 4.70034 3.97226 4.691 4.01798 4.6943C4.06371 4.6976 4.10765 4.71341 4.145 4.74L4.32 4.865C4.95775 5.31866 5.72116 5.562 6.5038 5.56111C7.28644 5.56021 8.0493 5.31512 8.686 4.86ZM17.75 19V14.25H20.25V19C20.25 19.3315 20.1183 19.6495 19.8839 19.8839C19.6495 20.1183 19.3315 20.25 19 20.25C18.6685 20.25 18.3505 20.1183 18.1161 19.8839C17.8817 19.6495 17.75 19.3315 17.75 19Z" fill="black"/>
+                    </svg>                        
+                    <small class="text-[10px] font-medium pt-[0.3rem]">Invoices</small>
                 </a>
             </div>
             <div class="menu-icons">
-                <a href="payment-method.html" class="no-underline text-[#3b5361] flex flex-col items-center flex flex-col items-center">
-                    <i class="fa-solid text-[18px] fa-credit-card"></i>
-                    <small class="text-[10px] font-medium">Payments</small>
+                <a href="shop.html" class="no-underline text-[#3b5361] flex flex-col items-center flex flex-col items-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.5 5.5C7.5 4.30653 7.97411 3.16193 8.81802 2.31802C9.66193 1.47411 10.8065 1 12 1C13.1935 1 14.3381 1.47411 15.182 2.31802C16.0259 3.16193 16.5 4.30653 16.5 5.5V7H21V23H3V7H7.5V5.5ZM7.5 9H5V21H19V9H16.5V12H14.5V9H9.5V12H7.5V9ZM14.5 7V5.5C14.5 4.83696 14.2366 4.20107 13.7678 3.73223C13.2989 3.26339 12.663 3 12 3C11.337 3 10.7011 3.26339 10.2322 3.73223C9.76339 4.20107 9.5 4.83696 9.5 5.5V7H14.5Z" fill="black"/>
+                    </svg>
+                    <small class="text-[10px] font-medium pt-[0.3rem]">Shop</small>
                 </a>
             </div>
             <div class="menu-icons">
                 <a href="#!" class="no-underline text-[#3b5361] flex flex-col items-center ">
-                    <i class="fa-solid text-[18px] fa-circle-user"></i>
-                    <small class="text-[10px] font-medium">User</small>
+                    <!-- <i class="fa-solid text-[18px] fa-circle-user"></i> -->
+                    <svg width="24" height="24" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.3125 21.375C8.375 20.5625 9.5625 19.9219 10.875 19.4531C12.1875 18.9844 13.5625 18.75 15 18.75C16.4375 18.75 17.8125 18.9844 19.125 19.4531C20.4375 19.9219 21.625 20.5625 22.6875 21.375C23.4167 20.5208 23.9844 19.5521 24.3906 18.4688C24.7969 17.3854 25 16.2292 25 15C25 12.2292 24.026 9.86979 22.0781 7.92188C20.1302 5.97396 17.7708 5 15 5C12.2292 5 9.86979 5.97396 7.92188 7.92188C5.97396 9.86979 5 12.2292 5 15C5 16.2292 5.20312 17.3854 5.60937 18.4688C6.01562 19.5521 6.58333 20.5208 7.3125 21.375ZM15 16.25C13.7708 16.25 12.7344 15.8281 11.8906 14.9844C11.0469 14.1406 10.625 13.1042 10.625 11.875C10.625 10.6458 11.0469 9.60938 11.8906 8.76563C12.7344 7.92188 13.7708 7.5 15 7.5C16.2292 7.5 17.2656 7.92188 18.1094 8.76563C18.9531 9.60938 19.375 10.6458 19.375 11.875C19.375 13.1042 18.9531 14.1406 18.1094 14.9844C17.2656 15.8281 16.2292 16.25 15 16.25ZM15 27.5C13.2708 27.5 11.6458 27.1719 10.125 26.5156C8.60417 25.8594 7.28125 24.9688 6.15625 23.8438C5.03125 22.7188 4.14063 21.3958 3.48438 19.875C2.82812 18.3542 2.5 16.7292 2.5 15C2.5 13.2708 2.82812 11.6458 3.48438 10.125C4.14063 8.60417 5.03125 7.28125 6.15625 6.15625C7.28125 5.03125 8.60417 4.14063 10.125 3.48438C11.6458 2.82812 13.2708 2.5 15 2.5C16.7292 2.5 18.3542 2.82812 19.875 3.48438C21.3958 4.14063 22.7188 5.03125 23.8438 6.15625C24.9688 7.28125 25.8594 8.60417 26.5156 10.125C27.1719 11.6458 27.5 13.2708 27.5 15C27.5 16.7292 27.1719 18.3542 26.5156 19.875C25.8594 21.3958 24.9688 22.7188 23.8438 23.8438C22.7188 24.9688 21.3958 25.8594 19.875 26.5156C18.3542 27.1719 16.7292 27.5 15 27.5Z" fill="#3B5361"/>
+                    </svg>
+                    <small class="text-[10px] font-medium pt-[0.3rem]">User</small>
                 </a>
             </div>
         </div>

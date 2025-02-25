@@ -1,3 +1,6 @@
+
+
+
 // Get all relevant elements
 const debitCardBtns = [
     document.getElementById('debitCardBtn'),
@@ -69,3 +72,4 @@ document.getElementById('payNowBtn').addEventListener('click', function() {
         alert('Please select a payment method.');
     }
 });
+

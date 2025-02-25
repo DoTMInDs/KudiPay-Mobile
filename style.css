@@ -24,3 +24,9 @@
 .card-active .switch-input{
     display: block;
 }
+.filter-invoice{
+    display: none;
+}
+.filterActive{
+    display: block;
+}
