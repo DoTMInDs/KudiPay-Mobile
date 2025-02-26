@@ -73,4 +73,3 @@ document.getElementById('payNowBtn').addEventListener('click', function() {
     }
 });
 
-

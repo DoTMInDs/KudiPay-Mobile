@@ -27,9 +27,20 @@
 .filter-invoice{
     display: none;
 }
-.filterActive{
-    display: block;
+.mobile-form-wrapper{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    width: 100%;
 }
-.hidden{
-    display: block;
+.mobile-input-search{
+    display: none;
+    gap: 5px;
+    align-items: center;
+    background: #ffffff;
+    width: 100%;
 }
+.mobile-input-search.search-input{
+    display: flex;
+   }

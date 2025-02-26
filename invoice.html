@@ -12,526 +12,136 @@
 <body>
      <!--nav-section-->
     <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 bg-slate-50 py-[0.5rem] px-[1rem] border-b border-slate-200 z-[999]">
-        <div class="">
-            <div class="logo-brand">
-                <a href="#!" class="text-[#3b5361] flex items-center gap-[0.3rem] no-underline">
-                    <!-- <img src="files/kudiPay-logo.png" alt="" class="w-[30px]"> -->
-                    <h1 class="font-semibold text-[16px]">Explore KudiPay</h1>
-                </a>
+        <div class="relative flex justify-between items-center w-full">
+            <div class="">
+                <div class="logo-brand">
+                    <a href="#!" class="text-[#3b5361] flex items-center gap-[0.3rem] no-underline">
+                        <!-- <img src="files/kudiPay-logo.png" alt="" class="w-[30px]"> -->
+                        <h1 class="font-semibold text-[16px]">Explore RplPay</h1>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="ion-icon-wrapper text-[#3b5361] flex items-center gap-[1rem]">
-            <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="black"/>
-                </svg>                    
-            </a>
-            <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" stroke-width="1.5"/>
-                    <path d="M13.765 2.152C13.398 2 12.932 2 12 2C11.068 2 10.602 2 10.235 2.152C9.99214 2.25251 9.77151 2.3999 9.58569 2.58572C9.39986 2.77155 9.25248 2.99218 9.15196 3.235C9.05996 3.458 9.02296 3.719 9.00896 4.098C9.00245 4.37193 8.92657 4.63973 8.7884 4.87635C8.65024 5.11298 8.45432 5.31069 8.21896 5.451C7.97977 5.58477 7.71055 5.65567 7.43649 5.65707C7.16244 5.65847 6.89251 5.59032 6.65196 5.459C6.31596 5.281 6.07296 5.183 5.83196 5.151C5.30628 5.08187 4.77466 5.22431 4.35396 5.547C4.03996 5.79 3.80596 6.193 3.33996 7C2.87396 7.807 2.63996 8.21 2.58896 8.605C2.5546 8.86545 2.57188 9.13012 2.63983 9.38389C2.70778 9.63767 2.82505 9.87556 2.98496 10.084C3.13296 10.276 3.33996 10.437 3.66096 10.639C4.13396 10.936 4.43796 11.442 4.43796 12C4.43796 12.558 4.13396 13.064 3.66096 13.36C3.33996 13.563 3.13196 13.724 2.98496 13.916C2.82505 14.1244 2.70778 14.3623 2.63983 14.6161C2.57188 14.8699 2.5546 15.1345 2.58896 15.395C2.64096 15.789 2.87396 16.193 3.33896 17C3.80596 17.807 4.03896 18.21 4.35396 18.453C4.5624 18.6129 4.8003 18.7302 5.05407 18.7981C5.30784 18.8661 5.57251 18.8834 5.83296 18.849C6.07296 18.817 6.31596 18.719 6.65196 18.541C6.89251 18.4097 7.16244 18.3415 7.43649 18.3429C7.71055 18.3443 7.97977 18.4152 8.21896 18.549C8.70196 18.829 8.98896 19.344 9.00896 19.902C9.02296 20.282 9.05896 20.542 9.15196 20.765C9.25248 21.0078 9.39986 21.2284 9.58569 21.4143C9.77151 21.6001 9.99214 21.7475 10.235 21.848C10.602 22 11.068 22 12 22C12.932 22 13.398 22 13.765 21.848C14.0078 21.7475 14.2284 21.6001 14.4142 21.4143C14.6001 21.2284 14.7474 21.0078 14.848 20.765C14.94 20.542 14.977 20.282 14.991 19.902C15.011 19.344 15.298 18.828 15.781 18.549C16.0202 18.4152 16.2894 18.3443 16.5634 18.3429C16.8375 18.3415 17.1074 18.4097 17.348 18.541C17.684 18.719 17.927 18.817 18.167 18.849C18.4274 18.8834 18.6921 18.8661 18.9459 18.7981C19.1996 18.7302 19.4375 18.6129 19.646 18.453C19.961 18.211 20.194 17.807 20.66 17C21.126 16.193 21.36 15.79 21.411 15.395C21.4453 15.1345 21.428 14.8699 21.3601 14.6161C21.2921 14.3623 21.1749 14.1244 21.015 13.916C20.867 13.724 20.66 13.563 20.339 13.361C20.1049 13.2184 19.9108 13.0187 19.7749 12.7807C19.639 12.5427 19.5658 12.2741 19.562 12C19.562 11.442 19.866 10.936 20.339 10.64C20.66 10.437 20.868 10.276 21.015 10.084C21.1749 9.87556 21.2921 9.63767 21.3601 9.38389C21.428 9.13012 21.4453 8.86545 21.411 8.605C21.359 8.211 21.126 7.807 20.661 7C20.194 6.193 19.961 5.79 19.646 5.547C19.4375 5.38709 19.1996 5.26981 18.9459 5.20187C18.6921 5.13392 18.4274 5.11664 18.167 5.151C17.927 5.183 17.684 5.281 17.347 5.459C17.1065 5.59014 16.8368 5.6582 16.5629 5.6568C16.2891 5.6554 16.02 5.58459 15.781 5.451C15.5456 5.31069 15.3497 5.11298 15.2115 4.87635C15.0734 4.63973 14.9975 4.37193 14.991 4.098C14.977 3.718 14.941 3.458 14.848 3.235C14.7474 2.99218 14.6001 2.77155 14.4142 2.58572C14.2284 2.3999 14.0078 2.25251 13.765 2.152Z" stroke="black" stroke-width="1.5"/>
-                </svg>
-            </a>
-            <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </a>
+            <div class="ion-icon-wrapper text-[#3b5361] flex items-center gap-[1rem]">
+                <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="black"/>
+                    </svg>                    
+                </a>
+                <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" stroke-width="1.5"/>
+                        <path d="M13.765 2.152C13.398 2 12.932 2 12 2C11.068 2 10.602 2 10.235 2.152C9.99214 2.25251 9.77151 2.3999 9.58569 2.58572C9.39986 2.77155 9.25248 2.99218 9.15196 3.235C9.05996 3.458 9.02296 3.719 9.00896 4.098C9.00245 4.37193 8.92657 4.63973 8.7884 4.87635C8.65024 5.11298 8.45432 5.31069 8.21896 5.451C7.97977 5.58477 7.71055 5.65567 7.43649 5.65707C7.16244 5.65847 6.89251 5.59032 6.65196 5.459C6.31596 5.281 6.07296 5.183 5.83196 5.151C5.30628 5.08187 4.77466 5.22431 4.35396 5.547C4.03996 5.79 3.80596 6.193 3.33996 7C2.87396 7.807 2.63996 8.21 2.58896 8.605C2.5546 8.86545 2.57188 9.13012 2.63983 9.38389C2.70778 9.63767 2.82505 9.87556 2.98496 10.084C3.13296 10.276 3.33996 10.437 3.66096 10.639C4.13396 10.936 4.43796 11.442 4.43796 12C4.43796 12.558 4.13396 13.064 3.66096 13.36C3.33996 13.563 3.13196 13.724 2.98496 13.916C2.82505 14.1244 2.70778 14.3623 2.63983 14.6161C2.57188 14.8699 2.5546 15.1345 2.58896 15.395C2.64096 15.789 2.87396 16.193 3.33896 17C3.80596 17.807 4.03896 18.21 4.35396 18.453C4.5624 18.6129 4.8003 18.7302 5.05407 18.7981C5.30784 18.8661 5.57251 18.8834 5.83296 18.849C6.07296 18.817 6.31596 18.719 6.65196 18.541C6.89251 18.4097 7.16244 18.3415 7.43649 18.3429C7.71055 18.3443 7.97977 18.4152 8.21896 18.549C8.70196 18.829 8.98896 19.344 9.00896 19.902C9.02296 20.282 9.05896 20.542 9.15196 20.765C9.25248 21.0078 9.39986 21.2284 9.58569 21.4143C9.77151 21.6001 9.99214 21.7475 10.235 21.848C10.602 22 11.068 22 12 22C12.932 22 13.398 22 13.765 21.848C14.0078 21.7475 14.2284 21.6001 14.4142 21.4143C14.6001 21.2284 14.7474 21.0078 14.848 20.765C14.94 20.542 14.977 20.282 14.991 19.902C15.011 19.344 15.298 18.828 15.781 18.549C16.0202 18.4152 16.2894 18.3443 16.5634 18.3429C16.8375 18.3415 17.1074 18.4097 17.348 18.541C17.684 18.719 17.927 18.817 18.167 18.849C18.4274 18.8834 18.6921 18.8661 18.9459 18.7981C19.1996 18.7302 19.4375 18.6129 19.646 18.453C19.961 18.211 20.194 17.807 20.66 17C21.126 16.193 21.36 15.79 21.411 15.395C21.4453 15.1345 21.428 14.8699 21.3601 14.6161C21.2921 14.3623 21.1749 14.1244 21.015 13.916C20.867 13.724 20.66 13.563 20.339 13.361C20.1049 13.2184 19.9108 13.0187 19.7749 12.7807C19.639 12.5427 19.5658 12.2741 19.562 12C19.562 11.442 19.866 10.936 20.339 10.64C20.66 10.437 20.868 10.276 21.015 10.084C21.1749 9.87556 21.2921 9.63767 21.3601 9.38389C21.428 9.13012 21.4453 8.86545 21.411 8.605C21.359 8.211 21.126 7.807 20.661 7C20.194 6.193 19.961 5.79 19.646 5.547C19.4375 5.38709 19.1996 5.26981 18.9459 5.20187C18.6921 5.13392 18.4274 5.11664 18.167 5.151C17.927 5.183 17.684 5.281 17.347 5.459C17.1065 5.59014 16.8368 5.6582 16.5629 5.6568C16.2891 5.6554 16.02 5.58459 15.781 5.451C15.5456 5.31069 15.3497 5.11298 15.2115 4.87635C15.0734 4.63973 14.9975 4.37193 14.991 4.098C14.977 3.718 14.941 3.458 14.848 3.235C14.7474 2.99218 14.6001 2.77155 14.4142 2.58572C14.2284 2.3999 14.0078 2.25251 13.765 2.152Z" stroke="black" stroke-width="1.5"/>
+                    </svg>
+                </a>
+                <div id="openSearch" class="no-underline text-[#3b5361] text-[20px] ">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <form action="" method="get" class="mobile-form-wrapper mt-[0.1rem] bg-[#fefefe]">
+                <div class="mobile-input-search" id="mobileInput">
+                    <p class="close-search mr-[0.5rem]" id="closeSearch"><i class="fa-solid fa-chevron-left text-[18px] text-[#3b5361] cursor-pointer" ></i></p>
+                    <div class="flex items-center w-[100%] px-[1rem] border border-slate-300 rounded-full">
+                        <i class="fa-solid fa-magnifying-glass text-[18px] text-slate-500 cursor-pointer" ></i>
+                        <input type="search" name="search" placeholder="Search RplPay..." class="w-full  py-[3px] px-[6px] bg-transparent outline-none">
+                    </div>
+                </div>
+            </form>
         </div>
     </nav>
 
     <!--main-section-->
-    <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[50px] mb-[80px] relative">
+    <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[50px] mb-[80px] ">
         <div class="">
             <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[18px]">My Invoices</h1>
             <p class="text-[14px] font-regular text-[#3b5361] md:text-[18px] mt-[0.2rem]">Here's a list of all invoices in the invoices queue</p>
         </div>
-        <div class="filter-icons mt-[0.5rem] flex gap-[1rem] items-center absolute left-[20px]">
-            <div class="relative">
-                <p id="filterInvoiceBtn" class="no-underline text-[#3b5361] ">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-[30px] h-[30px] rounded-full bg-slate-500 p-[0.5rem]">
-                        <path d="M4 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V5.586C20.9999 5.85119 20.8946 6.10551 20.707 6.293L14.293 
-                        12.707C14.1055 12.8945 14.0001 13.1488 14 13.414V19.719C14 19.871 13.9653 20.021 13.8987 20.1576C13.832 20.2942 13.735 20.4138 13.6152 20.5073C13.4954 
-                        20.6008 13.3558 20.6658 13.2071 20.6973C13.0584 20.7288 12.9044 20.7259 12.757 20.689L10.757 20.189C10.5408 20.1348 10.3488 20.01 10.2117 19.8342C10.0745 
-                        19.6585 10 19.4419 10 19.219V13.414C9.99994 13.1488 9.89455 12.8945 9.707 12.707L3.293 6.293C3.10545 6.10551 3.00006 5.85119 3 5.586V4C3 3.73478 3.10536 3.48043 
-                        3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
+        <div class="filter-icons mt-[0.5rem] flex gap-[1rem] items-center">
+            <div class="flex items-center gap-[0.5rem]">
+                <p class="no-underline w-[30] h-[30px] hover:bg-slate-100 flex items-center bg-slate-50  border border-slate-200 rounded-full ">
+                    <label for="paid" class="invoiceBtn  p-[0.3rem] text-slate-500 text-[14px]">All</label>
                 </p>
-                <div class="filter-invoice absolute top-[1rem] left-[2.2rem]" id="filterInvoice">
-                    <div class="">
-                        <p class="no-underline p-[0.5rem] hover:bg-slate-100 flex items-center bg-slate-50 px-[0.5rem] border border-slate-200 w-[150px] ">
-                            <input type="radio" name="filter" id="paid">
-                            <label for="paid" class="invoiceBtn px-[0.5rem] text-slate-500 text-[14px]">Paid</label>
-                        </p>
-                        <p class="no-underline p-[0.5rem] hover:bg-slate-100 flex items-center bg-slate-50 px-[0.5rem] border border-slate-200 w-[150px] ">
-                            <input type="radio" name="filter" id="canceled">
-                            <label for="canceled" class="px-[0.5rem] text-slate-500 text-[14px]">Canceled</label>
-                        </p>
-                        <p class="no-underline p-[0.5rem] hover:bg-slate-100 flex items-center bg-slate-50 px-[0.5rem] border border-slate-200 w-[150px] ">
-                            <input type="radio" name="filter" id="overdue">
-                            <label for="overdue" class="invoiceBtn px-[0.5rem] text-slate-500 text-[14px]">Overdue</label>
-                        </p>
-                    </div>
-                </div>
+                <p class="no-underline px-[0.5rem] rounded-full ">
+                    <input type="radio" name="filter" id="paid">
+                    <label for="paid" class="invoiceBtn px-[0.5rem] text-slate-500 text-[14px]">Paid</label>
+                </p>
+                <p class="no-underline px-[0.5rem] rounded-full ">
+                    <input type="radio" name="filter" id="overdue">
+                    <label for="overdue" class="invoiceBtn px-[0.5rem] text-slate-500 text-[14px]">Overdue</label>
+                </p>
             </div>
         </div>
 
         <div class="" style="overflow-x: auto;">
             <div class="flex gap-[20px]" style="scroll-snap-type:x mandatory">
-                <!--Overdue-invoice-->
-                <div id="overdueInvoice" class="overdueInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
-                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">07-SEP-2024 22:00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
-                            </div>
-                            <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                            </div>
-                            <div class="ml-[1rem]">
-                                <ul class="list-disc">
-                                    <li class="text-[13px] text-slate-400">Porridge</li>
-                                    <li class="text-[13px] text-slate-400">Koosie</li>
-                                    <li class="text-[13px] text-slate-400">Bread</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    vel, iste quod sint dignissimos 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10000</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">OVERDUE</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-500 mt-[1rem] rounded-full">
-                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
-                    </div>
-                </div>
-                <div id="overdueInvoice" class="overdueInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
-                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">07-SEP-2024 22:00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
-                            </div>
-                            <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                            </div>
-                            <div class="ml-[1rem]">
-                                <ul class="list-disc">
-                                    <li class="text-[13px] text-slate-400">Porridge</li>
-                                    <li class="text-[13px] text-slate-400">Koosie</li>
-                                    <li class="text-[13px] text-slate-400">Bread</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    vel, iste quod sint dignissimos 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10000</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">OVERDUE</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-500 mt-[1rem] rounded-full">
-                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
-                    </div>
-                </div>
-
-                <!--Canceled-invoice-->
-                <div id="canceledInvoice" class="canceledInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
-                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">07-SEP-2024 22:00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
-                            </div>
-                            <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                            </div>
-                            <div class="ml-[1rem]">
-                                <ul class="list-disc">
-                                    <li class="text-[13px] text-slate-400">Porridge</li>
-                                    <li class="text-[13px] text-slate-400">Koosie</li>
-                                    <li class="text-[13px] text-slate-400">Bread</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    vel, iste quod sint dignissimos 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-throught text-[#3b5361] font-regular">GHS 10000</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">CANCELED</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-500 mt-[1rem] rounded-full">
-                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
-                    </div>
-                </div>
-                <div id="canceledInvoice" class="canceledInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
-                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">07-SEP-2024 22:00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
-                            </div>
-                            <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                            </div>
-                            <div class="ml-[1rem]">
-                                <ul class="list-disc">
-                                    <li class="text-[13px] text-slate-400">Porridge</li>
-                                    <li class="text-[13px] text-slate-400">Koosie</li>
-                                    <li class="text-[13px] text-slate-400">Bread</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    vel, iste quod sint dignissimos 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-through text-[#3b5361] font-regular">GHS 10000</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">CANCELED</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-500 mt-[1rem] rounded-full">
-                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
-                    </div>
-                </div>
-
                 <!--Paid-invoice-->
                 <div id="paidInvoice1" class="paidInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
                     <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                            </div>
                             <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">07-SEP-2024 22:00</span>
+                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
+                                <span class="uppercase text-[12px] text-slate-500 font-regular">07-SEP-2024 22:00</span>
                             </div>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
+                                <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
                             </div>
-                            <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                            </div>
-                            <div class="ml-[1rem]">
-                                <ul class="list-disc">
+                                <ul class="list-disc ml-[1rem]">
                                     <li class="text-[13px] text-slate-400">Porridge</li>
-                                    <li class="text-[13px] text-slate-400">Koosie</li>
-                                    <li class="text-[13px] text-slate-400">Bread</li>
                                 </ul>
                             </div>
+                         
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                <small class=" text-[12px] text-slate-500 font-regular">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     vel, iste quod sint dignissimos 
-                                </span>
+                                </small>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
                             </div>
                             <div class="">
                                 <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
                             </div>
                             <div class="">
                                 <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
                             </div>
                             <div class="">
                                 <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10000</span>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
                             </div>
                             <div class="">
                                 <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem] bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
                             </div>
                             <div class="">
@@ -539,11 +149,9 @@
                             </div>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="basis-[40%]">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                <span class=" text-[12px] text-slate-500 font-regular">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 </span>
                             </div>
@@ -553,79 +161,72 @@
                         <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
                     </div>
                 </div>
-                <div id="paidInvoice2" class="paidInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+                <div id="paidInvoice1" class="paidInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
                     <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                            </div>
                             <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">07-SEP-2024 22:00</span>
+                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
+                                <span class="uppercase text-[12px] text-slate-500 font-regular">07-SEP-2024 22:00</span>
                             </div>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
+                                <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
                             </div>
-                            <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                            </div>
-                            <div class="ml-[1rem]">
-                                <ul class="list-disc">
+                                <ul class="list-disc ml-[1rem]">
                                     <li class="text-[13px] text-slate-400">Porridge</li>
-                                    <li class="text-[13px] text-slate-400">Koosie</li>
-                                    <li class="text-[13px] text-slate-400">Bread</li>
                                 </ul>
                             </div>
+                         
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                <small class=" text-[12px] text-slate-500 font-regular">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                     vel, iste quod sint dignissimos 
-                                </span>
+                                </small>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
                             </div>
                             <div class="">
                                 <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
                             </div>
                             <div class="">
                                 <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
                             </div>
                             <div class="">
                                 <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10000</span>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
                             </div>
                             <div class="">
                                 <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
                             </div>
                         </div>
-                        <div class="flex gap-[2rem] bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="basis-[40%]">
+                        <div class="flex gap-[2rem] justify-between items-center bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
                             </div>
                             <div class="">
@@ -633,17 +234,145 @@
                             </div>
                         </div>
                         <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="basis-[40%]">
+                            <div class="">
                                 <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                            </div>
-                            <div class="basis-[40%]">
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                <span class=" text-[12px] text-slate-500 font-regular">
                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 </span>
                             </div>
                         </div>
                     </div>
                     <div class="bg-slate-500 mt-[1rem] rounded-full">
+                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
+                    </div>
+                </div>
+             
+                <!--Overdue-invoice-->
+                <div id="overdueInvoice" class="overdueInvoice w-[100%] p-[0.5rem] my-[1rem] shadow-md border border-slate-20 rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+                    <div class="bg-[#FBFDFF] rounded-[15px]">
+                        <div class="p-[0.2rem] border-b border-slate-100">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
+                                <span class="uppercase text-[12px] text-slate-500 font-regular">07-SEP-2024 22:00</span>
+                            </div>
+                        </div>
+                        <div class="p-[0.2rem] border-b border-slate-100">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
+                                <span class="uppercase text-[12px] text-blue-400 underline font-regular">FF201ED810001</span>
+                            </div>
+                        </div>
+                        <div class="p-[0.2rem] border-b border-slate-100">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
+                                <ul class="list-disc ml-[1rem]">
+                                    <li class="text-[13px] text-slate-400">Koosie</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="p-[0.2rem] border-b border-slate-100">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
+                                <span class=" text-[12px] text-slate-500 font-regular">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    vel, iste quod sint dignissimos 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
+                            <span class="uppercase text-[12px] text-slate-500 font-regular">20</span>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
+                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 10</span>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
+                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 10000</span>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
+                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 0.00</span>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
+                            <span class="uppercase text-[12px] text-slate-600 font-bold">OVERDUE</span>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
+                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-500 mt-[3rem] rounded-full">
+                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
+                    </div>
+                </div>
+                <div id="overdueInvoice" class="overdueInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
+                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
+                                <span class="uppercase text-[12px] text-slate-500 font-regular">07-SEP-2024 22:00</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
+                                <span class="uppercase text-[12px] text-blue-400 underline font-regular">FF201ED810001</span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
+                                <ul class="list-disc ml-[1rem]">
+                                    <li class="text-[13px] text-slate-400">Koosie</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
+                                <span class=" text-[12px] text-slate-500 font-regular">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    vel, iste quod sint dignissimos 
+                                </span>
+                            </div>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
+                            <span class="uppercase text-[12px] text-slate-500 font-regular">20</span>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
+                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 10</span>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
+                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 10000</span>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
+                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 0.00</span>
+                        </div>
+                        <div class="flex gap-[2rem] justify-between bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
+                            <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
+                            <span class="uppercase text-[12px] text-slate-600 font-bold">OVERDUE</span>
+                        </div>
+                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
+                            <div class="">
+                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
+                                <span class=" text-[12px] text-[#3b5361] font-regular">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-slate-500 mt-[2rem] rounded-full">
                         <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
                     </div>
                 </div>
@@ -652,13 +381,18 @@
     </main>
 
      <!--download-button-->
-    <div class="fixed bottom-[150px] right-[30px] w-[35px] h-[35px] rounded-full bg-slate-400 flex justify-center items-center">
+     <div class="fixed bottom-[80px] right-[20px] w-[40px] h-[40px] rounded-full bg-teal-600 flex justify-center items-center">
         <a href="#!" class="no-underline ">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="p-[0.3rem]">
-                <path d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15M7 10L12 15M12 15L17 10M12 15V3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>                
+             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M13 9H18L13 4V9ZM6 22C5.45 22 4.97933 21.8043 4.588 21.413C4.19667 21.0217 4.00067 20.5507 4 20V17H20V20C20 20.55 19.8043 21.021 19.413 21.413C19.0217 21.805 18.5507 22.0007 18 22H6ZM1 15V13H23V15H1ZM4 11V4C4 3.45 4.196 2.97933 4.588 2.588C4.98 2.19667 5.45067 2.00067 6 2H14L20 8V11H4Z" fill="white"/>
+             </svg>
         </a>
-    </div>
+         <!-- <div  class="takePhoto">
+             <form id="take" action="" method="POST"> 
+                 <input type="file" id= "cap" name="personalPhoto" accept="image/*" capture ="camera" id="camera"><p>
+             </form>
+         </div>           -->
+     </div>
 
      <!--footer-section-->
     <footer class="bg-slate-50 border-t border-slate-200 fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
@@ -703,24 +437,10 @@
     <script>
        
         document.addEventListener('DOMContentLoaded', function() {
-            const filterBtn = document.getElementById('filterInvoiceBtn');
-            const filterInvoice = document.querySelector('#filterInvoice');
-
-            filterBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                filterInvoice.classList.toggle('filterActive');
-            });
-
-            document.addEventListener('click', function(e) {
-                if (!filterInvoice.contains(e.target) && !filterBtn.contains(e.target)) {
-                    filterInvoice.classList.add('filterActive');
-                }
-            });
- 
         
             // Filter functionality
             const filterRadios = document.querySelectorAll('input[name="filter"]');
-            const invoices = document.querySelectorAll('.overdueInvoice, .paidInvoice, .canceledInvoice');
+            const invoices = document.querySelectorAll('.overdueInvoice, .paidInvoice');
         
             filterRadios.forEach(radio => {
                 radio.addEventListener('change', function() {
@@ -733,13 +453,26 @@
                         invoice.style.display = shouldShow ? 'block' : 'none';
                     });
                     
-                    filterInvoice.classList.add('filterActive');
+                    filterInvoice.classList.remove('filterActive');
                 });
             });
         
             // Show all invoices by default
             document.querySelector('input[value="all"]').checked = true;
         });
+
+        const openSearch = document.getElementById('openSearch');
+        const closeSearch = document.getElementById('closeSearch');
+        const mobileInput = document.getElementById('mobileInput');
+
+
+        openSearch.addEventListener('click', () => {
+            mobileInput.classList.toggle('search-input');
+        })
+        closeSearch.addEventListener('click', () => {
+            mobileInput.classList.toggle('search-input');
+        })
+
     </script>
     
 </body>
