@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice detail</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+</head>
+<body>
+    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.5rem] z-[999]">
+        <div class="md:px-0 px-[1rem] my-[1rem] flex justify-between items-center w-full">
+            <a href="invoice.html" class="">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <p class="flex flex-col items-center">
+               Invoice 
+                <small class="text-[13px] uppercase text-slate-500">ID: APZQ - 1ED810001</small>
+            </p>
+            <a href="invoice.html" class="">
+                <i class="fa-solid fa-ellipsis"></i>
+            </a>
+        </div>
+    </nav>
+    <main class="w-[100%] md:w-[80%] m-auto  mt-[20px] mb-[20px] md:px-0 px-[1rem] my-[1rem]">
+        <section class="mt-[80px]">
+            <div class="text-sm ">
+                <p class="flex justify-between items-center">
+                    Christ Ambassadors
+                    <small class="text-[13px] text-slate-500 uppercase">07-Sep-24</small>
+                </p>
+                <p class="text-[14px]">To: <span class="text-slate-500">Ennam</span></p>
+            </div>
+            <!-- <div class="text-sm mt-[0.8rem]">
+                <p class="flex justify-between items-center">
+                    Invoice Name
+                </p>
+                <p class="text-[14px]"><span class="text-slate-500">School fees</span></p>
+            </div> -->
+        </section>
+        <section class="mt-[10px]">
+            <div class="">
+                <h2 class="text-[15px] font-medium mb-[0.3rem]">Description</h2>
+                <p class="text-[14px] text-slate-800">Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
+                    Dignissimos minima magnam omnis aliquam nihil explicabo error illo
+                </p>
+            </div>
+            <!-- OR -->
+            <div class=" w-full mt-[1rem]">
+                <h2 class="text-[15px] font-medium mb-[0.3rem]">Items</h2>
+                <div class="swiper mySwiper ">
+                    <div class="swiper-wrapper ">
+                        <div class="swiper-slide">
+                            <div class="bg-white py-3 rounded-xl shadow-sm border border-slate-200">
+                                <div class="flex justify-between items-center border-b border-slate-200 mb-1 px-[0.5rem]">
+                                    <p class="text-sm text-slate-700">School Fees </p>
+                                </div>
+                                <div class=" w-[100%] p-[0.5rem]">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700 ">Unit Price:</p>
+                                        <p class="text-xs text-slate-700 ">GHS 3,000.00</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700">Qty: </p>
+                                        <p class="text-xs text-slate-700 ">1</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700">Tax: </p>
+                                        <p class="text-xs text-slate-700 ">0.00</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between border-t border-slate-400 border-opacity-10 px-[0.5rem]">
+                                    <p class="text-sm text-slate-700">Amount: </p>
+                                    <p class="text-sm text-nowrap text-slate-600">GHS 3,000.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="bg-white py-3 rounded-xl shadow-sm border border-slate-200">
+                                <div class="flex justify-between items-center border-b border-slate-200 mb-1 px-[0.5rem]">
+                                    <p class="text-sm text-slate-700">Uniform</p>
+                                </div>
+                                <div class=" w-[100%] p-[0.5rem]">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700 ">Unit Price:</p>
+                                        <p class="text-xs text-slate-700 ">GHS 300.00</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700">Qty: </p>
+                                        <p class="text-xs text-slate-700 ">3</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700">Tax: </p>
+                                        <p class="text-xs text-slate-700 ">0.00</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between border-t border-slate-400 border-opacity-10 px-[0.5rem]">
+                                    <p class="text-sm text-slate-700">Amount: </p>
+                                    <p class="text-sm text-nowrap text-slate-600">GHS 900.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide ">
+                            <div class="bg-white py-3 rounded-xl shadow-sm border border-slate-200">
+                                <div class="flex justify-between items-center border-b border-slate-200 mb-1 px-[0.5rem]">
+                                    <p class="text-sm text-slate-700">Books</p>
+                                </div>
+                                <div class=" w-[100%] p-[0.5rem]">
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700 ">Unit Price:</p>
+                                        <p class="text-xs text-slate-700 ">GHS 50.00</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700">Qty: </p>
+                                        <p class="text-xs text-slate-700 ">20</p>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <p class="text-xs text-slate-700">Tax: </p>
+                                        <p class="text-xs text-slate-700 ">0.00</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center justify-between border-t border-slate-400 border-opacity-10 px-[0.5rem]">
+                                    <p class="text-sm text-slate-700">Amount: </p>
+                                    <p class="text-sm text-nowrap text-slate-600">GHS 1,000.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mt-[10px] fixed bottom-[5%] mx-[1rem] right-0 left-0">
+            <div class="flex flex-col justify-center items-center ">
+               <div class="text-center">
+                    <h2 class="text-lg">Total</h2>
+                    <h1 class="text-[28px] font-medium">GHS 4,900.00</h1>
+               </div>
+
+               <div class="mt-[2rem] w-full">
+                <a href="payment-method.html" class=""><button class="bg-rose-500 hover:bg-rose-400 transition duration-300 text-slate-50 block w-[100%] rounded-full py-[0.5rem]">Pay Now</button></a>
+               </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.mySwiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            loop: true,
+          });
+    </script>
+</body>
+</html>

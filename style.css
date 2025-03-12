@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --primary-font: "montserrat", sans-serif; 
+    --secondary-font: "roboto", sans-serif; 
+    --last-font: "Quicksand", sans-serif; 
+    --font-weight-tiny: 300;
+    --font-weight-small: 400;
+    --font-weight-normal: 500;
+    --font-weight-large: 700;
+}
+body{
+    font-family: "Quicksand", sans-serif,'roboto';
+    font-optical-sizing: auto;
+    font-style: normal;
+}
 .debit-card-content{
     height: 0;
     opacity: 0;

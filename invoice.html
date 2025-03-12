@@ -8,25 +8,27 @@
     <script defer src="main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
      <!--nav-section-->
-    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 bg-slate-50 py-[0.5rem] px-[1rem] border-b border-slate-200 z-[999]">
-        <div class="relative flex justify-between items-center w-full">
-            <div class="">
+    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 bg-slate-50 py-[0.5rem] px-[1rem] z-[999]">
+        <div class="relative flex justify-end items-center w-full">
+            <!-- <div class="">
                 <div class="logo-brand">
                     <a href="#!" class="text-[#3b5361] flex items-center gap-[0.3rem] no-underline">
-                        <!-- <img src="files/kudiPay-logo.png" alt="" class="w-[30px]"> -->
                         <h1 class="font-semibold text-[16px]">Explore RplPay</h1>
                     </a>
                 </div>
-            </div>
+            </div> -->
             <div class="ion-icon-wrapper text-[#3b5361] flex items-center gap-[1rem]">
-                <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
+                <!-- <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="black"/>
                     </svg>                    
-                </a>
+                </a> -->
                 <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="black" stroke-width="1.5"/>
@@ -44,7 +46,7 @@
                     <p class="close-search mr-[0.5rem]" id="closeSearch"><i class="fa-solid fa-chevron-left text-[18px] text-[#3b5361] cursor-pointer" ></i></p>
                     <div class="flex items-center w-[100%] px-[1rem] border border-slate-300 rounded-full">
                         <i class="fa-solid fa-magnifying-glass text-[18px] text-slate-500 cursor-pointer" ></i>
-                        <input type="search" name="search" placeholder="Search RplPay..." class="w-full  py-[3px] px-[6px] bg-transparent outline-none">
+                        <input type="search" name="search" placeholder="Search for Invoices..." class="w-full  py-[3px] px-[6px] bg-transparent outline-none">
                     </div>
                 </div>
             </form>
@@ -52,12 +54,12 @@
     </nav>
 
     <!--main-section-->
-    <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[50px] mb-[80px] ">
-        <div class="">
-            <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[18px]">My Invoices</h1>
-            <p class="text-[14px] font-regular text-[#3b5361] md:text-[18px] mt-[0.2rem]">Here's a list of all invoices in the invoices queue</p>
+    <main class="w-[100%] md:w-[80%] m-auto  mt-[50px] mb-[80px] ">
+        <div class="md:px-0 px-[1rem] mb-[1rem]">
+            <h1 class="text-[#3b5361] font-[var(--font-weight-large)] md:text-[36px] font-[var(--primary-font)] text-[28px]">Active Invoices</h1>
+            <!-- <p class="text-[14px] font-regular text-[#3b5361] md:text-[18px] mt-[0.2rem]">Here's a list of all invoices in the invoices queue</p> -->
         </div>
-        <div class="filter-icons mt-[0.5rem] flex gap-[1rem] items-center">
+        <!-- <div class="filter-icons mt-[0.5rem] flex gap-[1rem] items-center">
             <div class="flex items-center gap-[0.5rem]">
                 <p class="no-underline w-[30] h-[30px] hover:bg-slate-100 flex items-center bg-slate-50  border border-slate-200 rounded-full ">
                     <label for="paid" class="invoiceBtn  p-[0.3rem] text-slate-500 text-[14px]">All</label>
@@ -71,327 +73,107 @@
                     <label for="overdue" class="invoiceBtn px-[0.5rem] text-slate-500 text-[14px]">Overdue</label>
                 </p>
             </div>
-        </div>
+        </div> -->
 
-        <div class="" style="overflow-x: auto;">
-            <div class="flex gap-[20px]" style="scroll-snap-type:x mandatory">
-                <!--Paid-invoice-->
-                <div id="paidInvoice1" class="paidInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
-                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                                <span class="uppercase text-[12px] text-slate-500 font-regular">07-SEP-2024 22:00</span>
-                            </div>
+        <div class="carousel-item bg-white py-3 border-t border-slate-200 ">
+            <div class="md:px-0 px-[1rem]">
+                <a href="invoice-detail.html" class="">
+                    <div class="flex justify-between items-center border-b border-slate-100 mb-1 px-[0.5rem]">
+                        <div class="text-sm font-medium text-slate-700">
+                            <p class="font-semibold">Christ Ambassadors</p>
+                            <p class="text-[14px]">To: <span class="text-slate-500">Ennam</span></p>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
-                                <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
-                            </div>
+                        <a href="invoice-detail.html" class="">
+                           <i class="fa-solid fa-chevron-right text-[13px]"></i>
+                        </a>
+                    </div>
+                    <div class=" w-[100%] p-[0.5rem]">
+                        <div class="flex items-center justify-between pb-[0.2rem]">
+                            <p class="text-sm text-slate-700 ">School fees</p>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                                <ul class="list-disc ml-[1rem]">
-                                    <li class="text-[13px] text-slate-400">Porridge</li>
-                                </ul>
-                            </div>
-                         
+                        <div class="flex items-center justify-between">
+                            <p class="text-xs text-slate-700 ">Tax:</p>
+                            <p class="text-xs text-slate-700 ">0.00</p>
                         </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                                <small class=" text-[12px] text-slate-500 font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    vel, iste quod sint dignissimos 
-                                </small>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10000</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">PAID</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                                <span class=" text-[12px] text-slate-500 font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </span>
-                            </div>
+                        <div class="flex items-center justify-between ">
+                            <p class="text-xs text-slate-700">Amount: </p>
+                            <p class="text-xs text-nowrap text-slate-600">GHS 3,000.00</p>
                         </div>
                     </div>
-                    <div class="bg-slate-500 mt-[1rem] rounded-full">
-                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
-                    </div>
-                </div>
-                <div id="paidInvoice1" class="paidInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
-                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                                <span class="uppercase text-[12px] text-slate-500 font-regular">07-SEP-2024 22:00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
-                                <span class="uppercase text-[13px] text-blue-400 underline font-regular">FF201ED810001</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                                <ul class="list-disc ml-[1rem]">
-                                    <li class="text-[13px] text-slate-400">Porridge</li>
-                                </ul>
-                            </div>
-                         
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                                <small class=" text-[12px] text-slate-500 font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    vel, iste quod sint dignissimos 
-                                </small>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">20</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 10000</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-regular">GHS 0.00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
-                            </div>
-                            <div class="">
-                                <span class="uppercase text-[13px] text-[#3b5361] font-medium">PAID</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                                <span class=" text-[12px] text-slate-500 font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-500 mt-[1rem] rounded-full">
-                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
-                    </div>
-                </div>
-             
-                <!--Overdue-invoice-->
-                <div id="overdueInvoice" class="overdueInvoice w-[100%] p-[0.5rem] my-[1rem] shadow-md border border-slate-20 rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
-                    <div class="bg-[#FBFDFF] rounded-[15px]">
-                        <div class="p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                                <span class="uppercase text-[12px] text-slate-500 font-regular">07-SEP-2024 22:00</span>
-                            </div>
-                        </div>
-                        <div class="p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
-                                <span class="uppercase text-[12px] text-blue-400 underline font-regular">FF201ED810001</span>
-                            </div>
-                        </div>
-                        <div class="p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                                <ul class="list-disc ml-[1rem]">
-                                    <li class="text-[13px] text-slate-400">Koosie</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                                <span class=" text-[12px] text-slate-500 font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    vel, iste quod sint dignissimos 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
-                            <span class="uppercase text-[12px] text-slate-500 font-regular">20</span>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
-                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 10</span>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
-                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 10000</span>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
-                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 0.00</span>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
-                            <span class="uppercase text-[12px] text-slate-600 font-bold">OVERDUE</span>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-500 mt-[3rem] rounded-full">
-                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
-                    </div>
-                </div>
-                <div id="overdueInvoice" class="overdueInvoice w-[100%] p-[0.5rem]  my-[1rem] shadow-md border border-slate-20 p-[0.5rem] rounded-[25px]" style="min-width:350px;scroll-snap-align:start;">
-                    <div class="bg-[#FBFDFF] p-[0.5rem] rounded-[15px]">
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Transaction Date</p>
-                                <span class="uppercase text-[12px] text-slate-500 font-regular">07-SEP-2024 22:00</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Invoice ID</p>
-                                <span class="uppercase text-[12px] text-blue-400 underline font-regular">FF201ED810001</span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Items</p>
-                                <ul class="list-disc ml-[1rem]">
-                                    <li class="text-[13px] text-slate-400">Koosie</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] border-b border-slate-100">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Description</p>
-                                <span class=" text-[12px] text-slate-500 font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                    vel, iste quod sint dignissimos 
-                                </span>
-                            </div>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-center p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Quantity</p>
-                            <span class="uppercase text-[12px] text-slate-500 font-regular">20</span>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Unit Price</p>
-                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 10</span>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Amount</p>
-                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 10000</span>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between items-start p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Tax</p>
-                            <span class="uppercase text-[12px] text-slate-500 font-regular">GHS 0.00</span>
-                        </div>
-                        <div class="flex gap-[2rem] justify-between bg-slate-300 items-start p-[0.2rem] border-b border-slate-100">
-                            <p class="text-[14px] text-[#3b5361] font-medium">Status</p>
-                            <span class="uppercase text-[12px] text-slate-600 font-bold">OVERDUE</span>
-                        </div>
-                        <div class="flex gap-[2rem]  items-start p-[0.2rem] ">
-                            <div class="">
-                                <p class="text-[14px] text-[#3b5361] font-medium">Note</p>
-                                <span class=" text-[12px] text-[#3b5361] font-regular">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="bg-slate-500 mt-[2rem] rounded-full">
-                        <button class="block text-[#ffffff] w-full text-[12px]  py-[0.3rem] "><a href="payment-method.html" class="no-underline">PAY NOW</a></button>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
+        <div class="carousel-item bg-white py-3 border-t border-slate-200 ">
+            <div class="md:px-0 px-[1rem]">
+                <a href="#!" class="">
+                    <div class="flex justify-between items-center border-b border-slate-100 mb-1 px-[0.5rem]">
+                        <div class="text-sm font-medium text-slate-700">
+                            <p class="font-semibold">Christ Ambassadors</p>
+                            <p class="text-[14px]">To: <span class="text-slate-500">Henry Fletcher</span></p>
+                        </div>
+                        <a href="#!" class="">
+                           <i class="fa-solid fa-chevron-right text-[13px]"></i>
+                        </a>
+                    </div>
+                    <div class=" w-[100%] p-[0.5rem]">
+                        <div class="flex items-center justify-between pb-[0.2rem]">
+                            <p class="text-sm text-slate-700 ">Books</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                           <p class="text-xs text-slate-700 ">Tax:</p>
+                           <p class="text-xs text-slate-700 ">0.00</p>
+                        </div>
+                        <div class="flex items-center justify-between ">
+                            <p class="text-xs text-slate-700">Amount: </p>
+                            <p class="text-xs text-nowrap text-slate-600">GHS 1,000.00</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="carousel-item bg-white py-3 border-t border-slate-200 ">
+            <div class="md:px-0 px-[1rem]">
+                <a href="#!" class="">
+                    <div class="flex justify-between items-center border-b border-slate-100 mb-1 px-[0.5rem]">
+                        <div class="text-sm font-medium text-slate-700">
+                            <p class="font-semibold">Ghana Water Company</p>
+                            <p class="text-[14px]">To: <span class="text-slate-500">Henry Fletcher</span></p>
+                        </div>
+                        <a href="#!" class="">
+                            <i class="fa-solid fa-chevron-right text-[13px]"></i>
+                        </a>
+                    </div>
+                    <div class=" w-[100%] p-[0.5rem]">
+                        <div class="flex items-center justify-between pb-[0.2rem]">
+                            <p class="text-sm text-slate-700 ">Water Bill</p>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <p class="text-xs text-slate-700 ">Tax:</p>
+                            <p class="text-xs text-slate-700 ">0.00</p>
+                        </div>
+                        <div class="flex items-center justify-between ">
+                            <p class="text-xs text-slate-700">Amount: </p>
+                            <p class="text-xs text-nowrap text-slate-600">GHS 800.00</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        
     </main>
 
-    <div class="fixed bottom-[80px] right-[20px] w-[30px] h-[30px] rounded-full bg-teal-600 flex justify-center items-center">
+    <!-- <div class="fixed bottom-[80px] right-[20px] w-[30px] h-[30px] rounded-full bg-teal-600 flex justify-center items-center">
         <a href="#!" class="no-underline ">
              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <path d="M13 9H18L13 4V9ZM6 22C5.45 22 4.97933 21.8043 4.588 21.413C4.19667 21.0217 4.00067 20.5507 4 20V17H20V20C20 20.55 19.8043 21.021 19.413 21.413C19.0217 21.805 18.5507 22.0007 18 22H6ZM1 15V13H23V15H1ZM4 11V4C4 3.45 4.196 2.97933 4.588 2.588C4.98 2.19667 5.45067 2.00067 6 2H14L20 8V11H4Z" fill="white"/>
              </svg>
         </a>
-         <!-- <div  class="takePhoto">
+         <div  class="takePhoto">
              <form id="take" action="" method="POST"> 
                  <input type="file" id= "cap" name="personalPhoto" accept="image/*" capture ="camera" id="camera"><p>
              </form>
-         </div>           -->
-     </div>
+         </div>          
+     </div> -->
 
      <!--footer-section-->
     <footer class="bg-slate-50 border-t border-slate-200 fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">

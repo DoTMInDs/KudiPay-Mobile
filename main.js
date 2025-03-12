@@ -48,28 +48,3 @@ document.addEventListener('click', (event) => {
 });
 
 
-document.getElementById('payNowBtn').addEventListener('click', function() {
-    const selectedPaymentMethod = document.querySelector('input[name="payment-method"]:checked');
-    if (selectedPaymentMethod) {
-        const paymentMethod = selectedPaymentMethod.value;
-        let redirectUrl = '';
-
-        switch (paymentMethod) {
-            case 'debit-card':
-                redirectUrl = 'debit-card-payment.html';
-                break;
-            case 'mtn-momo':
-                redirectUrl = 'mtn-pay-now.html'; // Corrected to redirect to mtn-pay-now.html
-                break;
-            // Add cases for other payment methods
-            default:
-                alert('Payment method not recognized.');
-                return;
-        }
-
-        window.location.href = redirectUrl;
-    } else {
-        alert('Please select a payment method.');
-    }
-});
-
