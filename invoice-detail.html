@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invoice detail</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,12 +37,6 @@
                 </p>
                 <p class="text-[14px]">To: <span class="text-slate-500">Ennam</span></p>
             </div>
-            <!-- <div class="text-sm mt-[0.8rem]">
-                <p class="flex justify-between items-center">
-                    Invoice Name
-                </p>
-                <p class="text-[14px]"><span class="text-slate-500">School fees</span></p>
-            </div> -->
         </section>
         <section class="mt-[10px]">
             <div class="">
@@ -50,10 +45,13 @@
                     Dignissimos minima magnam omnis aliquam nihil explicabo error illo
                 </p>
             </div>
-            <!-- OR -->
+            <!-- Items -->
             <div class=" w-full mt-[1rem]">
-                <h2 class="text-[15px] font-medium mb-[0.3rem]">Items</h2>
-                <div class="swiper mySwiper ">
+                <div class="flex justify-between">
+                    <h2 class="text-[15px] font-medium mb-[0.3rem]">Items</h2>
+                    <p class="text-[14px] text-slate-600 mr-[0.5rem] font-semibold">1/3</p>
+                </div>
+                <div class="swiper mySwiper">
                     <div class="swiper-wrapper ">
                         <div class="swiper-slide">
                             <div class="bg-white py-3 rounded-xl shadow-sm border border-slate-200">

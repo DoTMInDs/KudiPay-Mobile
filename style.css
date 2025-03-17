@@ -58,3 +58,16 @@ body{
 .mobile-input-search.search-input{
     display: flex;
 }
+#openSettingsContainer{
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+    height: 650px;
+    top: 100%;  
+    transition: top 300ms ease-out;  
+}
+#openSettingsContainer.settingsActive{
+    top: 10px;    
+    transition: top 300ms ease-in;
+}
