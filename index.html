@@ -9,12 +9,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-      <!--nav-section-->
-    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 bg-slate-50 py-[0.5rem] px-[1rem] border-b border-slate-200 z-[999]">
+      <!--Nav-Section-->
+    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0  py-[0.5rem] px-[1rem]  z-[999]">
         <div class="relative flex justify-between items-center w-full">
             <div class="">
                 <div class="logo-brand">
@@ -46,97 +47,144 @@
                 <div class="mobile-input-search" id="mobileInput">
                     <p class="close-search mr-[0.5rem]" id="closeSearch"><i class="fa-solid fa-chevron-left text-[18px] text-[#3b5361] cursor-pointer" ></i></p>
                     <div class="flex items-center w-[100%] px-[1rem] border border-slate-300 rounded-full">
-                        <i class="fa-solid fa-magnifying-glass text-[18px] text-slate-500 cursor-pointer" ></i>
-                        <input type="search" name="search" placeholder="Search RplPay..." class="w-full  py-[3px] px-[6px] bg-transparent outline-none">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <input type="search" name="search" placeholder="Search BubbleShop..." class="w-full  py-[0.5rem] px-[0.5rem] bg-transparent outline-none">
                     </div>
                 </div>
             </form>
         </div>
     </nav>
+
+    <!-- Main-Section -->
     <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[80px]">
        <div class="">
-            <div class="my-[0.5rem]">
-                <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[18px]">My Invoices</h1>
+            <div class="my-[0.5rem]  flex justify-between items-center w-full mb-[1rem]">
+                <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[18px] ml-[0.3rem]">Active Invoices</h1>
+                <a href="#!" class="mr-[0.5rem] w-[25px] h-[25px] transition duration-200 hover:bg-slate-200 rounded-full flex justify-center items-center">
+                    <i class="fa-solid fa-chevron-right text-[15px] text-slate-500"></i>
+                 </a>
             </div>
-            <div class="" style="overflow-x: scroll;">
-                <div class="inline-flex gap-[10px] ">
-                    <div class="snap-center snap-mandatory relative p-[0.5rem] snap-x w-[250px] rounded-[15px] rounded h-[150px] bg-slate-100">
-                        <div class="no-underline relative">
-                            <div class="flex gap-[1rem] items-center my-[0.5rem]">
-                                <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
-                                    <i class="fa fa-regilar fa-file-lines"></i>
-                                    Invoice ID:
-                                </span> 
-                                <span class="uppercase font-regular text-blue-700 underline text-[13px]">FF201ED810001</span> 
-                            </div>
-                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
-                                <span class="font-regular text-slate-700 text-[13px]">School fees</span> 
-                            </div>
-                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
-                                <span class="font-regular text-rose-500 text-[14px]">GHS 10000</span> 
-                            </div>
-                            <div class="flex items-center  justify-between w-[100%] ">
-                                <div class="">
-                                    <p class="text-slate-700 text-[14px] uppercase font-regular">Overdue</p>
+            <div class="" >
+                <div class="gap-[10px] space-y-2">
+                    <div class="swiper mySwiper  w-full">
+                        <div class="swiper-wrapper">
+                            <!-- <div class=" w-full h-auto"> -->
+                                <div class="swiper-slide relative w-full rounded-[15px] rounded  bg-slate-100">
+                                    <div class="no-underline relative p-[0.5rem]">
+                                        <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                                <i class="fa fa-regilar fa-file-lines"></i>
+                                                Invoice ID:
+                                            </span> 
+                                            <span class="uppercase font-regular text-blue-700 underline text-[13px]">FF201ED810001</span> 
+                                        </div>
+                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
+                                            <span class="font-regular text-slate-700 text-[13px]">School fees</span> 
+                                        </div>
+                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
+                                            <span class="font-regular text-rose-500 text-[14px]">GHS 10000</span> 
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-200">
+                                        <div class="">
+                                            <p class="text-red-700 text-[14px] uppercase font-bold">Overdue</p>
+                                        </div>
+                                        <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
+                                            <a href="invoice-detail.html" class="">
+                                                <i class="fa-solid fa-arrow-up-right-from-square text-rose-700 text-[15px]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
-                                    <a href="#" class="">
-                                        <i class="fa-solid fa-arrow-up-right-from-square text-rose-800 text-[15px]"></i>
-                                    </a>
+                                <div class="swiper-slide relative w-full rounded-[15px] rounded  bg-slate-100">
+                                    <div class="no-underline relative p-[0.5rem]">
+                                        <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                                <i class="fa fa-regilar fa-file-lines"></i>
+                                                Invoice ID:
+                                            </span> 
+                                            <span class="uppercase font-regular text-blue-700 underline text-[13px]">FF201ED810001</span> 
+                                        </div>
+                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
+                                            <span class="font-regular text-slate-700 text-[13px]">School fees</span> 
+                                        </div>
+                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
+                                            <span class="font-regular text-rose-500 text-[14px]">GHS 10000</span> 
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-200">
+                                        <div class="">
+                                            <p class="text-red-700 text-[14px] uppercase font-bold">Overdue</p>
+                                        </div>
+                                        <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
+                                            <a href="invoice-detail.html" class="">
+                                                <i class="fa-solid fa-arrow-up-right-from-square text-rose-700 text-[15px]"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            <!-- </div> -->
+
+                            <!-- hidden file -->                                        
+                            <div class="swiper-slide hidden relative w-full rounded-[15px] rounded  bg-slate-100">
+                                <div class="relative w-full rounded-[15px]  rounded h-[150px] bg-blue-50">
+                                    <div class="no-underline relative p-[0.5rem] ">
+                                        <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                                <i class="fa fa-regilar fa-file-lines"></i>
+                                                Invoice ID:
+                                            </span> 
+                                            <span class="uppercase font-regular text-blue-800 underline text-[13px]">FF201ED810001</span> 
+                                        </div>
+                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
+                                            <span class="font-regular text-slate-700 text-[13px]">School fees</span> 
+                                        </div>
+                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                            <span class="font-regular text-[#3b5361] text-[13px]">Amount: </span> 
+                                            <span class="font-regular text-rose-500 text-[14px]">GHS 10000</span> 
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-200">
+                                        <div class="">
+                                            <p class="text-slate-700 uppercase text-[14px] font-regular">Paid</p>
+                                        </div>
+                                        <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
+                                            <i class="fa-solid fa-circle-check text-teal-600 text-[18px]"></i>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="snap-center snap-mandatory relative p-[0.5rem] snap-x w-[250px] rounded-[15px]  rounded h-[150px] bg-blue-50">
-                        <a href="#!" class="no-underline relative">
-                            <div class="flex gap-[1rem] items-center my-[0.5rem]">
-                                <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
-                                    <i class="fa fa-regilar fa-file-lines"></i>
-                                    Invoice ID:
-                                </span> 
-                                <span class="uppercase font-regular text-blue-800 underline text-[13px]">FF201ED810001</span> 
-                            </div>
-                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
-                                <span class="font-regular text-slate-700 text-[13px]">School fees</span> 
-                            </div>
-                            <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                <span class="font-regular text-[#3b5361] text-[13px]">Amount: </span> 
-                                <span class="font-regular text-rose-500 text-[14px]">GHS 10000</span> 
-                            </div>
-                            <div class="flex items-center  justify-between w-[100%] ">
-                                <div class="">
-                                    <p class="text-slate-700 uppercase text-[14px] font-regular">Paid</p>
-                                </div>
-                                <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
-                                    <i class="fa-solid fa-circle-check text-teal-600 text-[18px]"></i>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                   
                 </div>
             </div>
        </div>
+       <div class="">
+            <!-- Filter Button -->
+            <div id="filterButton" class="absolute bottom-[13%] right-[5%] flex justify-center items-center w-[35px] h-[35px] rounded-full bg-blue-200 transition-all duration-200 cursor-pointer hover:bg-blue-300"">
+                <i class="fa-solid fa-filter text-blue-500 text-[18px]"></i>
+            </div>
+            <!-- Filter Panel -->
+            <div id="filterPanel" class="bg-slate-50 absolute bottom-[20%] right-[10%] w-[200px] border border-slate-200 p-[0.5rem] rounded-[0.5rem] origin-top-right transform scale-95 opacity-0 transition-all duration-200">
+                <div class="">
+                    <p class="p-[0.5rem] text-[14px] rounded-[0.5rem] hover:bg-slate-100 uppercase">Overdue</p>
+                    <p class="p-[0.5rem] text-[14px] rounded-[0.5rem] hover:bg-slate-100 uppercase">Open</p>
+                    <p class="p-[0.5rem] text-[14px] rounded-[0.5rem] hover:bg-slate-100 uppercase">Paid</p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- <div class="fixed bottom-[80px] right-[20px] w-[30px] h-[30px] rounded-full bg-teal-600 flex justify-center items-center">
-       <a href="#!" class="no-underline ">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M13 9H18L13 4V9ZM6 22C5.45 22 4.97933 21.8043 4.588 21.413C4.19667 21.0217 4.00067 20.5507 4 20V17H20V20C20 20.55 19.8043 21.021 19.413 21.413C19.0217 21.805 18.5507 22.0007 18 22H6ZM1 15V13H23V15H1ZM4 11V4C4 3.45 4.196 2.97933 4.588 2.588C4.98 2.19667 5.45067 2.00067 6 2H14L20 8V11H4Z" fill="white"/>
-            </svg>
-       </a>
-        <div  class="takePhoto">
-            <form id="take" action="" method="POST"> 
-                <input type="file" id= "cap" name="personalPhoto" accept="image/*" capture ="camera" id="camera"><p>
-            </form>
-        </div>          
-    </div> -->
-
-    <footer class="bg-slate-50 border-t border-slate-200 fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
-        <div class="w-full flex justify-between items-center px-[2rem]">
+    <!-- Footer-Scetion -->
+    <footer class="fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
+        <div class="w-full flex justify-between items-center px-[1rem]">
             <div class="menu-icons">
                 <a href="index.html" class="no-underline text-[#3b5361] flex flex-col items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -174,18 +222,61 @@
         </div>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         const openSearch = document.getElementById('openSearch');
         const closeSearch = document.getElementById('closeSearch');
         const mobileInput = document.getElementById('mobileInput');
-
-
         openSearch.addEventListener('click', () => {
             mobileInput.classList.toggle('search-input');
         })
         closeSearch.addEventListener('click', () => {
             mobileInput.classList.toggle('search-input');
         })
+
+        const swiper = new Swiper('.mySwiper', {
+            direction: 'horizontal',
+            loop: true,
+            slidesPerView: 'auto', 
+            spaceBetween: 10,      
+            freeMode: true,        
+            mousewheel: true,      
+            touchRatio: 1,         
+            // Responsive breakpoints
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                }
+            }
+        });
+
+         // Toggle Filter Panel
+        const filterButton = document.getElementById('filterButton');
+        const filterPanel = document.getElementById('filterPanel');
+        const filterIcon = filterButton.querySelector('i');
+
+        filterButton.addEventListener('click', () => {
+            // Toggle panel scale and opacity
+            filterPanel.classList.toggle('scale-95');
+            filterPanel.classList.toggle('scale-100');
+            filterPanel.classList.toggle('opacity-0');
+            filterPanel.classList.toggle('opacity-100');
+            
+            // Toggle chevron icon
+            filterIcon.classList.toggle('fa-filter');
+            filterIcon.classList.toggle('fa-chevron-up');
+        });
+
+        // Close panel when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!filterButton.contains(e.target) && !filterPanel.contains(e.target)) {
+                filterPanel.classList.add('scale-95', 'opacity-0');
+                filterPanel.classList.remove('scale-100', 'opacity-100');
+                filterIcon.classList.add('fa-filter');
+                filterIcon.classList.remove('fa-chevron-up');
+            }
+        });
 
     </script>
 </body>
