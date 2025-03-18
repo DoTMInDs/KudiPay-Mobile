@@ -68,11 +68,11 @@ body{
     display: flex;
 }
 #openSettingsContainer{
-    position: absolute;
+    position: fixed;
     right: 0;
     left: 0;
     z-index: 10000;
-    height: 650px;
+    height: 100vh;
     top: 100%;  
     transition: top 300ms ease-out;  
 }
