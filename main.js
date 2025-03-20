@@ -1,6 +1,3 @@
-
-
-
 // Get all relevant elements
 const debitCardBtns = [
     document.getElementById('debitCardBtn'),
