@@ -15,13 +15,7 @@
      <!--nav-section-->
     <nav class="bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.8rem] px-[1rem] z-[999]">
         <div class="relative flex justify-between items-center w-full">
-                <label for="overdue" class="flex items-center gap-[0.5rem]">
-                    <label for="" class="uppercase text-[#3b5361]">All</label>
-                    <span class="relative inline-block w-11 h-5">
-                        <input disabled checked id="overdue" type="checkbox" class="peer appearance-none w-9 h-5 bg-slate-200 rounded-full checked:bg-green-600 cursor-pointer transition-colors duration-300" />
-                        <label for="overdue" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-4 peer-checked:border-green-600 cursor-pointer"></label>
-                    </span>
-                </label>
+                <p class=""></p>
                 <h1 class="text-[#3b5361] font-medium ml-[0.5rem] md:text-[36px] text-[16px]">Active Invoices</h1>
                 <div class="ion-icon-wrapper text-[#3b5361] flex items-center gap-[1rem]">
                     <div id="openSearch" class="no-underline text-[#3b5361] text-[20px] ">
@@ -47,11 +41,17 @@
 
     <!--main-section-->
     <main class="w-[100%] md:w-[80%] m-auto  mt-[60px] mb-[60px]">
-        <div class="p-[1rem] mb-[1rem]">
+        <div class="px-[1.5rem] mb-[1rem]">
             <!-- <h1 class="text-[#3b5361] font-medium ml-[0.5rem] md:text-[36px] text-[28px]">Active Invoices</h1> -->
-            <div class="flex justify-between items-center gap-[1rem] ml-[0.5rem] ">
-                
-                <label for="Paid" class="flex items-center gap-[0.5rem] mr-[0.5rem]">
+            <div class="flex justify-start items-center gap-[1rem] bg-slate-200 rounded-[35px]">
+                <label for="overdue" class="flex items-center gap-[0.5rem] rounded-[35px] bg-[#3b5361] px-[1rem] py-[0.6rem] ">
+                    <label for="" class="uppercase text-slate-50">All</label>
+                    <span class="relative inline-block w-11 h-5">
+                        <input checked id="overdue" type="checkbox" class="peer appearance-none w-9 h-5 bg-slate-300 rounded-full checked:bg-slate-500 cursor-pointer transition-colors duration-300" />
+                        <label for="overdue" class="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-4 peer-checked:border-green-600 cursor-pointer"></label>
+                    </span>
+                </label>
+                <label for="Paid" class="flex items-center gap-[0.5rem] mr-[0.5rem]  px-[1rem] py-[0.6rem] ">
                     <label for="overdue" class="uppercase ml-[-0.5rem] text-[#3b5361]">overdue</label>
                     <span class="relative inline-block w-11 h-5">
                         <input id="paid" type="checkbox" class="peer appearance-none w-9 h-5 bg-slate-300 rounded-full checked:bg-green-600 cursor-pointer transition-colors duration-300" />
