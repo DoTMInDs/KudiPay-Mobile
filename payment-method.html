@@ -8,20 +8,16 @@
     <script defer src="main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[1rem] px-[1rem] z-[999]">
-        <a href="invoice-detail.html" class="">
-            <i class="fa-solid fa-chevron-left"></i>
+        <a href="invoice-detail.html" class="cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
+            <i class="fa-solid fa-chevron-left text-slate-700 text-[20px]"></i>
         </a>
         <div class="">
             <div class="logo-brand">
                 <a href="#!" class="text-[#3b5361] flex items-center gap-[0.3rem] no-underline">
-                    <h1 class="font-semibold text-[16px]"> BubblePay</h1>
+                    <h1 class="font-semibold text-[16px]"> Payment Methods</h1>
                 </a>
             </div>
         </div>
@@ -37,7 +33,6 @@
 
     <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[80px]">
         <div class="">
-            <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[18px]">Add Payment Methods</h1>
         </div>
         <div id="debitCardBtn" class="input-radio">
             <div  class="flex justify-between items-center border-b border-slate-100 hover:bg-slate-200 p-[1rem] cursor-pointer">
@@ -183,7 +178,7 @@
             <a href="mtn-pay-now.html" class=""><button  id="payNowBtn" class="w-full block text-slate-50">PAY NOW</button></a>
         </div>
     </main>
-
+<!-- 
     <footer class="fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
         <div class="w-full flex justify-between items-center px-[1rem]">
             <div class="menu-icons">
@@ -221,6 +216,6 @@
                 </a>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>

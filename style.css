@@ -12,11 +12,7 @@
     --font-weight-normal: 500;
     --font-weight-large: 700;
 }
-body{
-    font-family: "Quicksand", sans-serif,'roboto';
-    font-optical-sizing: auto;
-    font-style: normal;
-}
+
 .p-text-after::after{
     content: "";
     width: 100%;

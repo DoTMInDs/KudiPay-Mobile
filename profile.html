@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script defer src="main.js"></script> -->
+    <script defer src="main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
 </head>
@@ -28,25 +28,22 @@
                 </svg>
             </div>
         </div>
-    </nav>
-
-    <!-- Settings-Modal -->
-    <section id="openSettingsContainer" class="w-full bg-white border border-slate-200 shadow-sm rounded-t-[20px] flex flex-col h-[85vh]">
-        <nav class="rounded-t-[20px] p-2">
-            <div class="flex justify-between items-center w-full ">
-                <div class="closeSettingsBtn cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
-                    <i class="fa-solid fa-chevron-left text-slate-700 text-[22px]"></i>
+        <!-- Settings-Modal -->
+        <section id="openSettingsContainer" class="w-full bg-white border border-slate-200 shadow-sm rounded-t-[20px] flex flex-col h-[85vh]">
+            <nav class="rounded-t-[20px] p-2">
+                <div class="flex justify-between items-center w-full ">
+                    <div class="closeSettingsBtn cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
+                        <i class="fa-solid fa-chevron-left text-slate-700 text-[22px]"></i>
+                    </div>
+                    <div class="">
+                        <h1 class="text-[18px] font-medium">Settings</h1>
+                    </div>
+                    <div class="">
+                        <!-- <i class="fa-solid fa-close text-[22px]"></i> -->
+                    </div>
                 </div>
-                <div class="">
-                    <h1 class="text-[18px] font-medium">Settings</h1>
-                </div>
-                <div class="">
-                    <!-- <i class="fa-solid fa-close text-[22px]"></i> -->
-                </div>
-            </div>
-        </nav>
-        <section class="overflow-y-scroll flex-1">
-            <div class="p-2">
+            </nav>
+            <section class="overflow-y-scroll flex-1 p-2">
                 <div class="flex justify-between font-semibold text-slate-800 px-2 py-4 rounded-[20px]">
                     <div class="flex items-center gap-[0.5rem]">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -84,7 +81,7 @@
                             <div class="inline-flex items-center">
                                 <label for="on"  data-ripple-dark="true" class="relative flex cursor-pointer items-center rounded-full p-3">
                                     <input name="ripple" checked type="radio" class="before:content[''] peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity hover:before:opacity-10" id="on" />
-                                    <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                                    <span class="absolute bg-[#3b5361] w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                                 </label>
                             </div>
                         </div>
@@ -102,7 +99,7 @@
                             <div class="inline-flex items-center">
                                 <label for="light-mode" data-ripple-dark="true" class="relative flex cursor-pointer items-center rounded-full p-3">
                                     <input name="ripple" type="radio" class="before:content[''] peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity hover:before:opacity-10" id="light-mode" />
-                                    <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                                    <span class="absolute bg-[#3b5361] w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                                 </label>
                             </div>
                         </div>
@@ -120,7 +117,7 @@
                             <div class="inline-flex items-center">
                                 <label for="dark-mode" data-ripple-dark="true" class="relative flex cursor-pointer items-center rounded-full p-3">
                                     <input name="ripple" type="radio" class="before:content[''] peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all before:absolute before:top-2/4 before:left-2/4 before:block before:h-12 before:w-12 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-slate-400 before:opacity-0 before:transition-opacity hover:before:opacity-10" id="dark-mode" />
-                                    <span class="absolute bg-slate-800 w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                                    <span class="absolute bg-[#3b5361] w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
                                 </label>
                             </div>
                         </div>
@@ -135,7 +132,7 @@
                             <label for="" class="text-slate-600 cursor-pointer text-sm">Contact us</label>
                         </div>
                         <div class="flex items-center gap-[0.5rem]">
-                        <i class="fa-solid fa-chevron-right text-slate-400 mr-4"></i>
+                            <i class="fa-solid fa-chevron-right text-slate-400 mr-4"></i>
                         </div>
                 </a>
                 </div>
@@ -204,12 +201,12 @@
                         </div>
                     </a>
                 </div>
-            </div>
+            </section>
         </section>
-    </section>
+    </nav>
 
-    <section class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[80px]">
-        <div>
+    <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] my-[80px]">
+        <section>
             <div class="flex justify-center items-center m-auto w-[80px] h-[80px] rounded-full bg-[#fdf2f7]">
                 <svg width="40" height="40" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="120" height="120" rx="60" fill="#fde6f1"/>
@@ -217,8 +214,8 @@
                     <path d="M60.0007 75C40.5776 75 24.0286 86.4852 17.7246 102.576C19.2603 104.101 20.878 105.543 22.5706 106.896C27.2648 92.1231 41.9909 81 60.0007 81C78.0106 81 92.7367 92.1231 97.4309 106.896C99.1235 105.544 100.741 104.101 102.277 102.576C95.973 86.4853 79.4239 75 60.0007 75Z" fill="#EA5373"/>
                 </svg>
             </div>
-        </div>
-        <div>
+        </section>
+        <section>
             <div class="flex justify-between w-[100%] py-6 font-semibold border-b border-rose-200 border-opacity-50">
                 <h1 class="text-slate-800">Personal Profile</h1>
                 <p id="openEditBtn" class="underline text-slate-700 cursor-pointer">
@@ -244,24 +241,168 @@
                     lexluthor@gmail.com
                 </p>
             </div>
-        </div>
-    </section>
-
-     <!-- Edit-Modal -->
-     <div id="openEditContainer" class="w-full bg-white border border-slate-200 shadow-sm rounded-t-[20px] p-[1rem] flex flex-col h-[85vh]">
-       <nav class="bg-white ">
-            <div class="flex justify-between items-center w-full ">
-                <div class="closeEditBtn cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
-                    <i class="fa-solid fa-chevron-left text-slate-700 text-[22px]"></i>
+        </section>
+        <section class="mt-[20px]">
+            <article class="font-semibold capitalize text-slate-800">
+                payment methods
+            </article>
+            <div id="debitCardBtn" class="input-radio">
+                <div  class="flex justify-between items-center border-b border-slate-100 hover:bg-slate-200 p-[1rem] cursor-pointer">
+                    <div class="flex items-center gap-[0.5rem]">
+                        <input type="radio" name="debit-card" id="debit-card">
+                        <label id="debit-card" name="debit-card" for="debit-card" class="text-[#3b5361] text-[14px] font-medium">Debit Card</label>
+                    </div>
+                    <div class="flex items-center gap-[0.5rem]">
+                        <div class="w-[30px] h-[30px] flex justify-center items-center border border-slate-200 rounded-[100%]">
+                            <img src="files/Visa-Logo-2006.png" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                        </div>
+                        <div class="text-slate-300">
+                            <i class="fa-solid fa-chevron-down text-[12px]"></i>
+                        </div>
+                    </div>
                 </div>
-                <div class="">
-                    <h1 class="text-[18px] font-medium">Edit Profile</h1>
-                </div>
-                <div class="">
-                    <!-- <i class="fa-solid fa-close text-[22px]"></i> -->
+                <!--debit-Card-Dropdown-->
+                <div class="debit-card-content" id="debitCardContent">
+                    <div class="flex justify-center my-[0.5rem]">
+                        <button class="bg-rose-400 switch-input text-[10px] rounded-[25px] px-[0.8rem] py-[0.3rem] text-[#fefefe]">
+                            <a href="add-debit-card.html" class="no-underline ">Use a new card</a>
+                        </button>
+                    </div>
+                    <div class="card-input mt-[0.5rem] switch-input">
+                        <input type="text" name="debit-card" id="debit-card" placeholder="1234*************7890" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
+                    </div>
+                    <div class="flex gap-[1rem] items-center mt-[0.5rem] w-full ">
+                        <div class="switch-input">
+                            <input type="text" name="date" id="date" placeholder="MM/YY" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
+                        </div>
+                        <div class="switch-input">
+                            <input type="text" name="date" id="date" placeholder="MM/YY" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-[0.5rem] justify-between mt-[0.5rem] ">
+                        <p class="text-[#3b5361] switch-input text-[12px]">Save this card for future use</p>
+                        <div class="switch-input">
+                            <i class="fa-solid fa-toggle-off text-slate-300 text-[20px]"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-       </nav>
+            <div id="debitCardBtn1" class="input-radio ">
+               <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
+                    <div class="flex items-center gap-[0.5rem]">
+                        <input type="radio" name="debit-card" id="mtn-momo">
+                        <label for="mtn-momo" class="text-[#3b5361] text-[14px] font-medium">MTN momo</label>
+                    </div>
+                    <div class="flex items-center gap-[0.5rem]">
+                        <div class="w-[30px] h-[30px] border border-slate-200 rounded-[100%]">
+                            <img src="files/mtn-momo.jpg" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                        </div>
+                        <div class="text-slate-300">
+                            <i class="fa-solid fa-chevron-down text-[12px]"></i>
+                        </div>
+                    </div>
+               </div>
+                <!--mtn-Card-Dropdown-->
+                <div class="debit-card-content" id="debitCardContent1">
+                    <div class="flex justify-center ">
+                        <a href="add-mtn-momo.html" class=" open-margin no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
+                            <i class="fa-solid fa-circle-plus text-[13px]"></i>
+                            Add Mobile Money Wallet
+                        </a>
+                    </div>
+                    <div class="switch-input">
+                        <select name="phone" id="phoneNumber" class="bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
+                            <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
+                            <option class="text-[15px] text-slate-500" value="2">0592131219</option>
+                            <option class="text-[15px] text-slate-500" value="3">0522131333</option>
+                            <option class="text-[15px] text-slate-500" value="4">0592134512</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="debitCardBtn2" class="input-radio ">
+               <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
+                    <div class="flex items-center gap-[0.5rem]">
+                        <input type="radio" name="debit-card" id="aitelTigo">
+                        <label for="aitelTigo" class="text-[#3b5361] text-[14px] font-medium">AirtelTigo Cash</label>
+                    </div>
+                    <div class="flex items-center gap-[0.5rem]">
+                        <div class="w-[30px] flex justify-center items-center h-[30px] border border-slate-200 rounded-[100%]">
+                            <img src="files/airteltigo.webp" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                        </div>
+                        <div class="text-slate-300">
+                            <i class="fa-solid fa-chevron-down text-[12px]"></i>
+                        </div>
+                    </div>
+               </div>
+                <!--mtn-Card-Dropdown-->
+                <div class="debit-card-content" id="debitCardContent2">
+                    <div class="flex justify-center ">
+                        <a href="add-mtn-momo.html" class="open-margin no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
+                            <i class="fa-solid fa-circle-plus text-[13px]"></i>
+                            Add Mobile Money Wallet
+                        </a>
+                    </div>
+                    <div class="switch-input">
+                        <select name="phone" id="phoneNumber" class="bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
+                            <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
+                            <option class="text-[15px] text-slate-500" value="2">0592131219</option>
+                            <option class="text-[15px] text-slate-500" value="3">0522131333</option>
+                            <option class="text-[15px] text-slate-500" value="4">0592134512</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div id="debitCardBtn3" class="input-radio ">
+               <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
+                    <div class="flex items-center gap-[0.5rem]">
+                        <input type="radio" name="debit-card" id="telecel">
+                        <label for="telecel" class="text-[#3b5361] text-[14px] font-medium">Telecel Cash</label>
+                    </div>
+                    <div class="flex items-center gap-[0.5rem]">
+                        <div class="w-[30px] h-[30px] flex justify-center items-center border border-slate-200 rounded-[100%]">
+                            <img src="files/T-Cash Red.png" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                        </div>
+                        <div class="text-slate-300">
+                            <i class="fa-solid fa-chevron-down text-[12px]"></i>
+                        </div>
+                    </div>
+               </div>
+                <!--mtn-Card-Dropdown-->
+                <div class="debit-card-content" id="debitCardContent3">
+                    <div class="flex justify-center open-margin">
+                        <a href="add-mtn-momo.html" class="no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
+                            <i class="fa-solid fa-circle-plus text-[13px]"></i>
+                            Add Mobile Money Wallet
+                        </a>
+                    </div>
+                    <div class="switch-input">
+                        <select name="phone" id="phoneNumber" class="open-margin bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
+                            <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
+                            <option class="text-[15px] text-slate-500" value="2">0592131219</option>
+                            <option class="text-[15px] text-slate-500" value="3">0522131333</option>
+                            <option class="text-[15px] text-slate-500" value="4">0592134512</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+     <!-- Edit-Modal -->
+    <div id="openEditContainer" class="w-full bg-white border border-slate-200 shadow-sm rounded-t-[20px] p-[1rem] flex flex-col h-[85vh]">
+        <nav class="bg-white flex justify-between items-center w-full">
+            <div class="closeEditBtn cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
+                <i class="fa-solid fa-chevron-left text-slate-700 text-[22px]"></i>
+            </div>
+            <div class="">
+                <h1 class="text-[18px] font-medium">Edit Profile</h1>
+            </div>
+            <div class="">
+                <!-- <i class="fa-solid fa-close text-[22px]"></i> -->
+            </div>
+        </nav>
 
         <div class="relative flex flex-col rounded-xl bg-transparent overflow-y-scroll flex-1">
             <form class="mt-8 mb-2 ">
@@ -277,7 +418,7 @@
                         </div>
                     </div>
                 </div>
-              <div class="mb-1 flex flex-col gap-6">
+                <div class="mb-1 flex flex-col gap-6">
                 <div class="w-full">
                     <label class="block mb-2 text-sm text-slate-600">
                         First Name
@@ -302,11 +443,11 @@
                     </label>
                     <input type="email" disabled class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" value="lexluthor@gmail.com"  />
                 </div>
-              </div>
-              
-              <button class="mt-4 w-full rounded-full bg-rose-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:shadow-none active:bg-rose-600 hover:bg-rose-400 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                </div>
+                
+                <button class="mt-4 w-full rounded-full bg-rose-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:shadow-none active:bg-rose-600 hover:bg-rose-400 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
                 Save
-              </button>
+                </button>
             
             </form>
         </div>
