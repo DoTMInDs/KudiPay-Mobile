@@ -2,142 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <meta name="description" content="BubblePay homepage">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    <script defer src="main.js"></script>
+    <!-- <script defer src="main.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
-<body class="bg-slate-50">
+<body class="bg-slate-100">
       <!--Nav-Section-->
-    <nav class="bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0  py-[0.5rem] px-[1rem]  z-[999]">
-        <div class="relative flex justify-between items-center w-full">
-            <div class="">
-                <div class="logo-brand">
-                    <a href="#!" class="text-[#3b5361] flex items-center gap-[0.3rem] no-underline">
-                        <!-- <img src="files/kudiPay-logo.png" alt="" class="w-[30px]"> -->
-                        <h1 class="font-semibold text-[16px]">Explore BubblePay</h1>
-                    </a>
-                </div>
-            </div>
-            <div class="ion-icon-wrapper text-[#3b5361] flex items-center gap-[1rem]">
-                <a href="#!" class="no-underline text-[#3b5361] text-[20px]">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="black"/>
-                    </svg>                    
-                </a>
-            </div>
-        </div>
+    <nav class="bg-slate-100 flex justify-between items-center w-full fixed top-0 right-0 left-0  py-[0.5rem] px-[1rem]  z-[999]">
+        <h1 class="font-semibold text-[16px]">Explore BubblePay</h1>
+        <a href="#!" aria-label="notification" class="no-underline text-[#3b5361] text-[20px]">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="black"/>
+            </svg>                    
+        </a>
     </nav>
 
     <!-- Main-Section -->
-    <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[60px] rounded-t-[35px] bg-slate-50 shadow border h-[100vh] pt-4">
+    <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[60px] rounded-t-[35px] bg-white shadow border h-[100vh] pt-4">
        <div class="">
-            <div class="my-[0.5rem]  flex justify-between items-center w-full mb-[1rem]">
-                <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[18px] ml-[0.3rem]">Active Invoices</h1>
-                <p class="mr-[0.5rem] text-[14px] font-semibold w-[25px] h-[25px] transition duration-200 hover:bg-slate-200 rounded-full flex justify-center items-center">
+            <article class="my-[0.5rem]  flex justify-between items-center w-full mb-[1rem]">
+                <h1 class="text-[#3b5361] font-medium md:text-[36px] text-[18px] ml-[0.3rem]">Active Invoices</h1>
+                <p class="mr-[0.5rem] text-[14px] font-semibold w-[25px] h-[25px] text-purple-700 transition duration-200 hover:bg-slate-200 rounded-full flex justify-center items-center">
                     1/3
                  </p>
-            </div>
-            <div class="" >
-                <div class="gap-[10px] space-y-2">
-                    <div class="swiper mySwiper  w-full">
-                        <div class="swiper-wrapper">
-                            <!-- <div class=" w-full h-auto"> -->
-                                <div class="swiper-slide relative w-full rounded-[10px] border border-rose-100 shadow-sm bg-purple-50">
-                                    <div class="no-underline relative p-[0.5rem]">
-                                        <div class="flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
-                                                <i class="fa fa-regilar fa-file-lines"></i>
-                                                Invoice Number:
-                                            </span> 
-                                            <span class="uppercase font-regular text-purple-700 text-[13px]">
-                                                <a href="invoice-detail.html" class="">AM - 2</a>
-                                            </span> 
-                                        </div>
-                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
-                                            <span class="font-regular text-slate-700 text-[13px]">KNUST Entry Registration </span> 
-                                        </div>
-                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
-                                            <span class="font-regular text-rose-500 text-[14px]">GHS 10,000</span> 
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-500 border-opacity-50 bg-purple-50  rounded-[10px]">
-                                        <div class="">
-                                            <p class="text-slate-600 text-[14px] uppercase font-bold">Overdue</p>
-                                        </div>
-                                        <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
-                                            <a href="invoice-detail.html" class="">
-                                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[15px]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+            </article>
+            <div class="space-y-2">
+                <div class="swiper mySwiper w-full">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide relative w-full rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
+                            <div class="no-underline relative p-[0.5rem]">
+                                <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                    <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                        <i class="fa fa-regilar fa-file-lines"></i>
+                                        Invoice Number:
+                                    </span> 
+                                    <a href="invoice-detail.html" class="uppercase font-semibold text-purple-700 text-[13px]">AM - 2</a>
                                 </div>
-                                <div class="swiper-slide relative w-full rounded-[10px] border border-rose-100 shadow-sm bg-purple-50">
-                                    <div class="no-underline relative p-[0.5rem]">
-                                        <div class="flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
-                                                <i class="fa fa-regilar fa-file-lines"></i>
-                                                Invoice Number:
-                                            </span> 
-                                            <span class="uppercase font-regular text-purple-700 text-[13px]">
-                                                <a href="invoice-detail.html" class="">AM - 2</a>
-                                            </span> 
-                                        </div>
-                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
-                                            <span class="font-regular text-slate-700 text-[13px]">KNUST Entry Registration </span> 
-                                        </div>
-                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
-                                            <span class="font-regular text-rose-500 text-[14px]">GHS 10,000</span> 
-                                        </div>
-                                    </div>
-                                    <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-500 border-opacity-50 bg-purple-50  rounded-[10px]">
-                                        <div class="">
-                                            <p class="text-slate-600 text-[14px] uppercase font-bold">Overdue</p>
-                                        </div>
-                                        <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
-                                            <a href="invoice-detail.html" class="">
-                                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[15px]"></i>
-                                            </a>
-                                        </div>
-                                    </div>
+                                <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                    <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
+                                    <span class="font-regular text-slate-700 text-[13px]">KNUST Entry Registration </span> 
                                 </div>
-                               
-                            <!-- </div> -->
+                                <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                    <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
+                                    <span class="font-regular text-rose-700 text-[14px]">GHS 10,000</span> 
+                                </div>
+                            </div>
+                            <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-500 border-opacity-30 bg-blue-700  rounded-[10px]">
+                                <p class="text-slate-50 text-[14px] uppercase font-bold">Overdue</p>
+                                <a href="invoice-detail.html" aria-label="view details" class="w-[30px] h-[30px]  rounded-full flex justify-center items-center ">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-50 text-[15px]"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide relative w-full rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
+                            <div class="no-underline relative p-[0.5rem]">
+                                <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                    <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                        <i class="fa fa-regilar fa-file-lines"></i>
+                                        Invoice Number:
+                                    </span> 
+                                    <a href="invoice-detail.html" class="uppercase font-semibold text-purple-700 text-[13px]">AM - 2</a>
+                                </div>
+                                <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                    <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
+                                    <span class="font-regular text-slate-700 text-[13px]">KNUST Entry Registration </span> 
+                                </div>
+                                <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                    <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
+                                    <span class="font-regular text-rose-700 text-[14px]">GHS 10,000</span> 
+                                </div>
+                            </div>
+                            <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-500 border-opacity-30 bg-blue-700  rounded-[10px]">
+                                <p class="text-slate-50 text-[14px] uppercase font-bold">Overdue</p>
+                                <a href="invoice-detail.html" aria-label="view details" class="w-[30px] h-[30px]  rounded-full flex justify-center items-center ">
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-slate-50 text-[15px]"></i>
+                                </a>
+                            </div>
+                        </div>
+                            
+                        <!-- </div> -->
 
-                            <!-- hidden file -->                                        
-                            <div class="hidden relative w-full rounded-[15px] rounded  bg-slate-100">
-                                <div class="relative w-full rounded-[15px]  rounded h-[150px] bg-blue-50">
-                                    <div class="no-underline relative p-[0.5rem] ">
-                                        <div class="flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
-                                                <i class="fa fa-regilar fa-file-lines"></i>
-                                                Invoice ID:
-                                            </span> 
-                                            <span class="uppercase font-regular text-blue-800 underline text-[13px]">FF201ED810001</span> 
-                                        </div>
-                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
-                                            <span class="font-regular text-slate-700 text-[13px]">School fees</span> 
-                                        </div>
-                                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
-                                            <span class="font-regular text-[#3b5361] text-[13px]">Amount: </span> 
-                                            <span class="font-regular text-rose-500 text-[14px]">GHS 10000</span> 
-                                        </div>
+                        <!-- hidden file -->                                        
+                        <div class="hidden relative w-full rounded-[15px] rounded  bg-slate-100">
+                            <div class="relative w-full rounded-[15px]  rounded h-[150px] bg-blue-50">
+                                <div class="no-underline relative p-[0.5rem] ">
+                                    <div class="flex gap-[1rem] items-center my-[0.5rem]">
+                                        <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                            <i class="fa fa-regilar fa-file-lines"></i>
+                                            Invoice ID:
+                                        </span> 
+                                        <span class="uppercase font-regular text-blue-800 underline text-[13px]">FF201ED810001</span> 
                                     </div>
-                                    <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-200">
-                                        <div class="">
-                                            <p class="text-slate-700 uppercase text-[14px] font-regular">Paid</p>
-                                        </div>
-                                        <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
-                                            <i class="fa-solid fa-circle-check text-teal-600 text-[18px]"></i>
-                                        </div>
+                                    <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                        <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
+                                        <span class="font-regular text-slate-700 text-[13px]">School fees</span> 
+                                    </div>
+                                    <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                                        <span class="font-regular text-[#3b5361] text-[13px]">Amount: </span> 
+                                        <span class="font-regular text-rose-500 text-[14px]">GHS 10000</span> 
+                                    </div>
+                                </div>
+                                <div class="flex items-center p-[0.5rem] justify-between w-[100%] border-t border-slate-200">
+                                    <div class="">
+                                        <p class="text-slate-700 uppercase text-[14px] font-regular">Paid</p>
+                                    </div>
+                                    <div class="w-[30px] h-[30px]  rounded-full flex justify-center items-center text-[#fefefe]">
+                                        <i class="fa-solid fa-circle-check text-teal-600 text-[18px]"></i>
                                     </div>
                                 </div>
                             </div>
@@ -150,7 +125,7 @@
     </main>
 
     <!-- Footer-Scetion -->
-    <footer class="fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] bg-white">
+    <footer class="fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] bg-slate-100">
         <div class="w-full flex justify-between items-center px-[1rem]">
             <div class="menu-icons">
                 <a href="index.html" class="no-underline text-[#3b5361] flex flex-col items-center hover:text-blue-400">
