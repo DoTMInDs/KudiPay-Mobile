@@ -12,12 +12,12 @@
 <body>
     <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[1rem] px-[1rem] z-[999]">
         <a href="invoice-detail.html" class="cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
-            <i class="fa-solid fa-chevron-left text-slate-700 text-[20px]"></i>
+            <i class="fa-solid fa-chevron-left text-[#3b5361] text-[20px]"></i>
         </a>
         <div class="">
             <div class="logo-brand">
                 <a href="#!" class="text-[#3b5361] flex items-center gap-[0.3rem] no-underline">
-                    <h1 class="font-semibold text-[16px]"> Payment Methods</h1>
+                    <h1 class="font-semibold text-[16px]">Add Payment Method</h1>
                 </a>
             </div>
         </div>
@@ -56,23 +56,26 @@
                         <a href="add-debit-card.html" class="no-underline ">Use a new card</a>
                     </button>
                 </div>
-                <div class="card-input mt-[0.5rem] switch-input">
-                    <input type="text" name="debit-card" id="debit-card" placeholder="1234*************7890" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
+                <div class="card-input mt-[0.5rem] switch-input relative">
+                    <i class="fa-solid fa-credit-card absolute text-[14px] text-[#3b5361] left-[10px] top-[1rem]"></i>
+                    <input type="text" name="debit-card" id="debit-card" placeholder="1234*************7890" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
                 </div>
                 <div class="flex gap-[1rem] items-center mt-[0.5rem] w-full ">
-                    <div class="switch-input">
-                        <input type="text" name="date" id="date" placeholder="MM/YY" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
+                    <div class="switch-input relative">
+                        <i class="fa-solid fa-calendar-days text-[14px] absolute text-[#3b5361] left-[10px] top-[1rem]"></i>
+                        <input type="text" name="date" id="date" placeholder="MM/YY" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
                     </div>
-                    <div class="switch-input">
-                        <input type="text" name="date" id="date" placeholder="MM/YY" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
+                    <div class="switch-input relative">
+                        <i class="fa-solid fa-key absolute text-[14px] text-[#3b5361] left-[10px] top-[1rem]"></i>
+                        <input type="tel" name="date" id="date" placeholder="CVV" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
                     </div>
                 </div>
-                <div class="flex items-center gap-[0.5rem] justify-between mt-[0.5rem] ">
+                <!-- <div class="flex items-center gap-[0.5rem] justify-between mt-[0.5rem] ">
                     <p class="text-[#3b5361] switch-input text-[12px]">Save this card for future use</p>
                     <div class="switch-input">
                         <i class="fa-solid fa-toggle-off text-slate-300 text-[20px]"></i>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div id="debitCardBtn1" class="input-radio ">
@@ -175,7 +178,7 @@
             </div>
         </div>
         <div class="bg-rose-500 py-[0.5rem] rounded-full mt-[30px]  w-[90%] m-auto">
-            <a href="mtn-pay-now.html" class=""><button  id="payNowBtn" class="w-full block text-slate-50">PAY NOW</button></a>
+            <a href="mtn-pay-now.html" class=""><button  id="payNowBtn" class="w-full block text-slate-50 uppercase">Save</button></a>
         </div>
     </main>
 
