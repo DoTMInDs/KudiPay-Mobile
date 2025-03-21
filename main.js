@@ -1,47 +1,43 @@
-// Get all relevant elements
-const debitCardBtns = [
-    document.getElementById('debitCardBtn'),
-    document.getElementById('debitCardBtn1'),
-    document.getElementById('debitCardBtn2'),
-    document.getElementById('debitCardBtn3')
-];
+// Get all radio inputs and content elements
+document.querySelectorAll('.input-radio').forEach(container => {
+    const radio = container.querySelector('input[type="radio"]');
+    const content = container.querySelector('.debit-card-content');
+    
+    // Toggle on container click
+    container.addEventListener('click', (e) => {
+        if (!radio.checked) {
+            radio.checked = true;
+            // Trigger change event manually
+            const event = new Event('change');
+            radio.dispatchEvent(event);
+            document.getElementById('fullname').focus()
+            
+            setTimeout(() => {
+                const firstInput = content.querySelector('input');
+                if (firstInput) firstInput.focus();
+            }, 300);
+        }
+    });
 
-const debitCardContents = [
-    document.getElementById('debitCardContent'),
-    document.getElementById('debitCardContent1'),
-    document.getElementById('debitCardContent2'),
-    document.getElementById('debitCardContent3')
-];
-
-// Add event listeners to each button
-debitCardBtns.forEach((btn, index) => {
-    btn.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent click event from propagating
-        debitCardContents.forEach((content, contentIndex) => {
-            if (index === contentIndex) {
-                content.classList.toggle('card-active');
-            } else {
-                content.classList.remove('card-active');
-            }
+    // Handle radio changes
+    radio.addEventListener('change', () => {
+        document.querySelectorAll('.debit-card-content').forEach(c => {
+            c.classList.remove('card-active');
         });
+        if (radio.checked) {
+            content.classList.add('card-active');
+        }
     });
 });
 
-// Add event listeners to each content to stop propagation
-debitCardContents.forEach(content => {
-    content.addEventListener('click', (event) => {
-        event.stopPropagation(); // Prevent click event from propagating
-    });
-});
-
-// Close all card contents when clicking outside
-document.addEventListener('click', (event) => {
-    if (!debitCardBtns.some(btn => btn.contains(event.target)) &&
-        !debitCardContents.some(content => content.contains(event.target))) {
-        debitCardContents.forEach(content => {
-            content.classList.remove('card-active');
+// Close dropdowns when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.input-radio')) {
+        document.querySelectorAll('.debit-card-content').forEach(c => {
+            c.classList.remove('card-active');
         });
     }
 });
 
-
+// Initialize first item
+document.querySelector('.debit-card-content').classList.add('card-active');

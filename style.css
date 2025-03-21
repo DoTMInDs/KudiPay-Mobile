@@ -22,27 +22,31 @@
     bottom: -1px;
     background: #00000088;
 }
-.debit-card-content{
-    height: 0;
+.debit-card-content {
+    max-height: 0;
     opacity: 0;
-    transition: height 200ms ease,
-                opacity 200ms ease;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
-.switch-input{
-    display: none;
-}
-.card-active .open-margin{
-    margin: 1rem 0;
-}
-.card-active{
-    height: 150px;
+
+.card-active {
+    max-height: 500px; /* Adjust based on tallest content */
     opacity: 1;
-    transition: height 200ms ease,
-                opacity 200ms ease;
+    transition: all 0.3s ease-in-out;
 }
-.card-active .switch-input{
-    display: block;
+
+.switch-input {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
 }
+
+.card-active .switch-input {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.3s ease-in-out 0.2s; /* Add slight delay */
+}
+
 .filter-invoice{
     display: none;
 }
