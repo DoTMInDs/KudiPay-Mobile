@@ -218,8 +218,11 @@
         <section>
             <div class="flex justify-between w-[100%] py-6 font-semibold border-b border-rose-200 border-opacity-50">
                 <h1 class="text-slate-800">Personal Profile</h1>
-                <p id="openEditBtn" class="underline text-slate-700 cursor-pointer">
-                    <i class="fa-solid fa-pen"></i>
+                <p id="openEditBtn" class="hover:underline text-slate-700 cursor-pointer flex gap-[0.3rem] items-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.3" d="M5 18.08V19H5.92L14.98 9.94002L14.06 9.02002L5 18.08Z" fill="black"/>
+                        <path d="M20.71 7.04C20.8027 6.94749 20.8763 6.8376 20.9264 6.71662C20.9766 6.59565 21.0024 6.46597 21.0024 6.335C21.0024 6.20403 20.9766 6.07435 20.9264 5.95338C20.8763 5.8324 20.8027 5.72251 20.71 5.63L18.37 3.29C18.17 3.09 17.92 3 17.66 3C17.4 3 17.15 3.1 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04ZM3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM5.92 19H5V18.08L14.06 9.02L14.98 9.94L5.92 19Z" fill="black"/>
+                    </svg>
                     Edit
                 </p>
             </div>
@@ -243,154 +246,23 @@
             </div>
         </section>
         <section class="mt-[20px]">
-            <article class="font-semibold capitalize text-slate-800">
-                payment methods
+            <article class="flex justify-between items-center">
+                <h1 class="font-semibold capitalize text-slate-800">payment methods</h1>
+                <p class="flex gap-[0.3rem] items-center hover:underline text-slate-700 font-semibold">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="black" fill-opacity="0.25"/>
+                        <path d="M12 8V16M16 12H8" stroke="black" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add</span>
+                </p>
             </article>
-            <div id="debitCardBtn" class="input-radio">
-                <div  class="flex justify-between items-center border-b border-slate-100 hover:bg-slate-200 p-[1rem] cursor-pointer">
-                    <div class="flex items-center gap-[0.5rem]">
-                        <input type="radio" name="debit-card" id="debit-card">
-                        <label id="debit-card" name="debit-card" for="debit-card" class="text-[#3b5361] text-[14px] font-medium">Debit Card</label>
-                    </div>
-                    <div class="flex items-center gap-[0.5rem]">
-                        <div class="w-[30px] h-[30px] flex justify-center items-center border border-slate-200 rounded-[100%]">
-                            <img src="files/Visa-Logo-2006.png" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
-                        </div>
-                        <div class="text-slate-300">
-                            <i class="fa-solid fa-chevron-down text-[12px]"></i>
-                        </div>
-                    </div>
-                </div>
-                <!--debit-Card-Dropdown-->
-                <div class="debit-card-content" id="debitCardContent">
-                    <div class="flex justify-center my-[0.5rem]">
-                        <button class="bg-rose-400 switch-input text-[10px] rounded-[25px] px-[0.8rem] py-[0.3rem] text-[#fefefe]">
-                            <a href="add-debit-card.html" class="no-underline ">Use a new card</a>
-                        </button>
-                    </div>
-                    <div class="card-input mt-[0.5rem] switch-input">
-                        <input type="text" name="debit-card" id="debit-card" placeholder="1234*************7890" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
-                    </div>
-                    <div class="flex gap-[1rem] items-center mt-[0.5rem] w-full ">
-                        <div class="switch-input">
-                            <input type="text" name="date" id="date" placeholder="MM/YY" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
-                        </div>
-                        <div class="switch-input">
-                            <input type="text" name="date" id="date" placeholder="MM/YY" class="w-full bg-slate-100 p-[0.5rem] text-[#3b5361] text-[14px] font-medium border border-slate-200 ">
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-[0.5rem] justify-between mt-[0.5rem] ">
-                        <p class="text-[#3b5361] switch-input text-[12px]">Save this card for future use</p>
-                        <div class="switch-input">
-                            <i class="fa-solid fa-toggle-off text-slate-300 text-[20px]"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="debitCardBtn1" class="input-radio ">
-               <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
-                    <div class="flex items-center gap-[0.5rem]">
-                        <input type="radio" name="debit-card" id="mtn-momo">
-                        <label for="mtn-momo" class="text-[#3b5361] text-[14px] font-medium">MTN momo</label>
-                    </div>
-                    <div class="flex items-center gap-[0.5rem]">
-                        <div class="w-[30px] h-[30px] border border-slate-200 rounded-[100%]">
-                            <img src="files/mtn-momo.jpg" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
-                        </div>
-                        <div class="text-slate-300">
-                            <i class="fa-solid fa-chevron-down text-[12px]"></i>
-                        </div>
-                    </div>
-               </div>
-                <!--mtn-Card-Dropdown-->
-                <div class="debit-card-content" id="debitCardContent1">
-                    <div class="flex justify-center ">
-                        <a href="add-mtn-momo.html" class=" open-margin no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
-                            <i class="fa-solid fa-circle-plus text-[13px]"></i>
-                            Add Mobile Money Wallet
-                        </a>
-                    </div>
-                    <div class="switch-input">
-                        <select name="phone" id="phoneNumber" class="bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
-                            <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
-                            <option class="text-[15px] text-slate-500" value="2">0592131219</option>
-                            <option class="text-[15px] text-slate-500" value="3">0522131333</option>
-                            <option class="text-[15px] text-slate-500" value="4">0592134512</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div id="debitCardBtn2" class="input-radio ">
-               <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
-                    <div class="flex items-center gap-[0.5rem]">
-                        <input type="radio" name="debit-card" id="aitelTigo">
-                        <label for="aitelTigo" class="text-[#3b5361] text-[14px] font-medium">AirtelTigo Cash</label>
-                    </div>
-                    <div class="flex items-center gap-[0.5rem]">
-                        <div class="w-[30px] flex justify-center items-center h-[30px] border border-slate-200 rounded-[100%]">
-                            <img src="files/airteltigo.webp" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
-                        </div>
-                        <div class="text-slate-300">
-                            <i class="fa-solid fa-chevron-down text-[12px]"></i>
-                        </div>
-                    </div>
-               </div>
-                <!--mtn-Card-Dropdown-->
-                <div class="debit-card-content" id="debitCardContent2">
-                    <div class="flex justify-center ">
-                        <a href="add-mtn-momo.html" class="open-margin no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
-                            <i class="fa-solid fa-circle-plus text-[13px]"></i>
-                            Add Mobile Money Wallet
-                        </a>
-                    </div>
-                    <div class="switch-input">
-                        <select name="phone" id="phoneNumber" class="bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
-                            <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
-                            <option class="text-[15px] text-slate-500" value="2">0592131219</option>
-                            <option class="text-[15px] text-slate-500" value="3">0522131333</option>
-                            <option class="text-[15px] text-slate-500" value="4">0592134512</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-            <div id="debitCardBtn3" class="input-radio ">
-               <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
-                    <div class="flex items-center gap-[0.5rem]">
-                        <input type="radio" name="debit-card" id="telecel">
-                        <label for="telecel" class="text-[#3b5361] text-[14px] font-medium">Telecel Cash</label>
-                    </div>
-                    <div class="flex items-center gap-[0.5rem]">
-                        <div class="w-[30px] h-[30px] flex justify-center items-center border border-slate-200 rounded-[100%]">
-                            <img src="files/T-Cash Red.png" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
-                        </div>
-                        <div class="text-slate-300">
-                            <i class="fa-solid fa-chevron-down text-[12px]"></i>
-                        </div>
-                    </div>
-               </div>
-                <!--mtn-Card-Dropdown-->
-                <div class="debit-card-content" id="debitCardContent3">
-                    <div class="flex justify-center open-margin">
-                        <a href="add-mtn-momo.html" class="no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
-                            <i class="fa-solid fa-circle-plus text-[13px]"></i>
-                            Add Mobile Money Wallet
-                        </a>
-                    </div>
-                    <div class="switch-input">
-                        <select name="phone" id="phoneNumber" class="open-margin bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
-                            <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
-                            <option class="text-[15px] text-slate-500" value="2">0592131219</option>
-                            <option class="text-[15px] text-slate-500" value="3">0522131333</option>
-                            <option class="text-[15px] text-slate-500" value="4">0592134512</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
+            
+            
         </section>
     </main>
 
      <!-- Edit-Modal -->
-    <div id="openEditContainer" class="w-full bg-white border border-slate-200 shadow-sm rounded-t-[20px] p-[1rem] flex flex-col h-[85vh]">
+    <section id="openEditContainer" class="w-full bg-white border border-slate-200 shadow-sm rounded-t-[20px] p-[1rem] flex flex-col h-[85vh]">
         <nav class="bg-white flex justify-between items-center w-full">
             <div class="closeEditBtn cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
                 <i class="fa-solid fa-chevron-left text-slate-700 text-[22px]"></i>
@@ -450,7 +322,7 @@
             
             </form>
         </div>
-    </div>
+    </section>
 
     <!-- camera -->
     <section id="cameraContainer" class="cameraWrapper fixed top-0 right-0 left-0 w-full h-screen bg-black bg-opacity-70 z-[99999] hidden">
@@ -484,7 +356,7 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M3.00003 13H4.00003V20C4.00003 21.103 4.89703 22 6.00003 22H18C19.103 22 20 21.103 20 20V13H21C21.1978 13 21.3911 12.9413 21.5555 12.8314C21.7199 12.7215 21.848 12.5654 21.9237 12.3827C21.9994 12.2 22.0192 11.9989 21.9806 11.805C21.942 11.611 21.8468 11.4329 21.707 11.293L12.707 2.293C12.5195 2.10553 12.2652 2.00021 12 2.00021C11.7349 2.00021 11.4806 2.10553 11.293 2.293L2.29303 11.293C2.15322 11.4329 2.05802 11.611 2.01945 11.805C1.98088 11.9989 2.00068 12.2 2.07635 12.3827C2.15202 12.5654 2.28016 12.7215 2.44457 12.8314C2.60898 12.9413 2.80228 13 3.00003 13ZM10 20V15H14V20H10ZM12 4.414L18 10.414V15L18.001 20H16V15C16 13.897 15.103 13 14 13H10C8.89703 13 8.00003 13.897 8.00003 15V20H6.00003V10.414L12 4.414Z" fill="black"/>
                     </svg>                        
-                    <small class="text-[10px] font-medium pt-[0.3rem]">Home</small>
+                    <small class="text-[10px] font-medium text-slate-600 pt-[0.3rem]">Home</small>
                 </a>
             </div>
             <div class="menu-icons">
@@ -493,7 +365,7 @@
                         <path d="M13.5 9.75C13.5 9.55109 13.421 9.36032 13.2803 9.21967C13.1397 9.07902 12.9489 9 12.75 9H6.75C6.55109 9 6.36032 9.07902 6.21967 9.21967C6.07902 9.36032 6 9.55109 6 9.75C6 9.94891 6.07902 10.1397 6.21967 10.2803C6.36032 10.421 6.55109 10.5 6.75 10.5H12.75C12.9489 10.5 13.1397 10.421 13.2803 10.2803C13.421 10.1397 13.5 9.94891 13.5 9.75ZM12.5 12.75C12.5 12.5511 12.421 12.3603 12.2803 12.2197C12.1397 12.079 11.9489 12 11.75 12H6.75C6.55109 12 6.36032 12.079 6.21967 12.2197C6.07902 12.3603 6 12.5511 6 12.75C6 12.9489 6.07902 13.1397 6.21967 13.2803C6.36032 13.421 6.55109 13.5 6.75 13.5H11.75C11.9489 13.5 12.1397 13.421 12.2803 13.2803C12.421 13.1397 12.5 12.9489 12.5 12.75ZM12.75 15C12.9489 15 13.1397 15.079 13.2803 15.2197C13.421 15.3603 13.5 15.5511 13.5 15.75C13.5 15.9489 13.421 16.1397 13.2803 16.2803C13.1397 16.421 12.9489 16.5 12.75 16.5H6.75C6.55109 16.5 6.36032 16.421 6.21967 16.2803C6.07902 16.1397 6 15.9489 6 15.75C6 15.5511 6.07902 15.3603 6.21967 15.2197C6.36032 15.079 6.55109 15 6.75 15H12.75Z" fill="black"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M6 21.75H19C19.7293 21.75 20.4288 21.4603 20.9445 20.9445C21.4603 20.4288 21.75 19.7293 21.75 19V13.5C21.75 13.3011 21.671 13.1103 21.5303 12.9697C21.3897 12.829 21.1989 12.75 21 12.75H17.75V4.943C17.75 3.52 16.141 2.692 14.983 3.519L14.808 3.644C14.4248 3.91602 13.9663 4.06182 13.4964 4.06111C13.0264 4.06039 12.5684 3.91319 12.186 3.64C11.5476 3.18567 10.7835 2.94153 10 2.94153C9.21645 2.94153 8.45238 3.18567 7.814 3.64C7.43162 3.91319 6.97359 4.06039 6.50364 4.06111C6.03369 4.06182 5.57521 3.91602 5.192 3.644L5.017 3.519C3.859 2.692 2.25 3.519 2.25 4.943V18C2.25 18.9946 2.64509 19.9484 3.34835 20.6516C4.05161 21.3549 5.00544 21.75 6 21.75ZM8.686 4.86C9.06995 4.58744 9.52915 4.44102 10 4.44102C10.4709 4.44102 10.9301 4.58744 11.314 4.86C11.9507 5.31512 12.7136 5.56021 13.4962 5.56111C14.2788 5.562 15.0423 5.31866 15.68 4.865L15.855 4.74C15.8923 4.71341 15.9363 4.6976 15.982 4.6943C16.0277 4.691 16.0735 4.70034 16.1143 4.7213C16.1551 4.74225 16.1893 4.77402 16.2132 4.81312C16.2372 4.85222 16.2499 4.89715 16.25 4.943V19C16.25 19.45 16.358 19.875 16.55 20.25H6C5.40326 20.25 4.83097 20.0129 4.40901 19.591C3.98705 19.169 3.75 18.5967 3.75 18V4.943C3.75012 4.89715 3.76284 4.85222 3.78678 4.81312C3.81072 4.77402 3.84495 4.74225 3.88573 4.7213C3.9265 4.70034 3.97226 4.691 4.01798 4.6943C4.06371 4.6976 4.10765 4.71341 4.145 4.74L4.32 4.865C4.95775 5.31866 5.72116 5.562 6.5038 5.56111C7.28644 5.56021 8.0493 5.31512 8.686 4.86ZM17.75 19V14.25H20.25V19C20.25 19.3315 20.1183 19.6495 19.8839 19.8839C19.6495 20.1183 19.3315 20.25 19 20.25C18.6685 20.25 18.3505 20.1183 18.1161 19.8839C17.8817 19.6495 17.75 19.3315 17.75 19Z" fill="black"/>
                     </svg>                        
-                    <small class="text-[10px] font-medium pt-[0.3rem]">Invoices</small>
+                    <small class="text-[10px] font-medium text-slate-600 pt-[0.3rem]">Invoices</small>
                 </a>
             </div>
             <div class="menu-icons">
@@ -501,7 +373,7 @@
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.5 5.5C7.5 4.30653 7.97411 3.16193 8.81802 2.31802C9.66193 1.47411 10.8065 1 12 1C13.1935 1 14.3381 1.47411 15.182 2.31802C16.0259 3.16193 16.5 4.30653 16.5 5.5V7H21V23H3V7H7.5V5.5ZM7.5 9H5V21H19V9H16.5V12H14.5V9H9.5V12H7.5V9ZM14.5 7V5.5C14.5 4.83696 14.2366 4.20107 13.7678 3.73223C13.2989 3.26339 12.663 3 12 3C11.337 3 10.7011 3.26339 10.2322 3.73223C9.76339 4.20107 9.5 4.83696 9.5 5.5V7H14.5Z" fill="black"/>
                     </svg>
-                    <small class="text-[10px] font-medium pt-[0.3rem]">Shop</small>
+                    <small class="text-[10px] font-medium text-slate-600 pt-[0.3rem]">Shop</small>
                 </a>
             </div>
             <div class="menu-icons">
@@ -510,7 +382,7 @@
                         <path d="M4 18C4 16.9391 4.42143 15.9217 5.17157 15.1716C5.92172 14.4214 6.93913 14 8 14H16C17.0609 14 18.0783 14.4214 18.8284 15.1716C19.5786 15.9217 20 16.9391 20 18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18Z" stroke="black" stroke-width="1.5" stroke-linejoin="round"/>
                         <path d="M12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10Z" stroke="black" stroke-width="1.5"/>
                     </svg>
-                    <small class="text-[10px] font-medium pt-[0.3rem]">Profile</small>
+                    <small class="text-[10px] font-medium text-slate-600 pt-[0.3rem]">Profile</small>
                 </a>
             </div>
         </div>

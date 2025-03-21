@@ -8,9 +8,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
 </head>
-<body >
-    <section class="bg-gray-100 flex items-center justify-center h-screen px-2">
-        <form class="p-[1rem] w-full bg-white rounded-lg shadow-lg space-y-4" onsubmit="return validateForm()">
+<body class="bg-gray-100">
+    <section class="bg-gray-100 flex items-center flex-col justify-center mt-[2rem] px-2 ">
+        <form class="p-[1rem] w-full bg-white rounded-lg shadow-lg space-y-4 z-[999]" onsubmit="return validateForm()">
             <div class="text-center">
                 <h2 class="text-2xl font-semibold text-gray-800">Login</h2>
                 <p class="text-gray-600 mt-2">Welcome! Please enter your Phone number</p>
@@ -23,8 +23,8 @@
             <div class="relative">
                 <!-- <label for="pin" class="block text-sm font-medium text-gray-700">Pin</label> -->
                 <i class="fa-solid fa-lock absolute top-[0.8rem] left-[1rem] text-slate-500"></i>
-                <input type="password" id="pin" class=" block w-full pl-[2.5rem] pr-[1rem] py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm" placeholder="Enter pin" required>
-                <i class="fa-solid fa-eye-slash absolute top-[0.8rem] right-[1rem] text-slate-500"></i>
+                <input type="password" id="pin" class="block w-full pl-[2.5rem] pr-[1rem] py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm" placeholder="Enter pin" required>
+                <i id="toggleEye" class="fa-solid fa-eye-slash absolute top-[0.8rem] right-[1rem] text-slate-500" onclick="toggleOTPVisibility()"></i>
             </div>
             <div class="flex items-center justify-between">
                 <div class="flex items-center">
@@ -42,6 +42,10 @@
                 New on our platform? <a href="index.html" class="font-medium text-red-400 hover:text-red-500">Create Account</a>
             </div>
         </form>
+        <section class="flex justify-center items-center fixed bottom-[20px] right-0 left-0">
+            <img src="files/rpl-logo-icon@4x (1).png" alt="" class="w-[30px] mr-[0.3rem]">
+            <h1 class="text-[28px] font-semibold text-[#3b5361]">Kemy<span class="text-rose-600">Pay</span></h1>
+        </section>
     </section>
 
     <script>
@@ -63,6 +67,22 @@
             // Redirect to verification page
         window.location.href = 'home.html';
             return false; // Prevent form submission
+        }
+
+        function toggleOTPVisibility() {
+            const pinInput = document.getElementById('pin');
+            const eyeIcon = document.getElementById('toggleEye');
+
+            if(pinInput.type == 'password') {
+                pinInput.type = 'text';
+                console.log('eye-slash')
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }else {
+                pinInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            }
         }
     </script>
 </body>
