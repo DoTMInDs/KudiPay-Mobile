@@ -22,7 +22,7 @@
                 <input class="w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="text" maxlength="1" required />
             </div>
             <hr class="w-full">
-            <button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Verify</button>
+            <button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Save</button>
         </form>
         <section class="flex justify-center items-center fixed bottom-[20px] right-0 left-0">
             <img src="files/rpl-logo-icon@4x (1).png" alt="" class="w-[30px] mr-[0.3rem]">
@@ -40,13 +40,13 @@
                 inputs[i].value = randomCode[i];
             }
         
-            let timeLeft = 40;
+            let timeLeft = 120;
             const timeElapseElement = document.getElementById('time-elapse');
             const countdown = setInterval(function() {
                 if (timeLeft <= 0) {
                     clearInterval(countdown);
                     window.location.href = 'confirmation.html';
-                    window.location.href = 'login.html';
+                    window.location.href = 'profile.html';
                 } else {
                     timeElapseElement.textContent = `Expires in 00:${timeLeft < 10 ? '0' : ''}${timeLeft} secs`;
                     timeLeft--;

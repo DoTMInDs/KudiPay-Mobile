@@ -32,13 +32,14 @@
     </nav>
 
     <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[80px]">
-        <div class="">
-        </div>
         <div id="debitCardBtn" class="input-radio">
-            <div  class="flex justify-between items-center border-b border-slate-100 hover:bg-slate-200 p-[1rem] cursor-pointer">
-                <div class="flex items-center gap-[0.5rem]">
-                    <input type="radio" name="debit-card" id="debit-card">
-                    <label id="debit-card" name="debit-card" for="debit-card" class="text-[#3b5361] text-[14px] font-medium">Debit Card</label>
+            <div  class="flex justify-between items-center border-b border-slate-100 rounded-lg hover:bg-slate-100 py-[1rem] cursor-pointer">
+                <div class="inline-flex items-center">
+                    <label class="relative flex items-center cursor-pointer" for="Card">
+                        <input name="framework" checked type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all" id="Card">
+                        <span class="absolute bg-[#3b5361] w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                    </label>
+                    <label for="Card" class="capitalize ml-[0.5rem] text-[#3b5361]">Debit Card</label>
                 </div>
                 <div class="flex items-center gap-[0.5rem]">
                     <div class="w-[30px] h-[30px] flex justify-center items-center border border-slate-200 rounded-[100%]">
@@ -51,38 +52,42 @@
             </div>
             <!--debit-Card-Dropdown-->
             <div class="debit-card-content" id="debitCardContent">
-                <div class="flex justify-center my-[0.5rem]">
-                    <button class="bg-rose-400 switch-input text-[10px] rounded-[25px] px-[0.8rem] py-[0.3rem] text-[#fefefe]">
-                        <a href="add-debit-card.html" class="no-underline ">Use a new card</a>
-                    </button>
-                </div>
-                <div class="card-input mt-[0.5rem] switch-input relative">
-                    <i class="fa-solid fa-credit-card absolute text-[14px] text-[#3b5361] left-[10px] top-[1rem]"></i>
-                    <input type="text" name="debit-card" id="debit-card" placeholder="1234*************7890" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
-                </div>
-                <div class="flex gap-[1rem] items-center mt-[0.5rem] w-full ">
-                    <div class="switch-input relative">
-                        <i class="fa-solid fa-calendar-days text-[14px] absolute text-[#3b5361] left-[10px] top-[1rem]"></i>
-                        <input type="text" name="date" id="date" placeholder="MM/YY" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
+                <div class="mt-[0.5rem] switch-input">
+                    <div class="card-input  relative">
+                        <i class="fa-solid fa-user absolute text-[14px] text-[#3b5361] left-[10px] top-[1rem]"></i>
+                        <input type="text" name="fullname" id="fullname" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] pl-[2.5rem] outline-none border border-slate-200 rounded-[35px]" placeholder="Enter your fullname">
                     </div>
-                    <div class="switch-input relative">
-                        <i class="fa-solid fa-key absolute text-[14px] text-[#3b5361] left-[10px] top-[1rem]"></i>
-                        <input type="tel" name="date" id="date" placeholder="CVV" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
+                    <div class="card-input mt-[0.5rem] switch-input relative">
+                        <i class="fa-solid fa-credit-card absolute text-[14px] text-[#3b5361] left-[10px] top-[1rem]"></i>
+                        <input type="tel" name="debit-card" id="debit-card" placeholder="1234*************7890" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
                     </div>
+                    <div class="flex gap-[1rem] items-center mt-[0.5rem] w-full ">
+                        <div class="switch-input relative">
+                            <i class="fa-solid fa-calendar-days text-[14px] absolute text-[#3b5361] left-[10px] top-[1rem]"></i>
+                            <input type="text" name="date" id="date" placeholder="MM/YY" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
+                        </div>
+                        <div class="switch-input relative">
+                            <i class="fa-solid fa-key absolute text-[14px] text-[#3b5361] left-[10px] top-[1rem]"></i>
+                            <input type="tel" name="date" id="date" placeholder="CVV" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]">
+                        </div>
+                    </div>
+                    <!-- <div class="flex items-center gap-[0.5rem] justify-between mt-[0.5rem] ">
+                        <p class="text-[#3b5361] switch-input text-[12px]">Save this card for future use</p>
+                        <div class="switch-input">
+                            <i class="fa-solid fa-toggle-off text-slate-300 text-[20px]"></i>
+                        </div>
+                    </div> -->
                 </div>
-                <!-- <div class="flex items-center gap-[0.5rem] justify-between mt-[0.5rem] ">
-                    <p class="text-[#3b5361] switch-input text-[12px]">Save this card for future use</p>
-                    <div class="switch-input">
-                        <i class="fa-solid fa-toggle-off text-slate-300 text-[20px]"></i>
-                    </div>
-                </div> -->
             </div>
         </div>
         <div id="debitCardBtn1" class="input-radio ">
-           <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
-                <div class="flex items-center gap-[0.5rem]">
-                    <input type="radio" name="debit-card" id="mtn-momo">
-                    <label for="mtn-momo" class="text-[#3b5361] text-[14px] font-medium">MTN momo</label>
+           <div class="border-b border-slate-100 flex justify-between items-center rounded-lg hover:bg-slate-100 py-[1rem] cursor-pointer">
+                <div class="inline-flex items-center">
+                    <label class="relative flex items-center cursor-pointer" for="mtn">
+                        <input name="framework" type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all" id="mtn">
+                        <span class="absolute bg-[#3b5361] w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                    </label>
+                    <label for="mtn" class="capitalize ml-[0.5rem] text-[#3b5361]">mtn Cash</label>
                 </div>
                 <div class="flex items-center gap-[0.5rem]">
                     <div class="w-[30px] h-[30px] border border-slate-200 rounded-[100%]">
@@ -94,28 +99,26 @@
                 </div>
            </div>
             <!--mtn-Card-Dropdown-->
-            <div class="debit-card-content" id="debitCardContent1">
-                <div class="flex justify-center ">
-                    <a href="add-mtn-momo.html" class=" open-margin no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
-                        <i class="fa-solid fa-circle-plus text-[13px]"></i>
-                        Add Mobile Money Wallet
-                    </a>
-                </div>
-                <div class="switch-input">
-                    <select name="phone" id="phoneNumber" class="bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
-                        <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
-                        <option class="text-[15px] text-slate-500" value="2">0592131219</option>
-                        <option class="text-[15px] text-slate-500" value="3">0522131333</option>
-                        <option class="text-[15px] text-slate-500" value="4">0592134512</option>
-                    </select>
+            <div class="debit-card-content " id="debitCardContent1">
+                <div class="switch-input mt-[0.5rem]">
+                    <div class="relative flex items-center text-slate-400 ">
+                        <i class="fa-solid fa-phone absolute text-[14px] left-[10px]"></i>
+                        <input type="tel" name="phone" id="phone" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]" placeholder="Enter your Number">
+                    </div>
+                    <div class="w-[180px] m-auto">
+                        <img src="files/undraw_contact-us_kcoa.svg" alt="" class="w-full">
+                    </div>
                 </div>
             </div>
         </div>
         <div id="debitCardBtn2" class="input-radio ">
-           <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
-                <div class="flex items-center gap-[0.5rem]">
-                    <input type="radio" name="debit-card" id="aitelTigo">
-                    <label for="aitelTigo" class="text-[#3b5361] text-[14px] font-medium">AirtelTigo Cash</label>
+           <div class="border-b border-slate-100 flex justify-between items-center rounded-lg hover:bg-slate-100 py-[1rem] cursor-pointer">
+                <div class="inline-flex items-center">
+                    <label class="relative flex items-center cursor-pointer" for="AirtelTigo">
+                        <input name="framework" type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all" id="AirtelTigo">
+                        <span class="absolute bg-[#3b5361] w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                    </label>
+                    <label for="AirtelTigo" class="capitalize ml-[0.5rem] text-[#3b5361]">AirtelTigo Cash</label>
                 </div>
                 <div class="flex items-center gap-[0.5rem]">
                     <div class="w-[30px] flex justify-center items-center h-[30px] border border-slate-200 rounded-[100%]">
@@ -128,27 +131,25 @@
            </div>
             <!--mtn-Card-Dropdown-->
             <div class="debit-card-content" id="debitCardContent2">
-                <div class="flex justify-center ">
-                    <a href="add-mtn-momo.html" class="open-margin no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
-                        <i class="fa-solid fa-circle-plus text-[13px]"></i>
-                        Add Mobile Money Wallet
-                    </a>
-                </div>
-                <div class="switch-input">
-                    <select name="phone" id="phoneNumber" class="bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
-                        <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
-                        <option class="text-[15px] text-slate-500" value="2">0592131219</option>
-                        <option class="text-[15px] text-slate-500" value="3">0522131333</option>
-                        <option class="text-[15px] text-slate-500" value="4">0592134512</option>
-                    </select>
+                <div class="switch-input mt-[0.5rem]">
+                    <div class="relative flex items-center text-slate-400 ">
+                        <i class="fa-solid fa-phone absolute text-[14px] left-[10px]"></i>
+                        <input type="tel" name="phone" id="phone" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]" placeholder="Enter your Number">
+                    </div>
+                    <div class="w-[180px] m-auto">
+                        <img src="files/undraw_contact-us_kcoa.svg" alt="" class="w-full">
+                    </div>
                 </div>
             </div>
         </div>
         <div id="debitCardBtn3" class="input-radio ">
-           <div class="border-b border-slate-100 flex justify-between items-center hover:bg-slate-200 p-[1rem] cursor-pointer">
-                <div class="flex items-center gap-[0.5rem]">
-                    <input type="radio" name="debit-card" id="telecel">
-                    <label for="telecel" class="text-[#3b5361] text-[14px] font-medium">Telecel Cash</label>
+           <div class="border-b border-slate-100 flex justify-between items-center rounded-lg hover:bg-slate-100 py-[1rem] cursor-pointer">
+                <div class="inline-flex items-center">
+                    <label class="relative flex items-center cursor-pointer" for="telecel">
+                        <input name="framework" type="radio" class="peer h-5 w-5 cursor-pointer appearance-none rounded-full border border-slate-300 checked:border-slate-400 transition-all" id="telecel">
+                        <span class="absolute bg-[#3b5361] w-3 h-3 rounded-full opacity-0 peer-checked:opacity-100 transition-opacity duration-200 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></span>
+                    </label>
+                    <label for="telecel" class="capitalize ml-[0.5rem] text-[#3b5361]">Telecel Cash</label>
                 </div>
                 <div class="flex items-center gap-[0.5rem]">
                     <div class="w-[30px] h-[30px] flex justify-center items-center border border-slate-200 rounded-[100%]">
@@ -161,24 +162,19 @@
            </div>
             <!--mtn-Card-Dropdown-->
             <div class="debit-card-content" id="debitCardContent3">
-                <div class="flex justify-center open-margin">
-                    <a href="add-mtn-momo.html" class="no-underline text-[13px] text-[#3b5361] flex items-center gap-[0.5rem] switch-input">
-                        <i class="fa-solid fa-circle-plus text-[13px]"></i>
-                        Add Mobile Money Wallet
-                    </a>
-                </div>
-                <div class="switch-input">
-                    <select name="phone" id="phoneNumber" class="open-margin bg-[#fefefe] border outline-slate-500 border-slate-400 rounded-full w-[100%] px-[1rem] py-[0.6rem] cursor-pointer">
-                        <option class="text-[15px] text-slate-500" disabled value="Choose your Number">Choose your Number</option>
-                        <option class="text-[15px] text-slate-500" value="2">0592131219</option>
-                        <option class="text-[15px] text-slate-500" value="3">0522131333</option>
-                        <option class="text-[15px] text-slate-500" value="4">0592134512</option>
-                    </select>
+                <div class="switch-input  mt-[0.5rem]">
+                    <div class="relative flex items-center text-slate-400 ">
+                        <i class="fa-solid fa-phone absolute text-[14px] left-[10px]"></i>
+                        <input type="tel" name="phone" id="phone" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]" placeholder="Enter your Number">
+                    </div>
+                    <div class="w-[180px] m-auto">
+                        <img src="files/undraw_contact-us_kcoa.svg" alt="" class="w-full">
+                    </div>
                 </div>
             </div>
         </div>
         <div class="bg-rose-500 py-[0.5rem] rounded-full mt-[30px]  w-[90%] m-auto">
-            <a href="mtn-pay-now.html" class=""><button  id="payNowBtn" class="w-full block text-slate-50 uppercase">Save</button></a>
+            <a href="verify-payment-type.html" class=""><button  id="payNowBtn" class="w-full block text-slate-50 uppercase">Continue</button></a>
         </div>
     </main>
 
