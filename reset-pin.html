@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Reset Pin</title>
     <script src="js/login.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
@@ -12,13 +12,8 @@
     <section class="bg-gray-100 flex items-center flex-col justify-center mt-[2rem] px-2 ">
         <form class="p-[1rem] w-full bg-white rounded-lg shadow-lg space-y-4 z-[999]" onsubmit="return validateForm()">
             <div class="text-center">
-                <h2 class="text-2xl font-semibold text-gray-800">Login</h2>
-                <p class="text-gray-600 mt-2">Welcome! Please enter your Phone number</p>
-            </div>
-            <div class="relative">
-                <!-- <label for="phone-number" class="block text-sm font-medium text-gray-700">Phone Number</label> -->
-                <i class="fa-solid fa-phone absolute top-[0.8rem] left-[1rem] text-slate-500"></i>
-                <input type="tel" id="phone-number" class=" block w-full pl-[2.5rem] pr-[1rem] py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-rose-500 focus:border-rose-500 sm:text-sm" placeholder="Enter phone number" required>
+                <h2 class="text-2xl font-semibold text-gray-800">Reset Pin</h2>
+                <p class="text-gray-600 mt-2">Please enter a new pin</p>
             </div>
             <div class="relative">
                 <!-- <label for="pin" class="block text-sm font-medium text-gray-700">Pin</label> -->
@@ -31,15 +26,9 @@
                     <input type="checkbox" id="remember-me" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded">
                     <label for="remember-me" class="ml-2 block text-sm text-gray-900">Remember me</label>
                 </div>
-                <div class="text-sm">
-                    <a href="verify-phone.html" class="font-medium text-red-400 hover:text-red-500">Forgot Pin?</a>
-                </div>
             </div>
             <div>
-                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Login</button>
-            </div>
-            <div class="text-center text-sm text-gray-600">
-                New on our platform? <a href="index.html" class="font-medium text-red-400 hover:text-red-500">Create Account</a>
+                <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Reset</button>
             </div>
         </form>
         <section class="flex justify-center items-center fixed bottom-[20px] right-0 left-0">
@@ -50,22 +39,20 @@
 
     <script>
         function validateForm() {
-            const phoneNumber = document.getElementById('phone-number').value;
             const pin = document.getElementById('pin').value;
-            // const terms = document.getElementById('terms').checked;
           
-            // Example validation: Check if phone number and pin are not empty
-            if (phoneNumber.trim() === '' || pin.trim() === '') {
+            //Check if phone number and pin are not empty
+            if (pin.trim() === '') {
               alert('Please fill in all fields.');
               return false;
           }
-             // Example validation: Check if pin is 4 digits
+             //Check if pin is 4 digits
             if (!/^\d{4}$/.test(pin)) {
               alert('Pin must be a 4-digit number.');
               return false;
           }
             // Redirect to verification page
-        window.location.href = 'home.html';
+        window.location.href = 'login.html';
             return false; // Prevent form submission
         }
 
@@ -74,7 +61,7 @@
             const eyeIcon = document.getElementById('toggleEye');
 
             if(pinInput.type == 'password') {
-                pinInput.type = 'text';
+                pinInput.type = 'tel';
                 console.log('eye-slash')
                 eyeIcon.classList.remove('fa-eye-slash');
                 eyeIcon.classList.add('fa-eye');

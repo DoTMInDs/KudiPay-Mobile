@@ -14,15 +14,17 @@
             <p class="text-center text-slate-600">Enter the verification code below</p>  
                 
             <div class="flex gap-[0.5rem]">
-                <input class="w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="text" maxlength="1" required />
-                <input class="w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="text" maxlength="1" required />
-                <input class="w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="text" maxlength="1" required />
-                <input class="w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="text" maxlength="1" required />
-                <input class="w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="text" maxlength="1" required />
-                <input class="w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="text" maxlength="1" required />
+                <input class="verification-input w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="tel" min="0" max="9" maxlength="1" required />
+                <input class="verification-input w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="tel" min="0" max="9" maxlength="1" required />
+                <input class="verification-input w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="tel" min="0" max="9" maxlength="1" required />
+                <input class="verification-input w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="tel" min="0" max="9" maxlength="1" required />
+                <input class="verification-input w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="tel" min="0" max="9" maxlength="1" required />
+                <input class="verification-input w-full max-w-[40px] shadow h-[40px] text-center text-[18px] font-medium text-[#3b5361] rounded border border-slate-300" type="tel" min="0" max="9" maxlength="1" required />
             </div>
             <hr class="w-full">
-            <button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="submit">Verify</button>
+            <a href="login.html" class="w-full">
+                <button class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-slate-800 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" type="button">Verify</button>
+            </a>
         </form>
         <section class="flex justify-center items-center fixed bottom-[20px] right-0 left-0">
             <img src="files/rpl-logo-icon@4x (1).png" alt="" class="w-[30px] mr-[0.3rem]">
@@ -32,26 +34,34 @@
 
     <script>
         // verification
-        document.addEventListener('DOMContentLoaded', function() {
-            const inputs = document.querySelectorAll('.verification-input');
-            const randomCode = Math.floor(100000 + Math.random() * 900000).toString();
-            
-            for (let i = 0; i < inputs.length; i++) {
-                inputs[i].value = randomCode[i];
-            }
+        let timeLeft = 180;  // 3 minutes in seconds
+        const timeElapseElement = document.getElementById('time-elapse');
+        const countdown = setInterval(function() {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        timeElapseElement.textContent = `Expires in ${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
         
-            let timeLeft = 40;
-            const timeElapseElement = document.getElementById('time-elapse');
-            const countdown = setInterval(function() {
-                if (timeLeft <= 0) {
-                    clearInterval(countdown);
-                    window.location.href = 'confirmation.html';
-                    window.location.href = 'login.html';
-                } else {
-                    timeElapseElement.textContent = `Expires in 00:${timeLeft < 10 ? '0' : ''}${timeLeft} secs`;
-                    timeLeft--;
-                }
-            }, 1000);
+        if (timeLeft <= 0) {
+            clearInterval(countdown);
+            window.location.href = 'login.html';
+        }
+        timeLeft--;
+        }, 1000);
+
+        
+        document.getElementById('verification-form').addEventListener('paste', (e) => {
+            e.preventDefault();
+            const pasteData = e.clipboardData.getData('text').trim().replace(/\D/g, '');
+            const digits = pasteData.split('').slice(0, 6);
+            
+            const inputs = document.querySelectorAll('.verification-input');
+            inputs.forEach((input, index) => {
+                input.value = digits[index] || '';
+            });
+            
+            // Auto-focus next empty input (optional)
+            const emptyInput = [...inputs].find(input => !input.value);
+            if (emptyInput) emptyInput.focus();
         });
   
     </script>
