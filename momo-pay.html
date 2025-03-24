@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <title>Invoice detail</title>
+    <meta name="description" content="Invoice details">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[1rem] px-[1rem] z-[999]">
+        <a href="invoice-detail.html" class="cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
+            <i class="fa-solid fa-chevron-left text-[#3b5361] text-[20px]"></i>
+        </a>
+        <h1 class="text-[#3b5361] font-semibold text-[16px]">Make Payment</h1>
+        <p class=""></p>
+    </nav>
+    <main class=" flex justify-center items-center p-4">
+        <section class="mt-[50px] w-[100%] h-[100%]">
+            <div class="mt-[1rem] flex justify-between items-center">
+                <div class="flex gap-[0.3rem] items-center">
+                    <div class="w-[50px] h-[50px] border border-slate-200 rounded-[100%]">
+                        <img src="files/mtn-momo.jpg" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                    </div>
+                    <div class="flex flex-col p-0 m-0">
+                        <p class="text-[14px] font-bold text-slate-600 p-0 m-0">KemyPay Wallet</p>
+                        <p class="text-[12px] font-bold text-slate-400 p-0 m-0">MTN MoMo</p>
+                    </div>
+                </div>
+                <p class="text-rose-500 pr-[0.5rem]"><a href="choose-payment.html">Change</a></p>
+            </div>
+
+            <div class="mt-[1rem]">
+                <form action="" method="post" class="w-[100%] flex flex-col gap-[1rem]">
+                    <div class="relative">
+                        <i class="fa fa-solid fa-phone text-slate-400 h-5 w-5 ml-1 absolute top-3.5 left-2.5 text-slate-500"></i>
+                        <select
+                            class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-full pl-10 pr-8 py-3 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md appearance-none cursor-pointer">
+                            <option class="hover:bg-slate-100" value="num1">05578814721</option>
+                            <option class="hover:bg-slate-100" value="num2">0244751234</option>
+                            <option class="hover:bg-slate-100" value="num3">0444741634</option>
+                        </select>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.2" stroke="currentColor" class="h-5 w-5 ml-1 absolute top-3.5 right-2.5 text-slate-700">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15 12 18.75 15.75 15m-7.5-6L12 5.25 15.75 9" />
+                        </svg>
+                    </div>
+                    <div class="flex gap-[0.5rem] justify-center items-center pl-[1rem] border border-slate-200 bg-slate-50 rounded-[35px]">
+                        <input type="number" name="cash" id="cash" value="GHS 1000" disabled placeholder="GHS 1000" class="w-[100%] text-[14px] font-bold bg-transparent p-[0.7rem] outline-none">
+                    </div>
+                    <p class="text-red-400 text-center py-[0.5rem]"><a href="#!">Need help with payment?</a></p>
+                    <a href="verify-payment.html" class="w-full block">
+                        <button class="inline-block bg-rose-500 hover:bg-rose-600 py-[0.8rem] rounded-full w-[90%] m-auto bottom-[20px] text-slate-50 fixed right-0 left-0">Pay Now</button>
+                    </a>
+                </form>
+            </div>
+        
+        </section>
+    </main>
+</body>
+</html>

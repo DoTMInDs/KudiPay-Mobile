@@ -12,7 +12,6 @@
     --font-weight-normal: 500;
     --font-weight-large: 700;
 }
-
 .p-text-after::after{
     content: "";
     width: 100%;
@@ -28,25 +27,25 @@
     overflow: hidden;
     transition: all 0.3s ease-in-out;
 }
-
 .card-active {
     max-height: 500px; /* Adjust based on tallest content */
     opacity: 1;
     transition: all 0.3s ease-in-out;
 }
-
 .switch-input {
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.3s ease-in-out;
 }
-
 .card-active .switch-input {
     opacity: 1;
     transform: translateY(0);
     transition: all 0.3s ease-in-out 0.2s; /* Add slight delay */
 }
-
+#toggleAnotherPayment {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
 .filter-invoice{
     display: none;
 }

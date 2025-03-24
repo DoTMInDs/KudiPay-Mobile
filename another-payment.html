@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <title>Invoice detail</title>
+    <meta name="description" content="Invoice details">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[1rem] px-[1rem] z-[999]">
+        <a href="invoice-detail.html" class="cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
+            <i class="fa-solid fa-chevron-left text-[#3b5361] text-[20px]"></i>
+        </a>
+        <h1 class="text-[#3b5361] font-semibold text-[16px]">Make Payment</h1>
+        <p class=""></p>
+    </nav>
+    <main class=" flex justify-center items-center p-4">
+        <section class="mt-[50px] w-[100%] h-[100%]">
+            <div class="mt-[1rem] flex justify-between items-center">
+                <div class="flex gap-[0.3rem] items-center">
+                    <div class="w-[50px] h-[50px] border border-slate-200 rounded-[100%]">
+                        <img src="files/mtn-momo.jpg" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                    </div>
+                    <div class="flex flex-col p-0 m-0">
+                        <p class="text-[14px] font-bold text-slate-600 p-0 m-0">KemyPay Wallet</p>
+                        <p class="text-[12px] font-bold text-slate-400 p-0 m-0">MTN MoMo</p>
+                    </div>
+                </div>
+                <p class="text-rose-500 pr-[0.5rem]"><a href="choose-payment.html">Change</a></p>
+            </div>
+
+            <div class="mt-[1rem]">
+                <form action="" method="post" class="w-[100%] flex flex-col gap-[1rem]">
+                    <div class="flex gap-[0.5rem] justify-center items-center pl-[1rem] border border-slate-200 bg-slate-50 rounded-[35px]">
+                        <i class="fa fa-solid fa-phone text-slate-400"></i>
+                        <input type="tel" name="phone" id="phone" placeholder="Enter your number" class="w-[100%] text-[14px] font-medium bg-transparent p-[0.7rem] outline-none">
+                    </div>
+                    <div class="flex gap-[0.5rem] justify-center items-center pl-[1rem] border border-slate-200 bg-slate-50 rounded-[35px]">
+                        <input type="number" name="cash" id="cash" value="GHS 1000" disabled placeholder="GHS 1000" class="w-[100%] text-[14px] font-bold bg-transparent p-[0.7rem] outline-none">
+                    </div>
+                    <p class="text-red-400 text-center py-[0.5rem]"><a href="#!">Need help with payment?</a></p>
+                    <button class="inline-block bg-rose-500 py-[0.5rem] rounded-full w-[90%] m-auto bottom-[20px] fixed right-0 left-0">
+                        <a href="verify-payment.html" class="no-underline text-white uppercase font-bold text-[13px]">pay (GHS 1000)</a>
+                    </button>
+                </form>
+            </div>
+        
+        </section>
+    </main>
+</body>
+</html>

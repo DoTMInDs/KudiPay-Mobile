@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <title>Invoice detail</title>
+    <meta name="description" content="Invoice details">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[1rem] px-[1rem] z-[999]">
+        <a href="invoice-detail.html" class="cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
+            <i class="fa-solid fa-chevron-left text-[#3b5361] text-[20px]"></i>
+        </a>
+        <h1 class="text-[#3b5361] font-semibold text-[16px] capitalize">Saved payment methods</h1>
+        <p class=""></p>
+    </nav>
+    <main class="w-[100%] md:w-[80%] mt-[80px] mb-[20px] md:px-0 px-[1rem]">
+        <div class="mt-[1rem]">
+            <ul class="flex flex-col gap-[0.5rem]">
+                 <li class="">
+                     <a href="momo-pay.html" aria-label="momo pay" class="flex justify-between p-[0.5rem] items-center bg-gray-50 border border-slate-200 rounded-full">
+                        <div class="flex items-center gap-[0.5rem]">
+                            <p class="w-[30px] h-[30px] border border-slate-200 rounded-[100%] flex justify-center items-center">
+                                <img src="files/mtn-momo.jpg" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                            </p>
+                            <p class="text-[14px] text-slate-700 font-bold">05578814721</p>
+                        </div>
+                        <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M5.32601 2.333C5.23878 2.4223 5.18994 2.54217 5.18994 2.667C5.18994 2.79183 5.23878 2.91171 5.32601 3.001L10.199 8L5.32601 12.998C5.23878 13.0873 5.18994 13.2072 5.18994 13.332C5.18994 13.4568 5.23878 13.5767 5.32601 13.666C5.3684 13.7095 5.41909 13.7442 5.47508 13.7678C5.53108 13.7914 5.59123 13.8036 5.65201 13.8036C5.71278 13.8036 5.77294 13.7914 5.82893 13.7678C5.88492 13.7442 5.93561 13.7095 5.97801 13.666L11.16 8.349C11.251 8.25563 11.302 8.13039 11.302 8C11.302 7.86961 11.251 7.74437 11.16 7.651L5.97801 2.334C5.93561 2.29046 5.88492 2.25585 5.82893 2.23222C5.77294 2.20859 5.71278 2.19641 5.65201 2.19641C5.59123 2.19641 5.53108 2.20859 5.47508 2.23222C5.41909 2.25585 5.3684 2.29046 5.32601 2.334V2.333Z" fill="#3B5361"/>
+                       </svg>
+                     </a>
+                 </li>
+                 <li>
+                     <a href="momo-pay.html" aria-label="momo pay" class="flex justify-between p-[0.5rem] items-center bg-gray-50 border border-slate-200 rounded-full">
+                        <div class="flex items-center gap-[0.5rem]">
+                            <p class="w-[30px] h-[30px] border border-slate-200 rounded-[100%] flex justify-center items-center">
+                                <img src="files/T-Cash Red.png" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                            </p>
+                            <p class="text-[14px] text-slate-700 font-bold">0204751234</p>
+                        </div>
+                        <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.32601 2.333C5.23878 2.4223 5.18994 2.54217 5.18994 2.667C5.18994 2.79183 5.23878 2.91171 5.32601 3.001L10.199 8L5.32601 12.998C5.23878 13.0873 5.18994 13.2072 5.18994 13.332C5.18994 13.4568 5.23878 13.5767 5.32601 13.666C5.3684 13.7095 5.41909 13.7442 5.47508 13.7678C5.53108 13.7914 5.59123 13.8036 5.65201 13.8036C5.71278 13.8036 5.77294 13.7914 5.82893 13.7678C5.88492 13.7442 5.93561 13.7095 5.97801 13.666L11.16 8.349C11.251 8.25563 11.302 8.13039 11.302 8C11.302 7.86961 11.251 7.74437 11.16 7.651L5.97801 2.334C5.93561 2.29046 5.88492 2.25585 5.82893 2.23222C5.77294 2.20859 5.71278 2.19641 5.65201 2.19641C5.59123 2.19641 5.53108 2.20859 5.47508 2.23222C5.41909 2.25585 5.3684 2.29046 5.32601 2.334V2.333Z" fill="#3B5361"/>
+                        </svg>
+                     </a>
+                 </li>
+            </ul>
+         </div>
+         <div class="flex justify-end mt-[1rem]" id="toggleAnotherPayBtn">
+            <h1 class="text-blue-800 underline font-semibold text-[15px] capitalize">
+                Another Payment
+                <i class="fa-solid fa-chevron-down"></i>
+            </h1>
+         </div>
+        <div id="toggleAnotherPayment" class="flex flex-col gap-[0.5rem] mt-[20px] hidden">
+            <a href="another-payment.html" aria-label="another payment" class="flex justify-between p-[0.5rem] items-center bg-gray-50 border border-slate-200 rounded-full">
+                <div class="flex items-center gap-[0.5rem] ">
+                    <img src="files/mtn-momo.jpg" alt="" class="w-[30px] h-[30px] border border-slate-200 rounded-[100%] object-cover object-center rounded-[100%]">
+                    <p class="text-[15px] text-slate-500 font-bold">MTN MoMo</p>
+                </div>
+                <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.32601 2.333C5.23878 2.4223 5.18994 2.54217 5.18994 2.667C5.18994 2.79183 5.23878 2.91171 5.32601 3.001L10.199 8L5.32601 12.998C5.23878 13.0873 5.18994 13.2072 5.18994 13.332C5.18994 13.4568 5.23878 13.5767 5.32601 13.666C5.3684 13.7095 5.41909 13.7442 5.47508 13.7678C5.53108 13.7914 5.59123 13.8036 5.65201 13.8036C5.71278 13.8036 5.77294 13.7914 5.82893 13.7678C5.88492 13.7442 5.93561 13.7095 5.97801 13.666L11.16 8.349C11.251 8.25563 11.302 8.13039 11.302 8C11.302 7.86961 11.251 7.74437 11.16 7.651L5.97801 2.334C5.93561 2.29046 5.88492 2.25585 5.82893 2.23222C5.77294 2.20859 5.71278 2.19641 5.65201 2.19641C5.59123 2.19641 5.53108 2.20859 5.47508 2.23222C5.41909 2.25585 5.3684 2.29046 5.32601 2.334V2.333Z" fill="#3B5361"/>
+                </svg>
+            </a>
+            <a href="another-payment.html" aria-label="another payment" class="flex justify-between p-[0.5rem] items-center bg-gray-50 border border-slate-200 rounded-full">
+                <div class="flex items-center gap-[0.5rem]">
+                    <img src="files/airteltigo.webp" alt="" class="w-[30px] h-[30px] border border-slate-200 rounded-[100%] object-contain object-center ">
+                    <p class="text-[15px] text-slate-500 font-bold">AirtelTigo Cash</p>
+                </div>
+                <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.32601 2.333C5.23878 2.4223 5.18994 2.54217 5.18994 2.667C5.18994 2.79183 5.23878 2.91171 5.32601 3.001L10.199 8L5.32601 12.998C5.23878 13.0873 5.18994 13.2072 5.18994 13.332C5.18994 13.4568 5.23878 13.5767 5.32601 13.666C5.3684 13.7095 5.41909 13.7442 5.47508 13.7678C5.53108 13.7914 5.59123 13.8036 5.65201 13.8036C5.71278 13.8036 5.77294 13.7914 5.82893 13.7678C5.88492 13.7442 5.93561 13.7095 5.97801 13.666L11.16 8.349C11.251 8.25563 11.302 8.13039 11.302 8C11.302 7.86961 11.251 7.74437 11.16 7.651L5.97801 2.334C5.93561 2.29046 5.88492 2.25585 5.82893 2.23222C5.77294 2.20859 5.71278 2.19641 5.65201 2.19641C5.59123 2.19641 5.53108 2.20859 5.47508 2.23222C5.41909 2.25585 5.3684 2.29046 5.32601 2.334V2.333Z" fill="#3B5361"/>
+                </svg>
+            </a>
+            <a href="another-payment.html" aria-label="another payment" class="flex justify-between p-[0.5rem] items-center bg-gray-50 border border-slate-200 rounded-full">
+                <div class="flex items-center gap-[0.5rem]">
+                    <img src="files/T-Cash Red.png" alt="" class="w-[30px] h-[30px] border border-slate-200 rounded-[100%] object-contain object-center ">
+                    <p class="text-[15px] text-slate-500 font-bold">Telecel Cash</p>
+                </div>
+                <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.32601 2.333C5.23878 2.4223 5.18994 2.54217 5.18994 2.667C5.18994 2.79183 5.23878 2.91171 5.32601 3.001L10.199 8L5.32601 12.998C5.23878 13.0873 5.18994 13.2072 5.18994 13.332C5.18994 13.4568 5.23878 13.5767 5.32601 13.666C5.3684 13.7095 5.41909 13.7442 5.47508 13.7678C5.53108 13.7914 5.59123 13.8036 5.65201 13.8036C5.71278 13.8036 5.77294 13.7914 5.82893 13.7678C5.88492 13.7442 5.93561 13.7095 5.97801 13.666L11.16 8.349C11.251 8.25563 11.302 8.13039 11.302 8C11.302 7.86961 11.251 7.74437 11.16 7.651L5.97801 2.334C5.93561 2.29046 5.88492 2.25585 5.82893 2.23222C5.77294 2.20859 5.71278 2.19641 5.65201 2.19641C5.59123 2.19641 5.53108 2.20859 5.47508 2.23222C5.41909 2.25585 5.3684 2.29046 5.32601 2.334V2.333Z" fill="#3B5361"/>
+                </svg>
+            </a>
+            <a href="debit-card-pay.html" aria-label="another payment" class="flex justify-between p-[0.5rem] items-center bg-gray-50 border border-slate-200 rounded-full">
+                <div class="flex items-center gap-[0.5rem]">
+                    <img src="files/Visa-Logo-2006.png" alt="" class="w-[30px] h-[30px] bg-white border border-slate-200 rounded-[100%] object-contain object-center ">
+                    <p class="text-[15px] text-slate-500 font-bold">Debit Card</p>
+                </div>
+                <svg width="25" height="25" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.32601 2.333C5.23878 2.4223 5.18994 2.54217 5.18994 2.667C5.18994 2.79183 5.23878 2.91171 5.32601 3.001L10.199 8L5.32601 12.998C5.23878 13.0873 5.18994 13.2072 5.18994 13.332C5.18994 13.4568 5.23878 13.5767 5.32601 13.666C5.3684 13.7095 5.41909 13.7442 5.47508 13.7678C5.53108 13.7914 5.59123 13.8036 5.65201 13.8036C5.71278 13.8036 5.77294 13.7914 5.82893 13.7678C5.88492 13.7442 5.93561 13.7095 5.97801 13.666L11.16 8.349C11.251 8.25563 11.302 8.13039 11.302 8C11.302 7.86961 11.251 7.74437 11.16 7.651L5.97801 2.334C5.93561 2.29046 5.88492 2.25585 5.82893 2.23222C5.77294 2.20859 5.71278 2.19641 5.65201 2.19641C5.59123 2.19641 5.53108 2.20859 5.47508 2.23222C5.41909 2.25585 5.3684 2.29046 5.32601 2.334V2.333Z" fill="#3B5361"/>
+                </svg>
+            </a>
+            <!-- <p class="mt-[0.5rem] text-center hover:underline"><a href="index.html" class="text-blue-400">Cancel Payment</a></p> -->
+        </div>
+    </main>
+
+   <script>
+    const toggleBtn = document.getElementById('toggleAnotherPayBtn');
+    const paymentSection = document.getElementById('toggleAnotherPayment');
+
+    if (toggleBtn && paymentSection) {
+        toggleBtn.addEventListener('click', () => {
+            paymentSection.classList.toggle('hidden');
+            // Optional: Toggle icon between + and -
+            const icon = toggleBtn.querySelector('i');
+            icon.classList.toggle('fa-chevron-up');
+            icon.classList.toggle('fa-chevron-down');
+        });
+    }
+   </script>
+</body>
+</html>
