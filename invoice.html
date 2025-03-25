@@ -51,13 +51,13 @@
                 </label>
             </div> 
         -->
-        <ul class="px-[1rem] my-[1rem] flex gap-[0.5rem]">
-          <li class="capitalize font-semibold text-[14px] text-slate-50 bg-[#3b5361] hover:bg-slate-500 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200">overdue</li>  
-          <li class="capitalize font-semibold text-[14px] text-slate-500 bg-slate-100 hover:bg-slate-200 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200">expired</li>  
-          <li class="capitalize font-semibold text-[14px] text-slate-500 bg-slate-100 hover:bg-slate-200 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200">paid</li>  
+        <ul class="px-[1rem] my-[1rem] flex gap-[0.5rem]" id="statusTabs">
+          <li class="li-element capitalize font-semibold text-[14px] text-slate-50 bg-[#3b5361] hover:bg-slate-200 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200">overdue</li>  
+          <li class="li-element capitalize font-semibold text-[14px] text-slate-500 bg-slate-100 hover:bg-slate-200 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200">expired</li>  
+          <li class="li-element capitalize font-semibold text-[14px] text-slate-500 bg-slate-100 hover:bg-slate-200 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200">paid</li>  
         </ul>
        
-        <ul>
+        <ul id="invoiceList">
             <li class="px-[0.5rem] py-[1rem] hover:bg-slate-50 transition duration-300 border-t border-rose-200 border-opacity-50">
                 <a href="invoice-detail.html" class="">
                     <div class="flex justify-between items-center border-b border-slate-100 mb-1 px-[0.5rem]">
@@ -77,7 +77,9 @@
                         </div>
                         <div class="flex items-center justify-between ">
                             <p class="text-xs text-slate-700">Amount: </p>
-                            <p class="text-xs text-nowrap text-slate-600">GHS 3,000.00</p>
+                            <p class="text-xs text-nowrap text-slate-600">GHS 3,000.00
+                                <small class="hidden">overdue</small>
+                            </p>
                         </div>
                     </div>
                 </a>
@@ -101,7 +103,9 @@
                         </div>
                         <div class="flex items-center justify-between ">
                             <p class="text-xs text-slate-700">Amount: </p>
-                            <p class="text-xs text-nowrap text-slate-600">GHS 1,500.00</p>
+                            <p class="text-xs text-nowrap text-slate-600">GHS 1,500.00
+                                <small class="hidden">paid</small>
+                            </p>
                         </div>
                     </div>
                 </a>
@@ -125,7 +129,9 @@
                         </div>
                         <div class="flex items-center justify-between ">
                             <p class="text-xs text-slate-700">Amount: </p>
-                            <p class="text-xs text-nowrap text-slate-600">GHS 800.00</p>
+                            <p class="text-xs text-nowrap text-slate-600">GHS 800.00
+                                <small class="hidden">overdue</small>
+                            </p>
                         </div>
                     </div>
                 </a>
@@ -149,7 +155,9 @@
                         </div>
                         <div class="flex items-center justify-between ">
                             <p class="text-xs text-slate-700">Amount: </p>
-                            <p class="text-xs text-nowrap text-slate-600">GHS 800.00</p>
+                            <p class="text-xs text-nowrap text-slate-600">GHS 800.00
+                                <small class="hidden">expired</small>
+                            </p>
                         </div>
                     </div>
                 </a>
@@ -200,44 +208,50 @@
     </footer>
 
     <script>
-        const openSearch = document.getElementById('openSearch');
-        const closeSearch = document.getElementById('closeSearch');
-        const mobileInput = document.getElementById('mobileInput');
-        openSearch.addEventListener('click', () => {
-            mobileInput.classList.toggle('search-input');
-            document.getElementById('search').focus()
-        })
-        closeSearch.addEventListener('click', () => {
-            mobileInput.classList.toggle('search-input');
+        document.addEventListener('DOMContentLoaded', () => {
+            // Get elements
+            const tabs = document.querySelectorAll('#statusTabs li');
+            const invoiceItems = document.querySelectorAll('#invoiceList > li'); // Fixed selector
+    
+            // Set initial state
+            const initialTab = document.querySelector('#statusTabs li:first-child');
+            initialTab.classList.add('bg-[#3b5361]', 'text-slate-50');
+            initialTab.classList.remove('bg-slate-100', 'text-slate-500', 'hover:bg-slate-200');
+            filterItems('overdue');
+    
+            // Add click handlers
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active state from all tabs
+                    tabs.forEach(t => {
+                        t.classList.remove('bg-[#3b5361]', 'text-slate-50');
+                        t.classList.add('bg-slate-100', 'text-slate-500', 'hover:bg-slate-200');
+                    });
+    
+                    // Add active state to clicked tab
+                    tab.classList.add('bg-[#3b5361]', 'text-slate-50');
+                    tab.classList.remove('bg-slate-100', 'text-slate-500', 'hover:bg-slate-200');
+    
+                    // Get filter type and filter items
+                    const filterType = tab.textContent.trim().toLowerCase();
+                    filterItems(filterType);
+                });
+            });
+    
+            function filterItems(status) {
+                invoiceItems.forEach(item => {
+                    // Get the status from hidden small element
+                    const itemStatus = item.querySelector('small').textContent.trim().toLowerCase();
+                    
+                    // Toggle visibility using Tailwind class instead of inline style
+                    if (itemStatus === status) {
+                        item.classList.remove('hidden');
+                    } else {
+                        item.classList.add('hidden');
+                    }
+                });
+            }
         });
-
-         // Toggle Filter Panel
-        const filterButton = document.getElementById('filterButton');
-        const filterPanel = document.getElementById('filterPanel');
-        const filterIcon = filterButton.querySelector('i');
- 
-        filterButton.addEventListener('click', () => {
-             // Toggle panel scale and opacity
-            filterPanel.classList.toggle('scale-95');
-            filterPanel.classList.toggle('scale-100');
-            filterPanel.classList.toggle('opacity-0');
-            filterPanel.classList.toggle('opacity-100');
-             
-             // Toggle chevron icon
-             filterIcon.classList.toggle('fa-filter');
-             filterIcon.classList.toggle('fa-chevron-up');
-         });
- 
-         // Close panel when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!filterButton.contains(e.target) && !filterPanel.contains(e.target)) {
-                 filterPanel.classList.add('scale-95', 'opacity-0');
-                 filterPanel.classList.remove('scale-100', 'opacity-100');
-                 filterIcon.classList.add('fa-filter');
-                 filterIcon.classList.remove('fa-chevron-up');
-             }
-         });
-
     </script>
 </body>
 </html>
