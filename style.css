@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 :root{
     --primary-font: "montserrat", sans-serif; 
     --secondary-font: "roboto", sans-serif; 
