@@ -27,24 +27,24 @@
     <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[60px] mb-[60px] rounded-t-[35px] bg-white shadow border py-4">
         <article class="my-[0.5rem] flex justify-between items-center w-full mb-[1rem]">
             <h1 class="text-[#3b5361] font-medium md:text-[36px] text-[18px] ml-[0.3rem]">Active Invoices</h1>
-            <p class="mr-[0.5rem] text-[14px] font-semibold w-[25px] h-[25px] text-[#3b5361]">
+            <p id="slideCounter" class="mr-[0.5rem] text-[14px] font-semibold w-[25px] h-[25px] text-[#3b5361]">
                 1/3
-                </p>
+            </p>
         </article>
         <section class="swiper mySwiper w-full">
             <ul class="swiper-wrapper">
-                <li class="swiper-slide relative w-full rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
+                <li class="swiper-slide max-w-[280px] relative rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm">
                     <div class="no-underline relative p-[0.5rem]">
                         <div class="flex gap-[1rem] items-center my-[0.5rem]">
                             <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
                                 <i class="fa fa-regilar fa-file-lines text-slate-50 w-[24px] h-[24px] rounded-full flex justify-center items-center bg-[#3b5361]"></i>
                                 Invoice Number:
                             </span> 
-                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] text-[13px]">AM - 1</a>
+                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] truncate text-[13px]">AM - 1</a>
                         </div>
-                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                        <div class="uppercase flex gap-[1rem] my-[0.5rem]">
                             <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
-                            <span class="font-regular text-slate-700 text-[13px]">School Fees </span> 
+                            <span class="font-regular truncate text-slate-700 text-[13px]">School Fees </span> 
                         </div>
                         <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
                             <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
@@ -58,18 +58,18 @@
                         </a>
                     </div>
                 </li>
-                <li class="swiper-slide relative w-full rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
+                <li class="swiper-slide max-w-[280px] w-[100%] relative rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
                     <div class="no-underline relative p-[0.5rem]">
                         <div class="flex gap-[1rem] items-center my-[0.5rem]">
                             <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
                                 <i class="fa fa-regilar fa-file-lines text-slate-50 w-[24px] h-[24px] rounded-full flex justify-center items-center bg-[#3b5361]"></i>
                                 Invoice Number:
                             </span> 
-                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] text-[13px]">AM - 2</a>
+                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] truncate text-[13px]">AM - 2</a>
                         </div>
-                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                        <div class="uppercase my-[0.5rem] flex gap-[1rem]">
                             <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
-                            <span class="font-regular text-slate-700 text-[13px]">KNUST Entry Registration </span> 
+                            <span class="font-regular truncate text-slate-700 text-[13px]">KNUST Entry Registration </span> 
                         </div>
                         <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
                             <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
@@ -83,18 +83,18 @@
                         </a>
                     </div>
                 </li>
-                <li class="swiper-slide relative w-full rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
+                <li class="swiper-slide max-w-[280px] relative rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
                     <div class="no-underline relative p-[0.5rem]">
                         <div class="flex gap-[1rem] items-center my-[0.5rem]">
                             <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
                                 <i class="fa fa-regilar fa-file-lines text-slate-50 w-[24px] h-[24px] rounded-full flex justify-center items-center bg-[#3b5361]"></i>
                                 Invoice Number:
                             </span> 
-                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] text-[13px]">AM - 3</a>
+                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] truncate text-[13px]">AM - 3</a>
                         </div>
-                        <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                        <div class="uppercase flex gap-[1rem]  my-[0.5rem]">
                             <span class="font-regular text-slate-700 text-[13px]">Description: </span> 
-                            <span class="font-regular text-slate-700 text-[13px]">Auction Exports </span> 
+                            <span class="font-regular truncate text-slate-700 text-[13px]">Auction Exports </span> 
                         </div>
                         <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
                             <span class="font-regular text-slate-700 text-[13px]">Amount: </span> 
@@ -153,7 +153,7 @@
     </main>
 
     <!-- Footer-Scetion -->
-    <<footer class="bg-white fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
+    <footer class="bg-white fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
         <div class="w-full flex justify-between items-center px-[1rem]">
             <div class="menu-icons">
                 <a href="home.html" class="no-underline text-[#3b5361] flex flex-col items-center hover:text-blue-400">
@@ -199,19 +199,26 @@
         const swiper = new Swiper('.mySwiper', {
             direction: 'horizontal',
             loop: false,
-            slidesPerView: 'auto', 
-            spaceBetween: 10,      
-            freeMode: true,        
-            mousewheel: true,      
-            touchRatio: 1,         
-            // Responsive breakpoints
+            slidesPerView: 'auto',
+            spaceBetween: 16,
+            freeMode: {
+                sticky: true,
+                momentumBounce: false
+            },
+            mousewheel: true,
+            touchRatio: 1,
             breakpoints: {
                 640: {
                     slidesPerView: 2,
                     spaceBetween: 10
+                },
+                1024: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 32
                 }
-            }
+            },
         });
+    
     </script>
 </body>
 </html>
