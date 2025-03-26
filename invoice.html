@@ -31,11 +31,11 @@
                 </svg>
                 <input id="search" type="search" name="search" placeholder="Search for Invoices..." class="w-full  py-[0.5rem] px-[0.5rem] bg-transparent outline-none">
             </div>
-            <ul class="mt-[1rem] flex gap-[0.5rem]" id="statusTabs">
-                <li class="cursor-pointer  font-semibold text-[14px] text-slate-50 bg-[#3b5361] hover:bg-slate-200 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"><button  class="capitalize" type="button">overdue</button></li>  
-                <li class="cursor-pointer  font-semibold text-[14px] text-slate-500 bg-slate-100 hover:bg-slate-200 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"><button class="capitalize"  type="button">expired</button></li>  
-                <li class="cursor-pointer  font-semibold text-[14px] text-slate-500 bg-slate-100 hover:bg-slate-200 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"><button class="capitalize"  type="button">paid</button></li>  
-            </ul>
+            <div class="mt-[1rem] flex gap-[0.5rem]">
+                <button class="capitalize cursor-pointer font-semibold text-[14px] text-slate-50 bg-[#3b5361] border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200" type="button">overdue</button> 
+                <button class="capitalize cursor-pointer font-semibold text-[14px] text-slate-500 bg-slate-100 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"  type="button">expired</button>
+                <button class="capitalize cursor-pointer font-semibold text-[14px] text-slate-500 bg-slate-100 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"  type="button">paid</button> 
+            </div>
         </form>
     </nav>
 
@@ -189,28 +189,19 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Get elements
-            const tabs = document.querySelectorAll('#statusTabs li');
-            const initialTab = document.querySelector('#statusTabs li:first-child');
-    
-            // Set initial state
-            initialTab.classList.add('bg-[#3b5361]', 'text-slate-50');
-            initialTab.classList.remove('bg-slate-100', 'text-slate-500', 'hover:bg-slate-200');
-    
-            // Add click handlers
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    // Remove active state from all tabs
-                    tabs.forEach(t => {
-                        t.classList.remove('bg-[#3b5361]', 'text-slate-50');
-                        t.classList.add('bg-slate-100', 'text-slate-500', 'hover:bg-slate-200');
+            const buttons = document.getElementsByTagName('button');
+            buttons[0].classList.add('bg-[#3b5361]', 'text-slate-50');
+            Array.from(buttons).forEach(button => {
+                button.onclick = () => {
+                    // Reset all buttons
+                    Array.from(buttons).forEach(btn => {
+                        btn.classList.remove('bg-[#3b5361]', 'text-slate-50');
+                        btn.classList.add('bg-slate-100', 'text-slate-500');
                     });
-    
-                    // Add active state to clicked tab
-                    tab.classList.add('bg-[#3b5361]', 'text-slate-50');
-                    tab.classList.remove('bg-slate-100', 'text-slate-500', 'hover:bg-slate-200');
-    
-                });
+                    // Set clicked button
+                    button.classList.add('bg-[#3b5361]', 'text-slate-50');
+                    button.classList.remove('bg-slate-100', 'text-slate-500');
+                };
             });
         });
     </script>
