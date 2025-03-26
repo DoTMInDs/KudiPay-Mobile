@@ -11,33 +11,24 @@
 </head>
 <body>
       <!--nav-section-->
-    <nav class="bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.5rem] px-[1rem] z-[999]  md:w-[60%] m-auto w-[100%]">
-        <div class="relative flex justify-between items-center w-full">
-            <h1 class="font-semibold text-[#3b5361] text-[16px]">Explore KemyPay</h1>
-            <div class="ion-icon-wrapper text-[#3b5361] flex items-center gap-[1rem]">
-                <div id="openSearch" class="no-underline text-[#3b5361] text-[20px] cursor-pointer">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="#3b5361" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <a href="#!" aria-label="notification" class="cursor-pointer no-underline text-[#3b5361] text-[20px]">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="#3b5361"/>
-                    </svg>                    
-                </a>
-            </div>
-            <form action="" method="get" class="mobile-form-wrapper mt-[0.1rem] bg-[#fefefe]">
-                <div class="mobile-input-search" id="mobileInput">
-                    <p class="close-search mr-[0.5rem]" id="closeSearch"><i class="fa-solid fa-chevron-left text-[18px] text-[#3b5361] cursor-pointer" ></i></p>
-                    <div class="flex items-center w-[100%] px-[1rem] border border-slate-300 rounded-full">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="#3b5361" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <input id="search" type="search" name="search" placeholder="Search RPLShop..." class="w-full  py-[0.5rem] px-[0.5rem] bg-transparent outline-none">
-                    </div>
-                </div>
-            </form>
+      <nav class="bg-white flex flex-col w-full fixed top-0 right-0 left-0 py-[0.5rem] px-[1rem] z-[999] md:w-[60%] m-auto w-[100%]">
+        <div class="flex justify-between items-center w-full">
+            <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[16px]">Explore KemyPay</h1>
+            <a href="notification.html" aria-label="notification" class="no-underline text-[#3b5361] text-[20px] relative inline-flex">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="#3b5361"/>
+                </svg> 
+                <span class="absolute top-[3px] right-[2px] grid min-h-[18px] min-w-[18px] translate-x-2/4 -translate-y-2/4 place-items-center rounded-full bg-red-500 py-py-0.5 px-1 text-xs font-medium leading-none text-white content-['']">
+                    5
+                </span>                     
+            </a>
         </div>
+        <form action="" method="get" class="mt-[0.5rem] flex items-center w-[100%] px-[1rem] bg-slate-50 border border-slate-300 border-opacity-20 rounded-full">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="#3b5361" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <input id="search" type="search" name="search" placeholder="Search for Invoices..." class="w-full  py-[0.5rem] px-[0.5rem] bg-transparent outline-none">
+        </form>
     </nav>
 
     <main class="w-[100%] md:w-[60%] m-auto md:px-0 px-[1rem] mt-[80px]">
@@ -93,18 +84,5 @@
         </div>
     </footer>
 
-    <script>
-        const openSearch = document.getElementById('openSearch');
-        const closeSearch = document.getElementById('closeSearch');
-        const mobileInput = document.getElementById('mobileInput');
-
-        openSearch.addEventListener('click', () => {
-            mobileInput.classList.toggle('search-input');
-            document.getElementById('search').focus()
-        })
-        closeSearch.addEventListener('click', () => {
-            mobileInput.classList.toggle('search-input');
-        })
-    </script>
 </body>
 </html>
