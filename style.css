@@ -76,6 +76,8 @@ html {
 .mobile-input-search.search-input{
     display: flex;
 }
+/* invoice-detail-3-dots-dropdown */
+
 /* Profile-Edit */
 #openEditContainer{
     position: fixed;
@@ -95,7 +97,6 @@ html {
                 height 200ms ,
                 opacity 200ms ;
 }
-
 
 /* Profile-Settings */
 #openSettingsContainer{
