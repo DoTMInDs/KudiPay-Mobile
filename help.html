@@ -11,9 +11,9 @@
 </head>
 <body>
       <!--nav-section-->
-      <nav class="bg-white flex flex-col w-full fixed top-0 right-0 left-0 py-[0.5rem] px-[1rem] z-[999] md:w-[60%] m-auto w-[100%]">
+    <nav class="bg-white flex flex-col w-full fixed top-0 right-0 left-0 py-[0.5rem] px-[1rem] z-[999] md:w-[60%] m-auto w-[100%]">
         <div class="flex justify-between items-center w-full">
-            <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[16px]">Explore KemyPay</h1>
+            <h1 class="text-[#3b5361] font-semibold md:text-[36px] text-[16px]">FAQs</h1>
             <a href="notification.html" aria-label="notification" class="no-underline text-[#3b5361] text-[20px] relative inline-flex">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 8C4 5.87827 4.84285 3.84344 6.34315 2.34315C7.84344 0.842855 9.87827 0 12 0C14.1217 0 16.1566 0.842855 17.6569 2.34315C19.1571 3.84344 20 5.87827 20 8V12.697L22 15.697V20H16.389C16.1615 20.9937 15.6036 21.8808 14.8064 22.5162C14.0091 23.1515 13.0199 23.4975 12.0005 23.4975C10.9811 23.4975 9.99185 23.1515 9.19465 22.5162C8.39744 21.8808 7.83946 20.9937 7.612 20H2V15.697L4 12.697V8ZM9.708 20C9.90238 20.4462 10.2228 20.826 10.6299 21.0928C11.0371 21.3595 11.5133 21.5016 12 21.5016C12.4867 21.5016 12.9629 21.3595 13.3701 21.0928C13.7772 20.826 14.0976 20.4462 14.292 20H9.708ZM12 2C10.4087 2 8.88258 2.63214 7.75736 3.75736C6.63214 4.88258 6 6.4087 6 8V13.303L4 16.303V18H20V16.303L18 13.303V8C18 6.4087 17.3679 4.88258 16.2426 3.75736C15.1174 2.63214 13.5913 2 12 2Z" fill="#3b5361"/>
@@ -26,22 +26,67 @@
     </nav>
 
     <main class="w-[100%] md:w-[60%] m-auto md:px-0 px-[1rem] mt-[60px]">
-    <section>
-        <form action="" method="get" class="my-[0.5rem] flex items-center w-[100%] px-[1rem] bg-slate-50 border border-slate-300 border-opacity-20 rounded-full">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="#3b5361" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <input id="search" type="search" name="search" placeholder="Search for Invoices..." class="w-full  py-[0.5rem] px-[0.5rem] bg-transparent outline-none">
-        </form>
-    </section>
-    <section>
-    <article>
-        <h1 class="text-center text-[2rem] text-[#3b5361]">Opening Soon !!!</h1>
-    </article>
-    </section>
-    <section class="mt-[50px] flex justify-center items-center">
-        <img src="files/undraw_shopping-bags_nfsf.svg" alt="">
-    </section>
+        <section>
+            <form action="" method="get" class="my-[0.5rem] flex items-center w-[100%] px-[1rem] bg-slate-50 border border-slate-300 border-opacity-20 rounded-full">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 17L21 21M3 11C3 13.1217 3.84285 15.1566 5.34315 16.6569C6.84344 18.1571 8.87827 19 11 19C13.1217 19 15.1566 18.1571 16.6569 16.6569C18.1571 15.1566 19 13.1217 19 11C19 8.87827 18.1571 6.84344 16.6569 5.34315C15.1566 3.84285 13.1217 3 11 3C8.87827 3 6.84344 3.84285 5.34315 5.34315C3.84285 6.84344 3 8.87827 3 11Z" stroke="#3b5361" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <input id="search" type="search" name="search" placeholder="Search for FAQs..." class="w-full  py-[0.5rem] px-[0.5rem] bg-transparent outline-none">
+            </form>
+        </section>
+        <section>
+            <!-- Accordion Item 1 -->
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>What do you need help with?</span>
+                    <span id="icon-1" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                        <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-1" class=" max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-5 text-sm text-slate-500">
+                        Material Tailwind is a framework that enhances Tailwind CSS with additional styles and components.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Accordion Item 2 -->
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>Useful tips about our App</span>
+                    <span id="icon-2" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-2" class=" max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-5 text-sm text-slate-500">
+                        You can use Material Tailwind by importing its components into your Tailwind CSS project.
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Accordion Item 3 -->
+            <div class="border-b border-slate-200">
+                <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center py-5 text-slate-800">
+                    <span>What can I do with KemyPay?</span>
+                    <span id="icon-3" class="text-slate-800 transition-transform duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4">
+                            <path d="M8.75 3.75a.75.75 0 0 0-1.5 0v3.5h-3.5a.75.75 0 0 0 0 1.5h3.5v3.5a.75.75 0 0 0 1.5 0v-3.5h3.5a.75.75 0 0 0 0-1.5h-3.5v-3.5Z" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="content-3" class=" max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                    <div class="pb-5 text-sm text-slate-500">
+                        Material Tailwind allows you to quickly build modern, responsive websites with a focus on design.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
     </main>
 
     <footer class="bg-white fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
@@ -65,7 +110,7 @@
                 </a>
             </div>
             <div class="menu-icons">
-                <a href="shop.html" class="no-underline text-[#3b5361] flex flex-col items-center flex flex-col items-center hover:text-blue-400">
+                <a href="help.html" class="no-underline text-[#3b5361] flex flex-col items-center flex flex-col items-center hover:text-blue-400">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M11.95 18C12.3 18 12.596 17.879 12.838 17.637C13.08 17.395 13.2007 17.0993 13.2 16.75C13.1993 16.4007 13.0787 16.1047 12.838 15.862C12.5973 15.6193 12.3013 15.4987 11.95 15.5C11.5987 15.5013 11.303 15.6223 11.063 15.863C10.823 16.1037 10.702 16.3993 10.7 16.75C10.698 17.1007 10.819 17.3967 11.063 17.638C11.307 17.8793 11.6027 18 11.95 18ZM11.05 14.15H12.9C12.9 13.6 12.9627 13.1667 13.088 12.85C13.2133 12.5333 13.5673 12.1 14.15 11.55C14.5833 11.1167 14.925 10.704 15.175 10.312C15.425 9.92001 15.55 9.44934 15.55 8.9C15.55 7.96667 15.2083 7.25001 14.525 6.75001C13.8417 6.25001 13.0333 6.00001 12.1 6.00001C11.15 6.00001 10.3793 6.25001 9.788 6.75001C9.19667 7.25001 8.784 7.85001 8.55 8.55001L10.2 9.20001C10.2833 8.90001 10.471 8.57501 10.763 8.22501C11.055 7.87501 11.5007 7.70001 12.1 7.70001C12.6333 7.70001 13.0333 7.846 13.3 8.138C13.5667 8.43 13.7 8.75067 13.7 9.10001C13.7 9.43334 13.6 9.746 13.4 10.038C13.2 10.33 12.95 10.6007 12.65 10.85C11.9167 11.5 11.4667 11.9917 11.3 12.325C11.1333 12.6583 11.05 13.2667 11.05 14.15ZM12 22C10.6167 22 9.31667 21.7377 8.1 21.213C6.88334 20.6883 5.825 19.9757 4.925 19.075C4.025 18.1743 3.31267 17.116 2.788 15.9C2.26333 14.684 2.00067 13.384 2 12C1.99933 10.616 2.262 9.31601 2.788 8.10001C3.314 6.88401 4.02633 5.82567 4.925 4.92501C5.82367 4.02434 6.882 3.31201 8.1 2.78801C9.318 2.26401 10.618 2.00134 12 2.00001C13.382 1.99867 14.682 2.26134 15.9 2.78801C17.118 3.31467 18.1763 4.02701 19.075 4.92501C19.9737 5.82301 20.6863 6.88134 21.213 8.10001C21.7397 9.31867 22.002 10.6187 22 12C21.998 13.3813 21.7353 14.6813 21.212 15.9C20.6887 17.1187 19.9763 18.177 19.075 19.075C18.1737 19.973 17.1153 20.6857 15.9 21.213C14.6847 21.7403 13.3847 22.0027 12 22ZM12 20C14.2333 20 16.125 19.225 17.675 17.675C19.225 16.125 20 14.2333 20 12C20 9.76667 19.225 7.87501 17.675 6.32501C16.125 4.77501 14.2333 4.00001 12 4.00001C9.76667 4.00001 7.875 4.77501 6.325 6.32501C4.775 7.87501 4 9.76667 4 12C4 14.2333 4.775 16.125 6.325 17.675C7.875 19.225 9.76667 20 12 20Z" fill="#3b5361"/>
                     </svg>
@@ -85,5 +130,30 @@
         </div>
     </footer>
 
+
+    <script>
+        function toggleAccordion(number) {
+            const content = document.getElementById(`content-${number}`);
+            const icon = document.getElementById(`icon-${number}`);
+            
+            // Toggle content visibility
+            content.classList.toggle('max-h-0');
+            content.classList.toggle('max-h-[1000px]'); // Adjust this value based on your content size
+            
+            // Toggle icon rotation
+            icon.classList.toggle('rotate-45');
+            
+            // Close other accordion items
+            document.querySelectorAll(`[id^="content-"]:not(#content-${number})`).forEach(otherContent => {
+                otherContent.classList.add('max-h-0');
+                otherContent.classList.remove('max-h-[1000px]');
+            });
+            
+            // Reset other icons
+            document.querySelectorAll(`[id^="icon-"]:not(#icon-${number})`).forEach(otherIcon => {
+                otherIcon.classList.remove('rotate-45');
+            });
+        }
+      </script>
 </body>
 </html>

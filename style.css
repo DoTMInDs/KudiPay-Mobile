@@ -76,7 +76,10 @@ html {
 .mobile-input-search.search-input{
     display: flex;
 }
-/* invoice-detail-3-dots-dropdown */
+/* Help-page-accordion */
+.accordion-content {
+    transition: max-height 0.3s ease-in-out;
+}
 
 /* Profile-Edit */
 #openEditContainer{
