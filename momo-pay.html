@@ -10,7 +10,7 @@
 </head>
 <body>
     <nav class="flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[1rem] px-[1rem] z-[999] md:w-[600px] m-auto w-[100%]">
-        <a href="invoice-detail.html" class="cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
+        <a href="javascript:window.history.back()" class="cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
             <i class="fa-solid fa-chevron-left text-[#3b5361] text-[20px]"></i>
         </a>
         <h1 class="text-[#3b5361] font-semibold text-[16px]">05578814721</h1>
@@ -32,14 +32,14 @@
             </div>
 
             <div class="mt-[1rem]">
-                <form action="" method="post" class="w-[100%] flex flex-col gap-[1rem]">
+                <form action="confirmation.html" method="post" class="w-[100%] flex flex-col gap-[1rem]">
                     <div class="flex gap-[0.5rem] justify-center items-center pl-[1rem] border border-slate-200 bg-slate-50 rounded-[35px]">
                         <p id="cash" class="w-[100%] text-[18px] text-[#3b5361] text-center font-bold bg-transparent p-[0.7rem]">GHS 1000</p>
                     </div>
-                    <p class="text-red-400 text-center py-[0.5rem]"><a href="#!" aria-label="nedd help with payment">Need help with payment?</a></p>
-                    <a href="verify-payment.html" class="w-full block">
-                        <button class="inline-block bg-rose-500 hover:bg-rose-600 py-[0.8rem] rounded-full w-[90%] m-auto bottom-[20px] text-slate-50 fixed right-0 left-0 md:w-[600px] m-auto w-[100%]">Pay Now</button>
-                    </a>
+                    <div class="fixed right-0 left-0 md:w-[600px] m-auto w-[100%] bottom-[20px]">
+                        <p class="text-red-400 text-center py-[0.5rem]"><a href="#!" aria-label="nedd help with payment">Need help with payment?</a></p>
+                        <button type="submit" class="block bg-[#E9322A] hover:bg-red-500 py-[0.8rem] rounded-full w-[90%] m-auto text-slate-50">Pay Now</button>
+                    </div>
                 </form>
             </div>
         
