@@ -15,9 +15,15 @@
             <a href="javascript:window.history.back()" aria-label="back" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center">
                 <i class="fa-solid fa-chevron-left"></i>
             </a>
-            <p class="flex flex-col items-center text-slate-800">
-                KNUST Entry Registration 
-                <small class="text-[13px] uppercase text-slate-500">Invoice #: AM-2 </small>
+            <p class="flex font-bold text-[18px] gap-[0.5rem] uppercase items-center text-slate-800">
+                Invoice:
+                <span class="font-medium text-slate-500 flex items-center gap-[0.5rem]">
+                    # AM-2
+                    <svg width="20" class="cursor-pointer" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.33325 7.77799C1.33325 7.17683 1.57206 6.6003 1.99714 6.17521C2.42223 5.75013 2.99876 5.51132 3.59992 5.51132H5.06992V6.84466H3.59992C3.35238 6.84466 3.11499 6.94299 2.93995 7.11802C2.76492 7.29306 2.66659 7.53045 2.66659 7.77799V12.578C2.66659 12.8255 2.76492 13.0629 2.93995 13.238C3.11499 13.413 3.35238 13.5113 3.59992 13.5113H8.39992C8.64745 13.5113 8.88485 13.413 9.05988 13.238C9.23492 13.0629 9.33325 12.8255 9.33325 12.578V11.378H10.6666V12.578C10.6666 13.1791 10.4278 13.7557 10.0027 14.1808C9.57761 14.6058 9.00108 14.8447 8.39992 14.8447H3.59992C2.99876 14.8447 2.42223 14.6058 1.99714 14.1808C1.57206 13.7557 1.33325 13.1791 1.33325 12.578V7.77799Z" fill="#3B5361"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66667 2H12C12.7072 2 13.3855 2.28095 13.8856 2.78105C14.3857 3.28115 14.6667 3.95942 14.6667 4.66667V10C14.6667 10.7072 14.3857 11.3855 13.8856 11.8856C13.3855 12.3857 12.7072 12.6667 12 12.6667H6.66667C5.95942 12.6667 5.28115 12.3857 4.78105 11.8856C4.28095 11.3855 4 10.7072 4 10V4.66667C4 3.95942 4.28095 3.28115 4.78105 2.78105C5.28115 2.28095 5.95942 2 6.66667 2ZM6.66667 3.33333C6.31304 3.33333 5.97391 3.47381 5.72386 3.72386C5.47381 3.97391 5.33333 4.31304 5.33333 4.66667V10C5.33333 10.3536 5.47381 10.6928 5.72386 10.9428C5.97391 11.1929 6.31304 11.3333 6.66667 11.3333H12C12.3536 11.3333 12.6928 11.1929 12.9428 10.9428C13.1929 10.6928 13.3333 10.3536 13.3333 10V4.66667C13.3333 4.31304 13.1929 3.97391 12.9428 3.72386C12.6928 3.47381 12.3536 3.33333 12 3.33333H6.66667Z" fill="#3B5361"/>
+                    </svg>
+                </span>
             </p>
             <div  class="relative">
                 <p id="shareBtn" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 rounded-full flex justify-center items-center cursor-pointer">
@@ -27,30 +33,17 @@
                 </p>
                 <!-- 3 Dot-Toggler -->
                 <div id="shareContainer" class="absolute hidden right-[15%] p-[0.3rem] top-[50px] w-[200px] rounded-[10px] bg-white border border-slate-100 shadow transform origin-top-right transition-all duration-200 ease-in-out scale-95 ">
-                    <p id="phoneBtn" class="px-[1rem] flex gap-[1rem] items-center py-[0.8rem] text-slate-700 rounded-t-[10px] hover:bg-slate-100 cursor-pointer">
-                        <i class="fa-solid fa-share-from-square"></i>
-                        Share
+                    <p class="px-[1rem] flex gap-[0.8rem] items-center py-[0.8rem] text-slate-700 rounded-t-[10px] hover:bg-slate-100 cursor-pointer">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.25 18.3C3.61667 17.55 3.10833 16.725 2.725 15.825C2.34167 14.925 2.1 13.9833 2 13H4.05C4.15 13.7167 4.33333 14.4043 4.6 15.063C4.86667 15.7217 5.21667 16.334 5.65 16.9L4.25 18.3ZM2 11C2.13333 10.0167 2.38333 9.075 2.75 8.175C3.11667 7.275 3.61667 6.45 4.25 5.7L5.65 7.1C5.21667 7.66667 4.86667 8.27934 4.6 8.938C4.33333 9.59667 4.15 10.284 4.05 11H2ZM10.95 21.95C9.96667 21.85 9.02933 21.6127 8.138 21.238C7.24667 20.8633 6.41733 20.3673 5.65 19.75L7.05 18.3C7.63333 18.7333 8.25 19.0917 8.9 19.375C9.55 19.6583 10.2333 19.85 10.95 19.95V21.95ZM7.1 5.7L5.65 4.25C6.43333 3.63334 7.275 3.13734 8.175 2.762C9.075 2.38667 10.0167 2.14934 11 2.05V4.05C10.2833 4.15 9.596 4.34167 8.938 4.625C8.28 4.90834 7.66733 5.26667 7.1 5.7ZM12.95 21.95V19.95C13.6833 19.85 14.3793 19.6627 15.038 19.388C15.6967 19.1133 16.3173 18.7507 16.9 18.3L18.35 19.75C17.5667 20.3833 16.721 20.8833 15.813 21.25C14.905 21.6167 13.9507 21.85 12.95 21.95ZM16.95 5.7C16.3667 5.26667 15.7417 4.90834 15.075 4.625C14.4083 4.34167 13.7167 4.15 13 4.05V2.05C13.9833 2.15 14.9293 2.38767 15.838 2.763C16.7467 3.13834 17.584 3.634 18.35 4.25L16.95 5.7ZM19.75 18.3L18.35 16.9C18.7833 16.3333 19.1333 15.721 19.4 15.063C19.6667 14.405 19.85 13.7173 19.95 13H22C21.8667 13.9833 21.6167 14.925 21.25 15.825C20.8833 16.725 20.3833 17.55 19.75 18.3ZM19.95 11C19.85 10.2833 19.6667 9.596 19.4 8.938C19.1333 8.28 18.7833 7.66734 18.35 7.1L19.75 5.7C20.3833 6.45 20.8917 7.275 21.275 8.175C21.6583 9.075 21.9 10.0167 22 11H19.95ZM11.025 17V10.825L8.425 13.425L7.025 12L12.025 7L17.025 12L15.6 13.4L13.025 10.825V17H11.025Z" fill="#3B5361"/>
+                        </svg>
+                        Payment Status
                     </p>
-                    <hr>
+                    <!-- <hr>
                     <p class="px-[1rem] flex gap-[1rem] items-center py-[0.8rem] text-slate-700 rounded-b-[10px] hover:bg-slate-100 cursor-pointer">
                         <i class="fa-solid fa-sliders"></i>
                         Manage
-                    </p>
-                </div>
-            </div>
-            <!-- PhoneNumber-Dropdown -->
-            <div id="phoneContainer" class="fixed bg-gray-500 bg-opacity-30 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible">
-                <div id="phoneModalContent" class="absolute top-[50%] left-[50%] md:w-[60%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
-                    <form method="" action="" class="">
-                        <label for="number" class="text-[#3b5361]">Enter number</label>
-                        <div class="relative flex items-center">
-                            <i class="fa-solid fa-phone absolute left-[10px] top-[20px] text-slate-600"></i>
-                            <input type="tel" id="number" class="border border-slate-300 rounded-l-[10px] w-full pl-[2rem] py-[0.5rem] mt-[0.5rem] focus:outline-none focus:border-rose-500" placeholder="Enter number" required>
-                            <button type="submit" class="bg-[#3b5361] hover:bg-slate-500 transition duration-300 text-slate-50 rounded-r-[10px] w-[50px] h-[42px] flex justify-center items-center mt-[0.5rem]">
-                                <i class="fa-solid fa-share-from-square"></i>
-                            </button>
-                        </div>
-                    </form>
+                    </p> -->
                 </div>
             </div>
         </div>
@@ -60,7 +53,6 @@
             <div class="text-sm ">
                 <p class="flex justify-between font-semibold text-slate-700">
                     KNUST - Kumasi
-                    
                 </p>
                 <p class="text-[14px] font-bold text-slate-900">To: <span class="font-medium text-slate-500">Ennam</span></p>
             </div>
@@ -75,6 +67,12 @@
                 <small class="text-[13px] text-slate-500 uppercase text-nowrap">
                     <i class="fa-regular fa-clock"></i>
                     07-Sep-2024
+                </small>
+            </div>
+            <div class="mt-[0.5rem]">
+                <h2 class="text-[15px] font-semibold mb-[0.1rem] text-slate-700">Description</h2>
+                <small class="text-[13px] text-slate-500 uppercase text-nowrap">
+                    KNUST Entry Registration
                 </small>
             </div>
             <!-- Items -->

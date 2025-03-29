@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <title>Payment</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Invoice details">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.5rem] z-[999] md:w-[60%] m-auto w-[100%]">
+        <div class="md:px-0 px-[1rem] my-[1rem] flex justify-between items-center w-full">
+            <a href="javascript:window.history.back()" aria-label="back" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <p class="flex font-bold text-[18px] gap-[0.5rem] capitalize items-center text-slate-800">
+                My Payment Methods
+            </p>
+            <p></p>
+        </div>
+    </nav>
+
+    <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[60px] mb-[60px] rounded-t-[35px] bg-white shadow border py-4">
+        <section class="mt-[2rem]">
+            <article class="flex justify-between items-center">
+                <h1 class="font-semibold capitalize text-slate-800">payment methods</h1>
+                <a href="payment-method.html" aria-label="add payment method" class="flex gap-[0.3rem] items-center hover:underline text-slate-700 font-semibold">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="#999999" fill-opacity="0.25"/>
+                        <path d="M12 8V16M16 12H8" stroke="black" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Add</span>
+                </a>
+            </article>
+            <div class="mt-[1rem]">
+               <ul>
+                    <li class="flex gap-[0.5rem] justify-between items-center py-4 border-b border-rose-200 border-opacity-50">
+                        <div class="flex gap-[0.5rem] items-center">
+                            <p class="w-[40px] h-[40px] border border-slate-200 rounded-[100%] flex justify-center items-center">
+                                <img src="files/mtn-momo.jpg" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                            </p>
+                            <p class="text-[14px] text-slate-700 font-bold">05578814721</p>
+                        </div>
+                        <a href="" aria-label="delete" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="flex gap-[0.5rem] justify-between items-center py-4 border-b border-rose-200 border-opacity-50">
+                        <div class="flex gap-[0.5rem] items-center">
+                            <p class="w-[40px] h-[40px] border border-slate-200 rounded-[100%] flex justify-center items-center">
+                                <img src="files/T-Cash Red.png" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                            </p>
+                            <p class="text-[14px] text-slate-700 font-bold">0204751234</p>
+                        </div>
+                        <a href="" aria-label="delete" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="flex  justify-between items-center py-4 border-b border-rose-200 border-opacity-50">
+                       <div class="flex gap-[0.5rem] items-center">
+                            <p class="w-[40px] h-[40px] border border-slate-200 rounded-[100%] flex justify-center items-center">
+                                <img src="files/Visa-Logo-2006.png" alt="" class="w-[100%] object-cover object-center rounded-[100%]">
+                            </p>
+                            <p class="text-[14px] text-slate-700 font-bold">2433 1745 2441 ***</p>
+                       </div>
+                       <a href="" aria-label="delete" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
+                            </svg>
+                       </a>
+                    </li>
+               </ul>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2">
+    <title>Profile info</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Invoice details">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.5rem] z-[999] md:w-[60%] m-auto w-[100%]">
+        <div class="md:px-0 px-[1rem] my-[1rem] flex justify-between items-center w-full">
+            <a href="javascript:window.history.back()" aria-label="back" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
+            <p class="flex font-bold text-[18px] gap-[0.5rem] capitalize items-center text-slate-800">
+                Profile Information
+            </p>
+            <p></p>
+        </div>
+    </nav>
+
+    <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[60px] mb-[60px] rounded-t-[35px] bg-white shadow border py-4">
+        <section>
+            <div class="flex justify-center items-center m-auto w-[80px] h-[80px] rounded-full bg-[#fdf2f7]">
+                <svg width="40" height="40" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="120" height="120" rx="60" fill="#fde6f1"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M78.0007 48C78.0007 57.9411 69.9419 66 60.0007 66C50.0596 66 42.0007 57.9411 42.0007 48C42.0007 38.0589 50.0596 30 60.0007 30C69.9419 30 78.0007 38.0589 78.0007 48ZM72.0007 48C72.0007 54.6274 66.6281 60 60.0007 60C53.3733 60 48.0007 54.6274 48.0007 48C48.0007 41.3726 53.3733 36 60.0007 36C66.6281 36 72.0007 41.3726 72.0007 48Z" fill="#EA5373"/>
+                    <path d="M60.0007 75C40.5776 75 24.0286 86.4852 17.7246 102.576C19.2603 104.101 20.878 105.543 22.5706 106.896C27.2648 92.1231 41.9909 81 60.0007 81C78.0106 81 92.7367 92.1231 97.4309 106.896C99.1235 105.544 100.741 104.101 102.277 102.576C95.973 86.4853 79.4239 75 60.0007 75Z" fill="#EA5373"/>
+                </svg>
+            </div>
+        </section>
+        <section>
+            <div class="flex justify-between w-[100%] py-6 font-semibold border-b border-rose-200 border-opacity-50">
+                <h1 class="text-slate-800">Personal Profile</h1>
+                <p id="openEditBtn" class="hover:underline text-slate-700 cursor-pointer flex gap-[0.3rem] items-center">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path opacity="0.3" d="M5 18.08V19H5.92L14.98 9.94002L14.06 9.02002L5 18.08Z" fill="#3b5361"/>
+                        <path d="M20.71 7.04C20.8027 6.94749 20.8763 6.8376 20.9264 6.71662C20.9766 6.59565 21.0024 6.46597 21.0024 6.335C21.0024 6.20403 20.9766 6.07435 20.9264 5.95338C20.8763 5.8324 20.8027 5.72251 20.71 5.63L18.37 3.29C18.17 3.09 17.92 3 17.66 3C17.4 3 17.15 3.1 16.96 3.29L15.13 5.12L18.88 8.87L20.71 7.04ZM3 17.25V21H6.75L17.81 9.94L14.06 6.19L3 17.25ZM5.92 19H5V18.08L14.06 9.02L14.98 9.94L5.92 19Z" fill="#3b5361"/>
+                    </svg>
+                    Edit
+                </p>
+            </div>
+            <div class="flex justify-between w-[100%] py-6 font-semibold border-b border-rose-200 border-opacity-50">
+                <h1 class="text-slate-600 text-[14px]">Full Name</h1>
+                <p class="text-[14px] text-slate-700">
+                    Alex Luthor
+                </p>
+            </div>
+            <div class="flex justify-between w-[100%] py-6 font-semibold border-b border-rose-200 border-opacity-50">
+                <h1 class="text-slate-600 text-[14px]">Phone Number</h1>
+                <p class="text-[14px] text-slate-700">
+                    2335578814721
+                </p>
+            </div>
+            <div class="flex justify-between w-[100%] py-6 font-semibold border-b border-rose-200 border-opacity-50">
+                <h1 class="text-slate-600 text-[14px]">Email Address</h1>
+                <p class="text-[14px] text-slate-700">
+                    lexluthor@gmail.com
+                </p>
+            </div>
+        </section>
+        
+        <!-- Edit-Modal -->
+       <section id="openEditContainer" class="w-full bg-white border border-slate-200 shadow-sm rounded-t-[20px] p-[1rem] flex flex-col h-[85vh]">
+           <nav class="bg-white flex justify-between items-center w-full">
+               <div class="closeEditBtn cursor-pointer w-[40px] h-[40px] rounded-full transition duration-200 bg-[#fdf2f7] hover:bg-rose-200 flex justify-center items-center">
+                   <i class="fa-solid fa-chevron-left text-slate-700 text-[22px]"></i>
+               </div>
+               <div class="">
+                   <h1 class="text-[18px] font-medium">Edit Profile</h1>
+               </div>
+               <div class="">
+               </div>
+           </nav>
+    
+           <div class="relative flex flex-col rounded-xl bg-transparent overflow-y-scroll flex-1">
+               <form class="mt-8 mb-2 ">
+                   <div class="">
+                       <div class="relative flex justify-center items-center m-auto w-[80px] h-[80px] rounded-full bg-[#fdf2f7]">
+                           <svg width="40" height="40" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+                               <rect width="120" height="120" rx="60" fill="#fde6f1"/>
+                               <path fill-rule="evenodd" clip-rule="evenodd" d="M78.0007 48C78.0007 57.9411 69.9419 66 60.0007 66C50.0596 66 42.0007 57.9411 42.0007 48C42.0007 38.0589 50.0596 30 60.0007 30C69.9419 30 78.0007 38.0589 78.0007 48ZM72.0007 48C72.0007 54.6274 66.6281 60 60.0007 60C53.3733 60 48.0007 54.6274 48.0007 48C48.0007 41.3726 53.3733 36 60.0007 36C66.6281 36 72.0007 41.3726 72.0007 48Z" fill="#EA5373"/>
+                               <path d="M60.0007 75C40.5776 75 24.0286 86.4852 17.7246 102.576C19.2603 104.101 20.878 105.543 22.5706 106.896C27.2648 92.1231 41.9909 81 60.0007 81C78.0106 81 92.7367 92.1231 97.4309 106.896C99.1235 105.544 100.741 104.101 102.277 102.576C95.973 86.4853 79.4239 75 60.0007 75Z" fill="#EA5373"/>
+                           </svg>
+                           <div id="cameraBtn" class="absolute bg-[#000000] right-0 bottom-0 flex justify-center items-center bg-opacity-70 w-[40px] h-[40px] rounded-full cursor-pointer">
+                               <i class="fa-solid fa-camera text-slate-50"></i>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="mb-1 flex flex-col gap-6">
+                   <div class="w-full">
+                       <label class="block mb-2 text-sm text-slate-600">
+                           First Name
+                       </label>
+                       <input type="text" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" value="Alex" />
+                   </div>
+                   <div class="w-full">
+                       <label class="block mb-2 text-sm text-slate-600">
+                           Last Name
+                       </label>
+                       <input type="text" class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" value="Luthor"/>
+                   </div>
+                   <div class="w-full">
+                       <label class="block mb-2 text-sm text-slate-600">
+                           Phone Number
+                       </label>
+                       <input type="tel" disabled class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" value="2335578814721"/>
+                   </div>
+                   <div class="w-full">
+                       <label class="block mb-2 text-sm text-slate-600">
+                           Email
+                       </label>
+                       <input type="email" disabled class="w-full bg-transparent placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded-md px-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-300 shadow-sm focus:shadow" value="lexluthor@gmail.com"  />
+                   </div>
+                   </div>
+                   
+                   <button class="mt-4 w-full rounded-full bg-rose-500 py-2 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg focus:shadow-none active:bg-rose-600 hover:bg-rose-400 active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" type="button">
+                   Save
+                   </button>
+               </form>
+           </div>
+       </section>
+    
+       <!-- camera -->
+       <section id="cameraContainer" class="cameraWrapper fixed top-0 right-0 left-0 w-full h-screen bg-gray-500 bg-opacity-30 z-[99999] hidden">
+           <div id="" class="fixed bottom-0 p-4 right-0 left-0 bg-white rounded-t-[25px] ">
+               <div class="flex justify-between items-center mb-[1.5rem]">
+                   <i id="closeCamera" class="fa-solid fa-close text-[18px] text-slate-700 cursor-pointer  w-[40px] h-[40px] hover:bg-rose-50 rounded-full flex justify-center items-center"></i>
+                   <h1 class="text-[16px] font-semibold">Choose Image</h1>
+                   <p class=""></p>
+               </div>
+               <div class="space-y-2 w-full">
+                   <label class="flex gap-[1rem] items-center cursor-pointer p-2 hover:bg-slate-100 rounded">
+                       <i class="fa-solid fa-camera text-slate-700 "></i>
+                       <span class="text-slate-700">Take Photo</span>
+                       <input type="file" id="cameraInput" class="hidden" accept="image/*" capture="environment">
+                   </label>
+                   
+                   <!-- Gallery Option -->
+                   <label class="flex gap-[1rem] items-center cursor-pointer p-2 hover:bg-slate-100 rounded">
+                       <i class="fa-solid fa-image text-slate-700"></i>
+                       <span class="text-slate-700">Gallery</span>
+                       <input type="file" id="galleryInput" class="hidden" accept="image/*">
+                   </label>
+               </div>
+           </div>
+       </section>
+    </main>
+
+
+    <script>
+        // Edit toggle
+        const editBtn = document.getElementById('openEditBtn');
+        const editContainer = document.getElementById('openEditContainer');
+        const closeEditBtn = document.querySelector('.closeEditBtn');
+
+        // Toggle settings visibility
+        editBtn.addEventListener('click', () => {
+            editContainer.classList.toggle('editActive');
+        });
+
+        // Close settings with close button
+        closeEditBtn.addEventListener('click', () => {
+            editContainer.classList.remove('editActive');
+        });
+
+        // Close settings when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!editBtn.contains(e.target) && 
+                !editContainer.contains(e.target)) {
+                editContainer.classList.remove('editActive');
+            }
+        });
+
+        // Camera Section Logic
+       const cameraBtn = document.getElementById('cameraBtn');
+       const cameraContainer = document.getElementById('cameraContainer');
+       //const cameraWrapper = document.querySelector('.cameraWrapper');
+       const closeCamera = document.getElementById('closeCamera');
+       // Show camera options
+       cameraBtn.addEventListener('click', () => {
+           cameraContainer.classList.remove('hidden');
+       });
+       // Hide camera options
+       closeCamera.addEventListener('click', () => {
+           cameraContainer.classList.add('hidden');
+       });
+       // Handle file selection
+       document.getElementById('cameraInput').addEventListener('change', function(e) {
+           handleFileSelect(e);
+       });
+       document.getElementById('galleryInput').addEventListener('change', function(e) {
+           handleFileSelect(e);
+       });
+       function handleFileSelect(event) {
+           const file = event.target.files[0];
+           if (file) {
+               // Handle the selected file here
+               console.log('Selected file:', file);
+               cameraContainer.classList.add('hidden');
+           }
+       }
+   </script>
+</body>
+</html>
