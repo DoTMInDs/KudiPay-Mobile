@@ -80,6 +80,9 @@ html {
 .accordion-content {
     transition: max-height 0.3s ease-in-out;
 }
+.menu-icons.active .footer-link {
+    color: #3b5361;
+}
 
 /* Profile-Edit */
 #openEditContainer{
@@ -119,4 +122,15 @@ html {
     transition: top 300ms ,
                 height 200ms ,
                 opacity 200ms ;
+}
+
+/* choose-payment */
+#wallet {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+    background-size: 1.2em;
+    padding-right: 2rem;
 }

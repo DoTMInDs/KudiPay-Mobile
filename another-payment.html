@@ -28,22 +28,24 @@
                         <p class="text-[12px] font-bold text-slate-400 p-0 m-0">MTN MoMo</p>
                     </div>
                 </div>
-                <p class="text-rose-500 pr-[0.5rem]"><a href="choose-payment.html">Change</a></p>
+                <p class="text-rose-500 pr-[0.5rem]"><a href="invoice-payment.html">Change</a></p>
             </div>
 
             <div class="mt-[1rem]">
-                <form action="" method="post" class="w-[100%] flex flex-col gap-[1rem]">
+                <form action="verify-payment.html" method="post" class="w-[100%] flex flex-col gap-[1rem]">
                     <div class="flex gap-[0.5rem] justify-center items-center pl-[1rem] border border-slate-200 bg-slate-50 rounded-[35px]">
                         <i class="fa fa-solid fa-phone text-slate-400"></i>
                         <input type="tel" name="phone" id="phone" placeholder="Enter your number" class="w-[100%] text-[14px] font-medium bg-transparent p-[0.7rem] outline-none">
                     </div>
                     <div class="flex gap-[0.5rem] justify-center items-center pl-[1rem] border border-slate-200 bg-slate-50 rounded-[35px]">
-                        <input type="number" name="cash" id="cash" value="GHS 1000" disabled placeholder="GHS 1000" class="w-[100%] text-[14px] font-bold bg-transparent p-[0.7rem] outline-none">
+                        <input type="number" name="cash" id="cash"  placeholder="Enter GHS amount" class="w-[100%] text-[14px] font-bold bg-transparent p-[0.7rem] outline-none">
                     </div>
-                    <p class="text-red-400 text-center py-[0.5rem]"><a href="#!">Need help with payment?</a></p>
-                    <button class="inline-block bg-rose-500 py-[0.5rem] rounded-full w-[90%] m-auto bottom-[20px] fixed right-0 left-0">
-                        <a href="verify-payment.html" class="no-underline text-white uppercase font-bold text-[13px]">pay (GHS 1000)</a>
-                    </button>
+                    <div class="bottom-[20px] fixed right-0 left-0 ">
+                        <p class="text-red-400 text-center py-[0.5rem]"><a href="#!">Need help with payment?</a></p>
+                        <button class="block bg-[#E9322A] capitalize text-slate-50 hover:bg-red-500 py-[0.8rem] rounded-full  w-[90%] m-auto">
+                            pay now
+                        </button>
+                    </div>
                 </form>
             </div>
         
