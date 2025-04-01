@@ -13,6 +13,9 @@
       <!--nav-section-->
     <nav class="bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.5rem] px-[1rem] z-[999] md:w-[80%] m-auto w-[100%]">
         <div class="relative flex justify-between items-center w-full">
+            <a href="javascript:window.history.back()" aria-label="back" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center">
+                <i class="fa-solid fa-chevron-left"></i>
+            </a>
             <h1 class="font-medium text-slate-800 text-[16px]">Big Esse</h1>
             <a href="notification.html" aria-label="notification" class="no-underline text-[#3b5361] text-[20px] relative inline-flex">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,37 +128,50 @@
                     </div>
                 </a>
             </div>
-            <div class="">
-                <a href="" aria-label="contact us" class="flex justify-between font-semibold text-slate-800 py-4 border-t border-rose-100 hover:bg-slate-50 transition duration-200">
-                    <div class="flex items-center gap-[0.5rem]">
-                        <svg width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12.2816 10.1563H11.1832C11.1082 10.1563 11.0378 10.1891 10.991 10.2469C10.8816 10.3797 10.7644 10.5078 10.641 10.6297C10.1361 11.1351 9.53812 11.5378 8.88003 11.8156C8.19825 12.1036 7.46545 12.2513 6.72535 12.25C5.97691 12.25 5.25191 12.1031 4.57066 11.8156C3.91257 11.5378 3.31457 11.1351 2.80972 10.6297C2.30397 10.1261 1.90069 9.5291 1.62222 8.8719C1.33316 8.19065 1.18785 7.46721 1.18785 6.71877C1.18785 5.97034 1.33472 5.2469 1.62222 4.56565C1.90035 3.90784 2.30035 3.31565 2.80972 2.80784C3.3191 2.30002 3.91129 1.90002 4.57066 1.6219C5.25191 1.3344 5.97691 1.18752 6.72535 1.18752C7.47379 1.18752 8.19878 1.33284 8.88003 1.6219C9.53941 1.90002 10.1316 2.30002 10.641 2.80784C10.7644 2.93127 10.88 3.0594 10.991 3.19065C11.0378 3.24846 11.1097 3.28127 11.1832 3.28127H12.2816C12.38 3.28127 12.441 3.1719 12.3863 3.08909C11.1878 1.22659 9.09097 -0.00622635 6.70816 2.36542e-05C2.96441 0.00939865 -0.0371524 3.04846 0.000347585 6.78752C0.0378476 10.4672 3.03472 13.4375 6.72535 13.4375C9.10191 13.4375 11.1894 12.2063 12.3863 10.3485C12.4394 10.2656 12.38 10.1563 12.2816 10.1563ZM13.6707 6.62034L11.4535 4.87034C11.3707 4.80471 11.2503 4.86409 11.2503 4.96877V6.15627H6.3441C6.27535 6.15627 6.2191 6.21252 6.2191 6.28127V7.15627C6.2191 7.22502 6.27535 7.28127 6.3441 7.28127H11.2503V8.46877C11.2503 8.57346 11.3722 8.63284 11.4535 8.56721L13.6707 6.81721C13.6856 6.80552 13.6977 6.79058 13.706 6.77352C13.7143 6.75647 13.7186 6.73775 13.7186 6.71877C13.7186 6.6998 13.7143 6.68108 13.706 6.66402C13.6977 6.64697 13.6856 6.63203 13.6707 6.62034Z" fill="#777777"/>
-                        </svg>
-                        <label for="" class="text-slate-700 cursor-pointer text-[16px]">Log out</label>
+            <div id="logoutBtn" class="flex justify-between font-semibold text-slate-800 py-4 border-t border-rose-100 hover:bg-slate-50 transition duration-200">
+                <div class="flex items-center gap-[0.5rem]">
+                    <svg width="18" height="18" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.2816 10.1563H11.1832C11.1082 10.1563 11.0378 10.1891 10.991 10.2469C10.8816 10.3797 10.7644 10.5078 10.641 10.6297C10.1361 11.1351 9.53812 11.5378 8.88003 11.8156C8.19825 12.1036 7.46545 12.2513 6.72535 12.25C5.97691 12.25 5.25191 12.1031 4.57066 11.8156C3.91257 11.5378 3.31457 11.1351 2.80972 10.6297C2.30397 10.1261 1.90069 9.5291 1.62222 8.8719C1.33316 8.19065 1.18785 7.46721 1.18785 6.71877C1.18785 5.97034 1.33472 5.2469 1.62222 4.56565C1.90035 3.90784 2.30035 3.31565 2.80972 2.80784C3.3191 2.30002 3.91129 1.90002 4.57066 1.6219C5.25191 1.3344 5.97691 1.18752 6.72535 1.18752C7.47379 1.18752 8.19878 1.33284 8.88003 1.6219C9.53941 1.90002 10.1316 2.30002 10.641 2.80784C10.7644 2.93127 10.88 3.0594 10.991 3.19065C11.0378 3.24846 11.1097 3.28127 11.1832 3.28127H12.2816C12.38 3.28127 12.441 3.1719 12.3863 3.08909C11.1878 1.22659 9.09097 -0.00622635 6.70816 2.36542e-05C2.96441 0.00939865 -0.0371524 3.04846 0.000347585 6.78752C0.0378476 10.4672 3.03472 13.4375 6.72535 13.4375C9.10191 13.4375 11.1894 12.2063 12.3863 10.3485C12.4394 10.2656 12.38 10.1563 12.2816 10.1563ZM13.6707 6.62034L11.4535 4.87034C11.3707 4.80471 11.2503 4.86409 11.2503 4.96877V6.15627H6.3441C6.27535 6.15627 6.2191 6.21252 6.2191 6.28127V7.15627C6.2191 7.22502 6.27535 7.28127 6.3441 7.28127H11.2503V8.46877C11.2503 8.57346 11.3722 8.63284 11.4535 8.56721L13.6707 6.81721C13.6856 6.80552 13.6977 6.79058 13.706 6.77352C13.7143 6.75647 13.7186 6.73775 13.7186 6.71877C13.7186 6.6998 13.7143 6.68108 13.706 6.66402C13.6977 6.64697 13.6856 6.63203 13.6707 6.62034Z" fill="#777777"/>
+                    </svg>
+                    <label for="" class="text-slate-700 cursor-pointer text-[16px]">Log out</label>
+                </div>
+                <div class="flex items-center gap-[0.5rem]">
+                    <i class="fa-solid fa-chevron-right text-slate-400 mr-4"></i>
+                </div>
+
+                <div id="logoutContainer" class="fixed bg-gray-500 bg-opacity-30 top-0 right-0 w-full h-screen transition-all duration-300 ease-out  opacity-0 invisible">
+                    <div id="logoutModalContent" class="absolute top-[50%] left-[50%] md:w-[60%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
+                        <div class="">
+                            <p  class=" flex justify-end">
+                                <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z" fill="#3b5362"/>
+                                </svg>
+                            </p>
+                            <div class="flex justify-center items-center flex-col w-full">
+                                <div class="mt-[1rem] flex justify-center items-center w-[80px] h-[80px] p-[0.5rem] rounded-full bg-amber-100">
+                                    <svg width="50" height="50" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M13.38 15H2.62C2.06 15 1.55 14.72 1.26 14.24C0.969999 13.76 0.939999 13.18 1.19 12.68L6.57 1.89C6.84 1.34 7.39 1 8 1C8.61 1 9.16 1.34 9.43 1.89L14.81 12.69C15.06 13.19 15.03 13.77 14.74 14.25C14.45 14.73 13.94 15.01 13.38 15.01V15ZM8 2C7.77 2 7.57 2.12 7.46 2.33L2.08 13.13C1.98 13.32 1.99 13.53 2.11 13.72C2.22 13.9 2.41 14.01 2.62 14.01H13.38C13.59 14.01 13.78 13.91 13.89 13.72C14 13.54 14.01 13.33 13.92 13.13L8.54 2.33C8.49063 2.22939 8.41362 2.14491 8.31799 2.08647C8.22236 2.02803 8.11206 1.99804 8 2Z" fill="#FFCA39"/>
+                                        <path d="M8 11.6199C8.34242 11.6199 8.62 11.3423 8.62 10.9999C8.62 10.6575 8.34242 10.3799 8 10.3799C7.65758 10.3799 7.38 10.6575 7.38 10.9999C7.38 11.3423 7.65758 11.6199 8 11.6199Z" fill="#FFCA39"/>
+                                        <path d="M8 9.12012C7.72 9.12012 7.5 8.90012 7.5 8.62012V5.62012C7.5 5.34012 7.72 5.12012 8 5.12012C8.28 5.12012 8.5 5.34012 8.5 5.62012V8.62012C8.5 8.90012 8.28 9.12012 8 9.12012Z" fill="#FFCA39"/>
+                                    </svg>
+                                </div>
+                                <h1 class="text-center text-amber-400 font-semibold text-[22px] mt-[0.5rem]">Warning</h1>
+                            </div>
+                            <div class="flex justify-center items-center flex-col w-full mt-[2rem]">
+                                <p class="text-[14px] text-slate-600">Are you sure you want to log out?</p>
+                                <a href="#!" aria-label="logout" class="text-slate-50 text-[18px] mt-[1rem] font-medium bg-[#E9322A] hover:bg-red-500 block w-full rounded-full">
+                                    <button class="py-[0.8rem] rounded-full w-full">Yes, Log out</button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="flex items-center gap-[0.5rem]">
-                        <i class="fa-solid fa-chevron-right text-slate-400 mr-4"></i>
-                    </div>
-                </a>
+                </div>
             </div>
-            <!-- <div class="">
-                <a href="" aria-label="contact us" class="flex justify-between font-semibold text-slate-800 py-4 hover:bg-slate-50 transition duration-200">
-                    <div class="flex items-center gap-[0.5rem]">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7.616 20C7.168 20 6.78667 19.8426 6.472 19.528C6.15733 19.2133 6 18.8323 6 18.385V5.99998H5V4.99998H9V4.22998H15V4.99998H19V5.99998H18V18.385C18 18.845 17.846 19.2293 17.538 19.538C17.23 19.8466 16.8453 20.0006 16.384 20H7.616ZM17 5.99998H7V18.385C7 18.5643 7.05767 18.7116 7.173 18.827C7.28833 18.9423 7.436 19 7.616 19H16.385C16.5383 19 16.6793 18.936 16.808 18.808C16.9367 18.68 17.0007 18.5386 17 18.384V5.99998ZM9.808 17H10.808V7.99998H9.808V17ZM13.192 17H14.192V7.99998H13.192V17Z" fill="#777777"/>
-                        </svg>
-                        <label for="" class="text-slate-700 cursor-pointer text-[16px]">Delete Account</label>
-                    </div>
-                    <div class="flex items-center gap-[0.5rem]">
-                        <i class="fa-solid fa-chevron-right text-slate-400 mr-4"></i>
-                    </div>
-                </a>
-            </div> -->
         </section>
     </main>
 
 
-    <footer class="bg-white fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
+    <!-- <footer class="bg-white fixed bottom-0 flex justify-between items-center w-full p-[0.5rem] ">
         <div class="w-full flex justify-between items-center px-[1rem]">
             <div class="menu-icons">
                 <a href="home.html" class="no-underline text-[#3b5361] flex flex-col items-center hover:text-blue-400">
@@ -177,7 +193,6 @@
             </div>
             <div class="menu-icons">
                 <a href="profile.html" class="no-underline text-[#3b5361] flex flex-col items-center hover:text-blue-400">
-                    <!-- <i class="fa-solid text-[18px] fa-circle-user"></i> -->
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 4C13.0609 4 14.0783 4.42143 14.8284 5.17157C15.5786 5.92172 16 6.93913 16 8C16 9.06087 15.5786 10.0783 14.8284 10.8284C14.0783 11.5786 13.0609 12 12 12C10.9391 12 9.92172 11.5786 9.17157 10.8284C8.42143 10.0783 8 9.06087 8 8C8 6.93913 8.42143 5.92172 9.17157 5.17157C9.92172 4.42143 10.9391 4 12 4ZM12 14C16.42 14 20 15.79 20 18V20H4V18C4 15.79 7.58 14 12 14Z" fill="#3B5362"/>
                     </svg>
@@ -185,8 +200,29 @@
                 </a>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
-   
+    <script>
+        // Invoice number modal
+        const logoutBtn = document.getElementById('logoutBtn');
+        const logoutContainer = document.getElementById('logoutContainer');
+        const logoutModalContent =  document.getElementById('logoutModalContent');
+        // Toggle phone number input
+        logoutBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            logoutContainer.classList.toggle('opacity-0');
+            logoutContainer.classList.toggle('invisible');
+            logoutModalContent.classList.toggle('scale-95');
+            logoutModalContent.classList.toggle('opacity-0');
+        });
+        // Close when clicking outside
+        logoutContainer.addEventListener('click', (e) => {
+            if(e.target === logoutContainer) {
+                logoutContainer.classList.add('opacity-0', 'invisible');
+                logoutModalContent.classList.add('scale-95', 'opacity-0');
+            }
+        });
+    
+    </script>
 </body>
 </html>
