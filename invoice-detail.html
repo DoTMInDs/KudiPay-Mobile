@@ -17,13 +17,15 @@
             </a>
             <p class="flex font-bold text-[18px] gap-[0.5rem] uppercase items-center text-slate-800">
                 Invoice:
-                <span class="font-medium text-slate-500 flex items-center gap-[0.5rem]">
-                    # AM-2
+                <span class="font-medium text-slate-500  flex items-center gap-[0.5rem]">
+                    # <small id="myNumber" class="text-[18px]">AM-2</small>
+                </span>
+                <button onclick="copyToClipboard()" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 rounded-full flex justify-center items-center">
                     <svg width="20" class="cursor-pointer" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M1.33325 7.77799C1.33325 7.17683 1.57206 6.6003 1.99714 6.17521C2.42223 5.75013 2.99876 5.51132 3.59992 5.51132H5.06992V6.84466H3.59992C3.35238 6.84466 3.11499 6.94299 2.93995 7.11802C2.76492 7.29306 2.66659 7.53045 2.66659 7.77799V12.578C2.66659 12.8255 2.76492 13.0629 2.93995 13.238C3.11499 13.413 3.35238 13.5113 3.59992 13.5113H8.39992C8.64745 13.5113 8.88485 13.413 9.05988 13.238C9.23492 13.0629 9.33325 12.8255 9.33325 12.578V11.378H10.6666V12.578C10.6666 13.1791 10.4278 13.7557 10.0027 14.1808C9.57761 14.6058 9.00108 14.8447 8.39992 14.8447H3.59992C2.99876 14.8447 2.42223 14.6058 1.99714 14.1808C1.57206 13.7557 1.33325 13.1791 1.33325 12.578V7.77799Z" fill="#3B5361"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M6.66667 2H12C12.7072 2 13.3855 2.28095 13.8856 2.78105C14.3857 3.28115 14.6667 3.95942 14.6667 4.66667V10C14.6667 10.7072 14.3857 11.3855 13.8856 11.8856C13.3855 12.3857 12.7072 12.6667 12 12.6667H6.66667C5.95942 12.6667 5.28115 12.3857 4.78105 11.8856C4.28095 11.3855 4 10.7072 4 10V4.66667C4 3.95942 4.28095 3.28115 4.78105 2.78105C5.28115 2.28095 5.95942 2 6.66667 2ZM6.66667 3.33333C6.31304 3.33333 5.97391 3.47381 5.72386 3.72386C5.47381 3.97391 5.33333 4.31304 5.33333 4.66667V10C5.33333 10.3536 5.47381 10.6928 5.72386 10.9428C5.97391 11.1929 6.31304 11.3333 6.66667 11.3333H12C12.3536 11.3333 12.6928 11.1929 12.9428 10.9428C13.1929 10.6928 13.3333 10.3536 13.3333 10V4.66667C13.3333 4.31304 13.1929 3.97391 12.9428 3.72386C12.6928 3.47381 12.3536 3.33333 12 3.33333H6.66667Z" fill="#3B5361"/>
                     </svg>
-                </span>
+                </button>
             </p>
             <div  class="relative">
                 <p id="shareBtn" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 rounded-full flex justify-center items-center cursor-pointer">
@@ -40,7 +42,7 @@
                         Payment Status
                     </p>
                     <hr>
-                    <p class="px-[1rem] flex gap-[1rem] items-center py-[0.8rem] text-slate-700 rounded-b-[10px] hover:bg-slate-100 cursor-pointer">
+                    <p onclick="printInvoice()" class="px-[1rem] flex gap-[1rem] items-center py-[0.8rem] text-slate-700 rounded-b-[10px] hover:bg-slate-100 cursor-pointer">
                         <i class="fa-solid fa-print"></i>
                         Print
                     </p>
@@ -178,24 +180,30 @@
                     shareContainer.classList.add('hidden');
                 }
             });
-
-            // Toggle phone number input
-            phoneBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                phoneContainer.classList.toggle('opacity-0');
-                phoneContainer.classList.toggle('invisible');
-                modalContent.classList.toggle('scale-95');
-                modalContent.classList.toggle('opacity-0');
-            });
-            // Close when clicking outside
-            phoneContainer.addEventListener('click', (e) => {
-                if(e.target === phoneContainer) {
-                    phoneContainer.classList.add('opacity-0', 'invisible');
-                    modalContent.classList.add('scale-95', 'opacity-0');
-                }
-            });
         });
 
+        function copyToClipboard() {
+            const invoiceNumber = document.getElementById('myNumber').textContent;
+            navigator.clipboard.writeText(invoiceNumber).then(() => {
+                alert(`Invoice number ${invoiceNumber} copied to clipboard!`);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+        // Function to copy text to clipboard
+        function copyTextToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                console.log('Text copied to clipboard');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+       
+        // Function to print the invoice
+        function printInvoice() {
+            window.print();
+        }
+       
     </script>
 </body>
 </html>
