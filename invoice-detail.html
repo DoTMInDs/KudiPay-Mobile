@@ -159,6 +159,15 @@
                 </a>
             </div>
         </section>
+
+        <section id="toast" class="fixed hidden left-1/2 -translate-x-1/2 bottom-8 z-50">
+            <div class="bg-[#3b5361] text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2 transition-opacity duration-300 opacity-0">
+                <svg id="toast-icon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                </svg>
+                <span id="toast-message" class="text-sm"></span>
+            </div>
+        </section>
     </main>
 
 
@@ -182,28 +191,43 @@
             });
         });
 
+       
+
         function copyToClipboard() {
             const invoiceNumber = document.getElementById('myNumber').textContent;
             navigator.clipboard.writeText(invoiceNumber).then(() => {
-                alert(`Invoice number ${invoiceNumber} copied to clipboard!`);
+                showToast(`Copied: ${invoiceNumber}`);
             }).catch(err => {
+                showToast('Failed to copy!', true);
                 console.error('Failed to copy: ', err);
             });
         }
-        // Function to copy text to clipboard
-        function copyTextToClipboard(text) {
-            navigator.clipboard.writeText(text).then(() => {
-                console.log('Text copied to clipboard');
-            }).catch(err => {
-                console.error('Failed to copy text: ', err);
-            });
+    
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            const toastMessage = document.getElementById('toast-message');
+            const toastIcon = document.getElementById('toast-icon');
+    
+            // Set message and style
+            toastMessage.textContent = message;
+            toast.classList.remove('hidden');
+            toast.firstElementChild.classList.add('opacity-100');
+    
+            // Update icon and color for error state
+            if(isError) {
+                toastIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>';
+                toast.firstElementChild.classList.add('bg-red-500');
+            } else {
+                toastIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>';
+                toast.firstElementChild.classList.remove('bg-red-500');
+            }
+    
+            // Auto-hide after 3 seconds
+            setTimeout(() => {
+                toast.firstElementChild.classList.remove('opacity-100');
+                setTimeout(() => toast.classList.add('hidden'), 300);
+            }, 3000);
         }
-       
-        // Function to print the invoice
-        function printInvoice() {
-            window.print();
-        }
-       
     </script>
 </body>
 </html>
