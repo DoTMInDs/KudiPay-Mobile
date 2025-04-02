@@ -113,8 +113,7 @@
                     <div class="no-underline relative p-[0.5rem]">
                         <div class="flex gap-[1rem] justify-between items-center my-[0.5rem]">
                             <p class="flex gap-[0.5rem] items-center overflow-hidden">
-                                <span class="font-regular capitalize flex gap-[0.3rem] items-center text-slate-700 truncate text-[13px]">
-                                    <i class="fa fa-regilar fa-file-lines text-slate-50 w-[24px] h-[24px] rounded-full flex justify-center items-center bg-[#3b5361]"></i>
+                                <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 truncate text-[13px]">
                                     Ransford Otto:
                                 </span> 
                                 <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] text-nowrap text-[13px]">AM - 5</a>
@@ -138,8 +137,7 @@
                     <div class="no-underline relative p-[0.5rem]">
                         <div class="flex gap-[1rem] justify-between items-center my-[0.5rem]">
                             <p class="flex gap-[0.5rem] items-center overflow-hidden">
-                                <span class="font-regular capitalize flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
-                                    <i class="fa fa-regilar fa-file-lines text-slate-50 w-[24px] h-[24px] rounded-full flex justify-center items-center bg-[#3b5361]"></i>
+                                <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
                                     Don Togbe:
                                 </span> 
                                 <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] truncate text-[13px]">AM - 6</a>
@@ -196,7 +194,7 @@
     <footer class="bg-white fixed bottom-0 flex justify-between items-center w-full p-[0.5rem]">
         <div class="w-full flex justify-between items-center px-[1rem]">
             <div class="menu-icons">
-                <a href="#!" aria-label="footer" class="footer-link no-underline text-[#3b5361] flex flex-col items-center ">
+                <a href="#!" aria-label="footer" onclick="toggleFooterIcon(this); return false;" class="footer-link no-underline text-[#3b5361] flex flex-col items-center ">
                     <svg width="24" height="24" class="hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.133 21C4.955 21 4 20.02 4 18.81V10.008C4 9.34303 4.295 8.71303 4.8 8.29803L10.667 3.48003C11.0419 3.16961 11.5133 2.99976 12 2.99976C12.4867 2.99976 12.9581 3.16961 13.333 3.48003L19.199 8.29803C19.705 8.71303 20 9.34303 20 10.008V18.81C20 20.02 19.045 21 17.867 21H6.133Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M9.5 21V15.5C9.5 14.9696 9.71071 14.4609 10.0858 14.0858C10.4609 13.7107 10.9696 13.5 11.5 13.5H12.5C13.0304 13.5 13.5391 13.7107 13.9142 14.0858C14.2893 14.4609 14.5 14.9696 14.5 15.5V21" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -209,7 +207,7 @@
                 </a>
             </div>
             <div class="menu-icons">
-                <a href="invoice.html" aria-label="footer" class="footer-link no-underline text-[#3b5361] flex flex-col items-center ">
+                <a href="invoice.html" aria-label="footer" onclick="toggleFooterIcon(this); return false;" class="footer-link no-underline text-[#3b5361] flex flex-col items-center ">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13.5 9.75C13.5 9.55109 13.421 9.36032 13.2803 9.21967C13.1397 9.07902 12.9489 9 12.75 9H6.75C6.55109 9 6.36032 9.07902 6.21967 9.21967C6.07902 9.36032 6 9.55109 6 9.75C6 9.94891 6.07902 10.1397 6.21967 10.2803C6.36032 10.421 6.55109 10.5 6.75 10.5H12.75C12.9489 10.5 13.1397 10.421 13.2803 10.2803C13.421 10.1397 13.5 9.94891 13.5 9.75ZM12.5 12.75C12.5 12.5511 12.421 12.3603 12.2803 12.2197C12.1397 12.079 11.9489 12 11.75 12H6.75C6.55109 12 6.36032 12.079 6.21967 12.2197C6.07902 12.3603 6 12.5511 6 12.75C6 12.9489 6.07902 13.1397 6.21967 13.2803C6.36032 13.421 6.55109 13.5 6.75 13.5H11.75C11.9489 13.5 12.1397 13.421 12.2803 13.2803C12.421 13.1397 12.5 12.9489 12.5 12.75ZM12.75 15C12.9489 15 13.1397 15.079 13.2803 15.2197C13.421 15.3603 13.5 15.5511 13.5 15.75C13.5 15.9489 13.421 16.1397 13.2803 16.2803C13.1397 16.421 12.9489 16.5 12.75 16.5H6.75C6.55109 16.5 6.36032 16.421 6.21967 16.2803C6.07902 16.1397 6 15.9489 6 15.75C6 15.5511 6.07902 15.3603 6.21967 15.2197C6.36032 15.079 6.55109 15 6.75 15H12.75Z" fill="currentColor"/>
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M6 21.75H19C19.7293 21.75 20.4288 21.4603 20.9445 20.9445C21.4603 20.4288 21.75 19.7293 21.75 19V13.5C21.75 13.3011 21.671 13.1103 21.5303 12.9697C21.3897 12.829 21.1989 12.75 21 12.75H17.75V4.943C17.75 3.52 16.141 2.692 14.983 3.519L14.808 3.644C14.4248 3.91602 13.9663 4.06182 13.4964 4.06111C13.0264 4.06039 12.5684 3.91319 12.186 3.64C11.5476 3.18567 10.7835 2.94153 10 2.94153C9.21645 2.94153 8.45238 3.18567 7.814 3.64C7.43162 3.91319 6.97359 4.06039 6.50364 4.06111C6.03369 4.06182 5.57521 3.91602 5.192 3.644L5.017 3.519C3.859 2.692 2.25 3.519 2.25 4.943V18C2.25 18.9946 2.64509 19.9484 3.34835 20.6516C4.05161 21.3549 5.00544 21.75 6 21.75ZM8.686 4.86C9.06995 4.58744 9.52915 4.44102 10 4.44102C10.4709 4.44102 10.9301 4.58744 11.314 4.86C11.9507 5.31512 12.7136 5.56021 13.4962 5.56111C14.2788 5.562 15.0423 5.31866 15.68 4.865L15.855 4.74C15.8923 4.71341 15.9363 4.6976 15.982 4.6943C16.0277 4.691 16.0735 4.70034 16.1143 4.7213C16.1551 4.74225 16.1893 4.77402 16.2132 4.81312C16.2372 4.85222 16.2499 4.89715 16.25 4.943V19C16.25 19.45 16.358 19.875 16.55 20.25H6C5.40326 20.25 4.83097 20.0129 4.40901 19.591C3.98705 19.169 3.75 18.5967 3.75 18V4.943C3.75012 4.89715 3.76284 4.85222 3.78678 4.81312C3.81072 4.77402 3.84495 4.74225 3.88573 4.7213C3.9265 4.70034 3.97226 4.691 4.01798 4.6943C4.06371 4.6976 4.10765 4.71341 4.145 4.74L4.32 4.865C4.95775 5.31866 5.72116 5.562 6.5038 5.56111C7.28644 5.56021 8.0493 5.31512 8.686 4.86ZM17.75 19V14.25H20.25V19C20.25 19.3315 20.1183 19.6495 19.8839 19.8839C19.6495 20.1183 19.3315 20.25 19 20.25C18.6685 20.25 18.3505 20.1183 18.1161 19.8839C17.8817 19.6495 17.75 19.3315 17.75 19Z" fill="currentColor"/>
@@ -221,7 +219,7 @@
                 </a>
             </div>
             <div class="menu-icons">
-                <a href="profile.html" aria-label="footer" class="footer-link no-underline text-[#3b5361] flex flex-col items-center ">
+                <a href="profile.html" aria-label="footer" onclick="toggleFooterIcon(this); return false;" class="footer-link no-underline text-[#3b5361] flex flex-col items-center ">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 18C4 16.9391 4.42143 15.9217 5.17157 15.1716C5.92172 14.4214 6.93913 14 8 14H16C17.0609 14 18.0783 14.4214 18.8284 15.1716C19.5786 15.9217 20 16.9391 20 18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
                         <path d="M12 10C13.6569 10 15 8.65685 15 7C15 5.34315 13.6569 4 12 4C10.3431 4 9 5.34315 9 7C9 8.65685 10.3431 10 12 10Z" stroke="currentColor" stroke-width="1.5"/>
@@ -281,32 +279,28 @@
         });
 
         // Footer active state toggle function
-        document.querySelectorAll('.menu-icons a').forEach(link => {
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                // Deactivate all menu items
-                document.querySelectorAll('.menu-icons a').forEach(otherLink => {
-                    const icons = otherLink.querySelectorAll('svg');
-                    icons[0].classList.remove('hidden');
-                    icons[1].classList.add('hidden');
-
-                    // Reset home icon color
-                    if(otherLink.querySelector('svg[fill="#3b5362"]')) {
-                        otherLink.querySelector('svg[fill="#3b5362"]')
-                            .setAttribute('fill', 'currentColor');
-                    }
-                });
-                // Activate clicked menu item
-                const clickedIcons = this.querySelectorAll('svg');
+        function toggleFooterIcon(element) {
+            // Deactivate all menu items
+            document.querySelectorAll('.menu-icons a').forEach(otherLink => {
+                const icons = otherLink.querySelectorAll('svg');
+                // Always show first SVG (inactive state)
+                icons[0].classList.remove('hidden');
+                // Always hide second SVG (active state)
+                if(icons[1]) icons[1].classList.add('hidden');
+            });
+            // Activate clicked menu item
+            const clickedIcons = element.querySelectorAll('svg');
+            if(clickedIcons.length === 2) {
                 clickedIcons[0].classList.add('hidden');
                 clickedIcons[1].classList.remove('hidden');
-                // Special handling for home icon
-                if(this.querySelector('svg[fill="#3b5362"]')) {
-                    this.querySelector('svg[fill="#3b5362"]')
-                        .setAttribute('fill', 'currentColor');
-                }
-            });
-        });
+            }
+            // Special case for Home icon
+            if(element.querySelector('svg[fill="#3b5362"]')) {
+                // Handle home icon color change
+                element.querySelector('svg[fill="#3b5362"]')
+                    .setAttribute('fill', 'currentColor');
+            }
+        }
 
     </script>
 </body>
