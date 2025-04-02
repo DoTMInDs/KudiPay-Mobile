@@ -36,11 +36,8 @@
                 <input id="search" type="search" name="search" placeholder="Search for Invoices..." class="w-full  py-[0.5rem] px-[0.5rem] bg-transparent outline-none">
             </div>
             <div class="mt-[1rem] flex gap-[0.5rem] overflow-x-auto pb-3 snap-x scrollbar-hide">
-                <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-50 bg-[#3b5361] border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200" type="button">overdue</button> 
-                <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-500 bg-slate-100 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"  type="button">expired</button>
+                <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-50 bg-[#3b5361] border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200" type="button">Due</button> 
                 <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-500 bg-slate-100 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"  type="button">paid</button> 
-                <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-500 bg-slate-100 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"  type="button">Shared with me</button> 
-                <a href="payment-status.html"><button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-500 bg-slate-100 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"  type="button">Payment status</button> </a>
             </div>
         </form>
         <ul id="invoiceList">
@@ -177,7 +174,7 @@
      <footer class="bg-white fixed bottom-0 flex justify-between items-center w-full p-[0.5rem]">
         <div class="w-full flex justify-between items-center px-[1rem]  md:w-[60%] m-auto w-[100%]">
             <div class="menu-icons">
-                <a href="home.html" class="no-underline text-[#3b5361] flex flex-col items-center">
+                <a href="home.html" aria-label="footer" class="no-underline text-[#3b5361] flex flex-col items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M6.133 21C4.955 21 4 20.02 4 18.81V10.008C4 9.343 4.295 8.713 4.8 8.298L10.667 3.48C11.0419 3.16958 11.5133 2.99973 12 2.99973C12.4867 2.99973 12.9581 3.16958 13.333 3.48L19.199 8.298C19.705 8.713 20 9.343 20 10.008V18.81C20 20.02 19.045 21 17.867 21H6.133Z" stroke="#3B5361" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M9.5 21V15.5C9.5 14.9696 9.71071 14.4609 10.0858 14.0858C10.4609 13.7107 10.9696 13.5 11.5 13.5H12.5C13.0304 13.5 13.5391 13.7107 13.9142 14.0858C14.2893 14.4609 14.5 14.9696 14.5 15.5V21" stroke="#3B5361" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -186,7 +183,7 @@
                 </a>
             </div>
             <div class="menu-icons">
-                <a href="invoice.html" class="no-underline text-[#3b5361] flex flex-col items-center">
+                <a href="invoice.html" aria-label="footer" class="no-underline text-[#3b5361] flex flex-col items-center">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M19 21.5H6C5.07174 21.5 4.1815 21.1313 3.52513 20.4749C2.86875 19.8185 2.5 18.9283 2.5 18V4.94304C2.5 3.87604 3.556 3.19904 4.485 3.52104C4.61833 3.56704 4.74733 3.63437 4.872 3.72304L5.047 3.84804C5.47266 4.15007 5.98188 4.31189 6.5038 4.311C7.02572 4.3101 7.53438 4.14653 7.959 3.84304C8.55504 3.41886 9.26843 3.19092 10 3.19092C10.7316 3.19092 11.445 3.41886 12.041 3.84304C12.4656 4.14653 12.9743 4.3101 13.4962 4.311C14.0181 4.31189 14.5273 4.15007 14.953 3.84804L15.128 3.72304C16.121 3.01304 17.5 3.72304 17.5 4.94304V12.5H21C21.1989 12.5 21.3897 12.5791 21.5303 12.7197C21.671 12.8604 21.75 13.0511 21.75 13.25V18.75C21.75 19.4794 21.4603 20.1789 20.9445 20.6946C20.4288 21.2103 19.7293 21.5 19 21.5ZM17.75 14V18.75C17.75 19.0816 17.8817 19.3995 18.1161 19.6339C18.3505 19.8683 18.6685 20 19 20C19.3315 20 19.6495 19.8683 19.8839 19.6339C20.1183 19.3995 20.25 19.0816 20.25 18.75V14H17.75ZM13.5 9.75004C13.5 9.55113 13.421 9.36036 13.2803 9.21971C13.1397 9.07906 12.9489 9.00004 12.75 9.00004H6.75C6.55109 9.00004 6.36032 9.07906 6.21967 9.21971C6.07902 9.36036 6 9.55113 6 9.75004C6 9.94895 6.07902 10.1397 6.21967 10.2804C6.36032 10.421 6.55109 10.5 6.75 10.5H12.75C12.9489 10.5 13.1397 10.421 13.2803 10.2804C13.421 10.1397 13.5 9.94895 13.5 9.75004ZM12.5 12.75C12.5 12.5511 12.421 12.3604 12.2803 12.2197C12.1397 12.0791 11.9489 12 11.75 12H6.75C6.55109 12 6.36032 12.0791 6.21967 12.2197C6.07902 12.3604 6 12.5511 6 12.75C6 12.949 6.07902 13.1397 6.21967 13.2804C6.36032 13.421 6.55109 13.5 6.75 13.5H11.75C11.9489 13.5 12.1397 13.421 12.2803 13.2804C12.421 13.1397 12.5 12.949 12.5 12.75ZM12.75 15C12.9489 15 13.1397 15.0791 13.2803 15.2197C13.421 15.3604 13.5 15.5511 13.5 15.75C13.5 15.949 13.421 16.1397 13.2803 16.2804C13.1397 16.421 12.9489 16.5 12.75 16.5H6.75C6.55109 16.5 6.36032 16.421 6.21967 16.2804C6.07902 16.1397 6 15.949 6 15.75C6 15.5511 6.07902 15.3604 6.21967 15.2197C6.36032 15.0791 6.55109 15 6.75 15H12.75Z" fill="#3B5362"/>
                     </svg>
@@ -194,7 +191,7 @@
                 </a>
             </div>
             <div class="menu-icons">
-                <a href="profile.html" class="no-underline text-[#3b5361] flex flex-col items-center">
+                <a href="profile.html" aria-label="footer" class="no-underline text-[#3b5361] flex flex-col items-center">
                     <!-- <i class="fa-solid text-[18px] fa-circle-user"></i> -->
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4 18C4 16.9391 4.42143 15.9217 5.17157 15.1716C5.92172 14.4214 6.93913 14 8 14H16C17.0609 14 18.0783 14.4214 18.8284 15.1716C19.5786 15.9217 20 16.9391 20 18C20 18.5304 19.7893 19.0391 19.4142 19.4142C19.0391 19.7893 18.5304 20 18 20H6C5.46957 20 4.96086 19.7893 4.58579 19.4142C4.21071 19.0391 4 18.5304 4 18Z" stroke="#3b5361" stroke-width="1.5" stroke-linejoin="round"/>
