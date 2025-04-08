@@ -8,25 +8,70 @@
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <nav class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.5rem] z-[999] md:w-[60%] m-auto w-[100%]">
+    <nav class="w-full md:w-[80%] m-auto md:px-0 px-[1rem] bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.5rem] z-[999]">
         <a href="javascript:window.history.back()" aria-label="back" class="w-[40px] h-[40px] transition duration-300 hover:bg-slate-200 bg-slate-100 rounded-full flex justify-center items-center">
             <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.25 3.5L5.75 8L10.25 12.5" stroke="#3B5362" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </a>
-        <p class="flex flex-col items-center text-slate-800 ml-[-1.5rem] text-[18px]">
+        <h1 class="text-[#3b5362] font-semibold ml-[-1.5rem] text-[18px]">
             Notification 
-        </p>
+        </h1>
         <p href="" class="">
         </p>
     </nav>
     <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[60px]">
-        <section>
-
+        <section >
+            <ul class="flex flex-col gap-[0.5rem]">
+                <li class="notificationBtn">
+                    <div class="p-[0.5rem] bg-slate-100 rounded-[15px]">
+                        <p class="text-slate-500 text-[14px] truncate">
+                            <span class="text-[#3b5362] font-semibold">Lorem ipsum dolor sit amet</span> <br> you have received a new notification click here to view
+                        </p>
+                    </div>
+                </li>
+                <li class="notificationBtn"> 
+                    <div class="p-[0.5rem] bg-slate-100 rounded-[15px]">
+                        <p class="text-slate-500 text-[14px] truncate">
+                            <span class="text-[#3b5362] font-semibold">Lorem ipsum dolor sit amet</span> <br> you have received a new notification click here to view
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <div id="notificationWrapper" class="fixed top-0 right-0 left-0 bg-gray-500 bg-opacity-50  z-[999] w-full h-screen transition-all duration-300 ease-out  opacity-0 invisible">
+                <div id="notificationContent" class="flex flex-col gap-[0.5rem] w-[95%] m-auto  fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  mt-[1rem] bg-white rounded-lg shadow-lg p-[1rem] transform transition-all duration-300 ease-out scale-95 opacity-0">
+                    <p class="text-slate-500 text-[14px] truncate">
+                        <span class="text-[#3b5362] font-semibold">Lorem ipsum dolor sit amet</span> <br> you have received a new notification click here to view
+                    </p>
+                </div>
+            </div>
         </section>
-        <section class="flex justify-center items-center w-full h-[100%]">
+        <!-- <section class="flex justify-center items-center w-full h-[100%]">
             <img src="files/undraw_notify_rnwe.svg" alt="" class="w-[100%] object-center object-cover">
-        </section>
+        </section> -->
     </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.getElementById('notificationWrapper');
+            const content = document.getElementById('notificationContent');
+            // Open modal
+            document.querySelectorAll('.notificationBtn').forEach(button => {
+                button.addEventListener('click', () => {
+                    wrapper.classList.remove('opacity-0', 'invisible');
+                    content.classList.remove('opacity-0', 'scale-95');
+                });
+            });
+            // Close modal when clicking anywhere on wrapper
+            wrapper.addEventListener('click', () => {
+                wrapper.classList.add('opacity-0', 'invisible');
+                content.classList.add('opacity-0', 'scale-95');
+            });
+            // Prevent clicks on content from closing modal
+            content.addEventListener('click', (e) => {
+                e.stopPropagation();
+            });
+        });
+    </script>
 </body>
 </html>
