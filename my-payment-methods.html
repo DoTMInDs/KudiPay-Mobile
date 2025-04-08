@@ -11,12 +11,14 @@
 </head>
 <body>
     <nav class="bg-white flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[0.5rem] z-[999] md:w-[80%] md:px-0 p-[1rem] m-auto w-[100%]">
-        <a href="javascript:window.history.back()" aria-label="back" class="w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center">
-            <i class="fa-solid fa-chevron-left"></i>
+        <a href="javascript:window.history.back()" aria-label="back" class="w-[40px] h-[40px] transition duration-300 hover:bg-slate-200 bg-slate-100 rounded-full flex justify-center items-center">
+            <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.25 3.5L5.75 8L10.25 12.5" stroke="#3B5362" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
         </a>
-        <p class="flex font-bold text-[18px] gap-[0.5rem] capitalize items-center text-slate-800">
+        <h1 class="flex font-bold text-[18px] ml-[-1.5rem] gap-[0.5rem] capitalize items-center text-slate-800">
             Add payment methods
-        </p>
+        </h1>
         <p></p>
     </nav>
 
@@ -24,7 +26,7 @@
         <section class="">
             <article class="flex justify-between items-center">
                 <h1 class="font-semibold capitalize text-slate-800">payment methods</h1>
-                <a href="payment-method.html" aria-label="add payment method" class="flex gap-[0.3rem] items-center hover:underline text-slate-700 font-semibold">
+                <a href="select-payment.html" aria-label="add payment method" class="flex gap-[0.3rem] items-center hover:underline text-slate-700 font-semibold">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M12 21C16.9706 21 21 16.9706 21 12C21 7.02944 16.9706 3 12 3C7.02944 3 3 7.02944 3 12C3 16.9706 7.02944 21 12 21Z" fill="#999999" fill-opacity="0.25"/>
                         <path d="M12 8V16M16 12H8" stroke="black" stroke-width="1.2" stroke-linecap="square" stroke-linejoin="round"/>
@@ -75,6 +77,11 @@
                     </li>
                </ul>
             </div>
+        </section>
+
+        <section class="flex justify-center items-center fixed bottom-[20px] right-0 left-0">
+            <img src="files/rpl-logo-icon@4x (1).png" alt="" class="w-[20px] mr-[0.3rem]">
+            <h1 class="text-[20px] font-semibold text-[#3b5361]">Kemy</h1>
         </section>
     </main>
 </body>
