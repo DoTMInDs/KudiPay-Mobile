@@ -24,7 +24,12 @@
         <section >
             <ul class="flex flex-col gap-[0.5rem]">
                 <li class="notificationBtn cursor-pointer group relative overflow-hidden">
-                    <div class="p-[0.5rem] bg-slate-100 rounded-[15px]">
+                    <div class="absolute transform transition duration-200 group-hover:translate-x-[30px]  right-[30px] top-[50%] bg-rose-200 rounded-lg w-[50px] h-[50px] flex justify-center items-center text-[12px] text-white font-semibold translate-x-[50%] translate-y-[-50%]">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
+                        </svg>
+                    </div>
+                    <div class="p-[0.5rem] bg-slate-100 rounded-[15px] transform transition duration-200 group-hover:translate-x-[-15%] md:group-hover:translate-x-[-5%]"> 
                         <p class="text-slate-500 text-[14px] truncate">
                             <span class="text-[#3b5362] font-semibold">Notification 1</span> <br> you have received a new notification click here to view
                         </p>
