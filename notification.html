@@ -24,52 +24,34 @@
         <section >
             <ul class="flex flex-col gap-[0.5rem]">
                 <li class="cursor-pointer group relative overflow-hidden flex items-center gap-[0.5rem]">
-                    <div onclick="notificationBtn()" class="p-[0.5rem] bg-slate-100 rounded-[15px] w-[90%] md:w-[100%]"> 
+                    <div onclick="notificationBtn()" class="p-[0.5rem] bg-slate-100 rounded-[15px] w-[100%]"> 
                         <p class="text-slate-500 text-[14px] truncate">
                             <span class="text-[#3b5362] font-semibold">Notification 1</span> <br> you have received a new notification click here to view
                         </p>
-                    </div>
-                    <div onclick="openModal(1)" class="bg-rose-100 rounded-lg w-[30px] h-[50px] flex justify-center items-center text-[12px] text-white font-semibold">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
-                        </svg>
-                    </div>
-                </li>
-                <li class="cursor-pointer group relative overflow-hidden flex items-center gap-[0.5rem]">
-                    <div onclick="notificationBtn()" class="p-[0.5rem] bg-slate-100 rounded-[15px] w-[90%] md:w-[100%]"> 
-                        <p class="text-slate-500 text-[14px] truncate">
-                            <span class="text-[#3b5362] font-semibold">Notification 2</span> <br> you have received a new notification click here to view
-                        </p>
-                    </div>
-                    <div onclick="openModal(1)" class="bg-rose-100 rounded-lg w-[30px] h-[50px] flex justify-center items-center text-[12px] text-white font-semibold">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
-                        </svg>
-                    </div>
-                </li>
-                <li class="cursor-pointer group relative overflow-hidden flex items-center gap-[0.5rem]">
-                    <div onclick="notificationBtn()" class="p-[0.5rem] bg-slate-100 rounded-[15px] w-[90%] md:w-[100%]"> 
-                        <p class="text-slate-500 text-[14px] truncate">
-                            <span class="text-[#3b5362] font-semibold">Notification 3</span> <br> you have received a new notification click here to view
-                        </p>
-                    </div>
-                    <div onclick="openModal(1)" class="bg-rose-100 rounded-lg w-[30px] h-[50px] flex justify-center items-center text-[12px] text-white font-semibold">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
-                        </svg>
                     </div>
                 </li>
             </ul>
             <div onclick="notificationWrapper()" id="notificationWrapper" class="fixed top-0 right-0 left-0 bg-gray-500 bg-opacity-50 z-[999] w-full h-screen transition-all duration-300 ease-out  opacity-0 invisible">
                 <div id="notificationContent" class="flex flex-col gap-[0.5rem] w-[95%] md:w-[80%] m-auto fixed top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]  mt-[1rem] bg-white rounded-lg shadow-lg p-[1rem] transform transition-all duration-300 ease-out scale-95 opacity-0">
+                    <p onclick="notificationWrapper()" class="close-btn flex justify-end cursor-pointer">
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z" fill="#3b5362"/>
+                        </svg>
+                    </p>
                     <p class="text-slate-500 text-[14px] truncate">
                         <span class="text-[#3b5362] font-semibold">Lorem ipsum dolor sit amet</span> <br> you have received a new notification click here to view
                     </p>
+                    <div onclick="openModal(1)" class="bg-[#E9322A] py-[0.8rem] rounded-full flex gap-[0.3rem] justify-center items-center text-[12px] border-t border-slate-200 text-white font-semibold">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="currentColor"/>
+                        </svg>
+                        Delete
+                    </div>
                 </div>
             </div>
 
              <!-- delete modal -->
-            <div id="deleteContainer" class="fixed bg-gray-500 bg-opacity-30 top-0 right-0 w-full h-screen transition-all duration-300 ease-out  opacity-0 invisible">
+            <div onclick="closeBtn()" id="deleteContainer" class="fixed bg-gray-500 bg-opacity-30 top-0 right-0 w-full h-screen transition-all duration-300 ease-out  opacity-0 invisible z-[9999]">
                 <div id="deleteModalContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
                     <form method="post" action="" class="">
                         <input type="hidden" name="delete-notification" id="delete-notification">
@@ -114,10 +96,7 @@
             wrapper.classList.add('opacity-0', 'invisible');
             content.classList.add('opacity-0', 'scale-95');
         }
-        // Prevent clicks on content from closing modal
-        content.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
+        
 
         const deleteContainer = document.getElementById('deleteContainer');
         const deleteModalContent = document.getElementById('deleteModalContent');
@@ -135,24 +114,6 @@
             e.stopPropagation();
         });
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const shareBtn = document.getElementById('shareBtn');
-            const shareContainer = document.getElementById('shareContainer');
-            const phoneBtn = document.getElementById('phoneBtn');
-            const phoneContainer = document.getElementById('phoneContainer');
-            const modalContent =  document.getElementById('phoneModalContent');
-            // Toggle share options
-            shareBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                shareContainer.classList.toggle('hidden');
-            });
-            // Close when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!shareContainer.contains(e.target) && !shareBtn.contains(e.target)) {
-                    shareContainer.classList.add('hidden');
-                }
-            });
-        });
     </script>
 </body>
 </html>
