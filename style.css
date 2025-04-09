@@ -134,3 +134,26 @@ html {
     background-size: 1.2em;
     padding-right: 2rem;
 }
+.swipe-container {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.swipe-content {
+    position: relative;
+    z-index: 1;
+    background: white;
+}
+.delete-overlay {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    background: #fee2e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
