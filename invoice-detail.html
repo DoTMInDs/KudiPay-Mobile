@@ -194,9 +194,6 @@
                 }
             });
         });
-
-       
-
         function copyToClipboard() {
             const invoiceNumber = document.getElementById('myNumber').textContent;
             navigator.clipboard.writeText(invoiceNumber).then(() => {
@@ -206,7 +203,6 @@
                 console.error('Failed to copy: ', err);
             });
         }
-    
         function showToast(message, isError = false) {
             const toast = document.getElementById('toast');
             const toastMessage = document.getElementById('toast-message');
@@ -232,8 +228,6 @@
                 setTimeout(() => toast.classList.add('hidden'), 300);
             }, 3000);
         }
-
-      
     </script>
 </body>
 </html>

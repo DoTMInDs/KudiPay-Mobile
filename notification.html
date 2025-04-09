@@ -14,38 +14,28 @@
                 <path d="M10.25 3.5L5.75 8L10.25 12.5" stroke="#3B5362" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
         </a>
-        <h1 class="text-[#3b5362] font-semibold ml-[-1.5rem] text-[18px]">
+        <h1 class="text-[#3b5362] font-semibold mr-[1.5rem] text-[18px]">
             Notification 
         </h1>
-        <p href="" class="">
-        </p>
+        <div  class="">
+        </div>
     </nav>
     <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[60px]">
         <section >
             <ul class="flex flex-col gap-[0.5rem]">
-                <li  class=" cursor-pointer group relative overflow-hidden">
-                    <div onclick="openModal(1)" class="absolute transform transition duration-200 group-hover:translate-x-[30px]  right-[30px] top-[50%] bg-rose-200 rounded-lg w-[50px] h-[50px] flex justify-center items-center text-[12px] text-white font-semibold translate-x-[50%] translate-y-[-50%]">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
-                        </svg>
-                    </div>
-                    <div onclick="notificationBtn()" class="p-[0.5rem] bg-slate-100 rounded-[15px] transform transition duration-200 group-hover:translate-x-[-15%] md:group-hover:translate-x-[-5%]"> 
-                        <p class="text-slate-500 text-[14px] truncate">
-                            <span class="text-[#3b5362] font-semibold">Notification 1</span> <br> you have received a new notification click here to view
-                        </p>
-                    </div>
-                </li>
-                <li  class=" cursor-pointer group relative overflow-hidden">
-                    <div onclick="openModal(1)" class="absolute transform transition duration-200 group-hover:translate-x-[30px]  right-[30px] top-[50%] bg-rose-200 rounded-lg w-[50px] h-[50px] flex justify-center items-center text-[12px] text-white font-semibold translate-x-[50%] translate-y-[-50%]">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
-                        </svg>
-                    </div>
-                    <div onclick="notificationBtn()" class="p-[0.5rem] bg-slate-100 rounded-[15px] transform transition duration-200 group-hover:translate-x-[-15%] md:group-hover:translate-x-[-5%]"> 
-                        <p class="text-slate-500 text-[14px] truncate">
-                            <span class="text-[#3b5362] font-semibold">Notification 2</span> <br> you have received a new notification click here to view
-                        </p>
-                    </div>
+                <li  class="cursor-pointer group relative overflow-hidden">
+                   <div class="group relative overflow-hidden">
+                        <div onclick="notificationBtn()" class="p-[0.5rem] bg-slate-100 rounded-[15px] transform transition duration-200 translate-x-[-15%] md:translate-x-[-5%]"> 
+                            <p class="text-slate-500 text-[14px] truncate">
+                                <span class="text-[#3b5362] font-semibold">Notification 1</span> <br> you have received a new notification click here to view
+                            </p>
+                        </div>
+                        <div onclick="openModal(1)" class="absolute transform transition duration-200 group-hover:translate-x-[30px]  right-[30px] top-[50%] bg-rose-200 rounded-lg w-[50px] h-[50px] flex justify-center items-center text-[12px] text-white font-semibold translate-x-[50%] translate-y-[-50%] ">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
+                            </svg>
+                        </div>
+                   </div>
                 </li>
             </ul>
             <div onclick="notificationWrapper()" id="notificationWrapper" class="fixed top-0 right-0 left-0 bg-gray-500 bg-opacity-50 z-[999] w-full h-screen transition-all duration-300 ease-out  opacity-0 invisible">
@@ -121,6 +111,25 @@
         // Prevent clicks on content from closing modal
         deleteModalContent.addEventListener('click', (e) => {
             e.stopPropagation();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const shareBtn = document.getElementById('shareBtn');
+            const shareContainer = document.getElementById('shareContainer');
+            const phoneBtn = document.getElementById('phoneBtn');
+            const phoneContainer = document.getElementById('phoneContainer');
+            const modalContent =  document.getElementById('phoneModalContent');
+            // Toggle share options
+            shareBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                shareContainer.classList.toggle('hidden');
+            });
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!shareContainer.contains(e.target) && !shareBtn.contains(e.target)) {
+                    shareContainer.classList.add('hidden');
+                }
+            });
         });
     </script>
 </body>
