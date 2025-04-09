@@ -43,7 +43,7 @@
                             </p>
                             <p class="text-[14px] text-slate-700 font-bold">05578814721</p>
                         </div>
-                        <div class="deleteBtn w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center cursor-pointer">
+                        <div onclick="deleteBtn(1)" class="deleteBtn w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center cursor-pointer">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
                             </svg>
@@ -56,7 +56,7 @@
                             </p>
                             <p class="text-[14px] text-slate-700 font-bold">0204751234</p>
                         </div>
-                        <div class="deleteBtn w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center cursor-pointer">
+                        <div onclick="deleteBtn(2)" class="deleteBtn w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center cursor-pointer">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
                             </svg>
@@ -69,7 +69,7 @@
                             </p>
                             <p class="text-[14px] text-slate-700 font-bold">2433 1745 2441 ***</p>
                        </div>
-                       <div class="deleteBtn w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center cursor-pointer">
+                       <div onclick="deleteBtn(3)" class="deleteBtn w-[40px] h-[40px] transition duration-300 hover:bg-rose-100 bg-rose-50 rounded-full flex justify-center items-center cursor-pointer">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M7 21C6.45 21 5.97933 20.8043 5.588 20.413C5.19667 20.0217 5.00067 19.5507 5 19V6H4V4H9V3H15V4H20V6H19V19C19 19.55 18.8043 20.021 18.413 20.413C18.0217 20.805 17.5507 21.0007 17 21H7ZM17 6H7V19H17V6ZM9 17H11V8H9V17ZM13 17H15V8H13V17Z" fill="#F24822"/>
                             </svg>
@@ -82,8 +82,9 @@
         <!-- delete modal -->
         <div id="deleteContainer" class="fixed bg-gray-500 bg-opacity-30 top-0 right-0 w-full h-screen transition-all duration-300 ease-out  opacity-0 invisible">
             <div id="deleteModalContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
-                <div class="">
-                    <p  class="close-btn flex justify-end cursor-pointer">
+                <form method="post" action="" class="">
+                    <input type="hidden" name="delete-wallet" id="delete-wallet">
+                    <p onclick="closeBtn()" class="close-btn flex justify-end cursor-pointer">
                         <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z" fill="#3b5362"/>
                         </svg>
@@ -99,12 +100,10 @@
                         <h1 class="text-center text-amber-400 font-semibold text-[22px] mt-[0.5rem]">Warning</h1>
                     </div>
                     <div class="flex justify-center items-center flex-col w-full mt-[2rem]">
-                        <p class="text-[14px] text-slate-600">Are you sure you want to delete this wallet?</p>
-                        <a href="#" aria-label="delete" class="text-slate-50 text-[18px] mt-[1rem] font-medium bg-[#E9322A] hover:bg-red-500 block w-full rounded-full">
-                            <button class="py-[0.8rem] rounded-full w-full">Delete Wallet</button>
-                        </a>
+                        <p class="text-[14px] text-slate-600">Are you sure you want to delete this payment method?</p>
+                        <button type="submit" class="py-[0.8rem] rounded-full w-full text-slate-50 text-[18px] mt-[1rem] font-medium bg-[#E9322A] hover:bg-red-500 block rounded-full">Delete Wallet</button>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
 
@@ -115,31 +114,28 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const wrapper = document.getElementById('deleteContainer');
-            const content = document.getElementById('deleteModalContent');
-            const closeBtn = document.querySelector('.close-btn');
-            // Open modal
-            document.querySelectorAll('.deleteBtn').forEach(button => {
-                button.addEventListener('click', () => {
-                    wrapper.classList.remove('opacity-0', 'invisible');
-                    content.classList.remove('opacity-0', 'scale-95');
-                });
-            });
-            // Close modal when clicking anywhere on wrapper
-            wrapper.addEventListener('click', () => {
-                wrapper.classList.add('opacity-0', 'invisible');
-                content.classList.add('opacity-0', 'scale-95');
-            });
-            closeBtn.addEventListener('click', () => {
-                wrapper.classList.add('opacity-0', 'invisible');
-                content.classList.add('opacity-0', 'scale-95');
-            });
-            // Prevent clicks on content from closing modal
-            content.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
+        
+        const wrapper = document.getElementById('deleteContainer');
+        const content = document.getElementById('deleteModalContent');
+        function deleteBtn(paymentId) {
+            wrapper.classList.remove('opacity-0', 'invisible');
+            content.classList.remove('opacity-0', 'scale-95');
+            document.getElementById('delete-wallet').value = paymentId;
+        }
+        function closeBtn() {
+            wrapper.classList.add('opacity-0', 'invisible');
+            content.classList.add('opacity-0', 'scale-95');
+        }
+        // Close modal when clicking anywhere on wrapper
+        document.getElementById('deleteContainer').addEventListener('click', () => {
+            closeBtn();
         });
+        // Prevent clicks on content from closing modal
+        document.getElementById('deleteModalContent').addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+        
     </script>
 </body>
 </html>
+
