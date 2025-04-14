@@ -27,7 +27,7 @@
     </nav>
 
     <!--main-section-->
-    <main class="w-[100%] md:w-[80%] m-auto mt-[60px] px-[1rem] mb-[60px] ">
+    <main class="w-[100%] md:w-[80%] m-auto mt-[60px] px-[1rem] mb-[60px] rounded-t-[35px] bg-white shadow border py-4">
         <form action="" method="get" class=" pb-[1rem]">
             <div class="flex items-center w-[100%] px-[1rem] bg-slate-50 border border-slate-300 border-opacity-20 rounded-full">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -36,111 +36,143 @@
                 <input id="search" type="search" name="search" placeholder="Search for Invoices..." class="w-full  py-[0.5rem] px-[0.5rem] bg-transparent outline-none">
             </div>
             <div class="mt-[1rem] flex gap-[0.5rem] overflow-x-auto pb-3 snap-x scrollbar-hide">
-                <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-50 bg-[#3b5361] border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200" type="button">Due</button> 
+                <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-50 bg-[#3b5361] border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200" type="button">Latest</button> 
+                <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-500 bg-slate-100 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"  type="button">Overdue</button> 
                 <button class="flex-none snap-start capitalize text-nowrap cursor-pointer font-semibold text-[14px] text-slate-500 bg-slate-100 border border-slate-300 border-opacity-20 rounded-[25px] px-[1rem] py-[0.3rem] transition duration-200"  type="button">paid</button> 
             </div>
         </form>
-        <ul id="invoiceList">
-            <li class="py-[1rem] hover:bg-slate-50 transition duration-300 border-t border-rose-200 border-opacity-50">
-                <a href="invoice-detail.html" class="">
-                    <div class="flex justify-between items-center border-b border-slate-100 mb-1">
-                        <div class="text-sm font-medium text-slate-700 ">
-                            <p class="font-semibold">Christ Ambassadors</p>
-                            <p class="text-[14px]">To: <span class="text-slate-500">Ennam</span></p>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[13px]"></i>
+        <ul class="flex flex-col gap-[0.5rem]">
+            <li class="w-[100%] rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm overflow-hidden">
+                <div class="no-underline relative p-[0.5rem]">
+                    <div class="flex gap-[1rem] justify-between items-center my-[0.5rem]">
+                        <p class="flex gap-[0.5rem] items-center overflow-hidden">
+                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 truncate text-[13px]">
+                                Ransford Otto:
+                            </span> 
+                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] text-nowrap text-[13px]">AM - 5</a>
+                        </p>
+                        <p>
+                            <a href="invoice-detail.html" aria-label="view details" class="w-[30px] h-[30px]  hover:bg-slate-200 text-nowrap rounded-full flex justify-center items-center ">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[15px]"></i>
+                            </a>
+                        </p>
                     </div>
-                    <div class=" w-[100%]">
-                        <div class="flex items-center justify-between pb-[0.2rem]">
-                            <p class="text-sm text-slate-700 ">School fees</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xs text-slate-700 ">Tax:</p>
-                            <p class="text-xs text-slate-700 ">0.00</p>
-                        </div>
-                        <div class="flex items-center justify-between ">
-                            <p class="text-xs text-slate-700">Amount: </p>
-                            <p class="text-xs text-nowrap text-slate-600">GHS 3,000.00
-                            </p>
-                        </div>
+                    <div class="capitalize flex gap-[1rem] my-[0.5rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">Electricity Bills </span> 
                     </div>
-                </a>
+                    <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">07-Sep-2024</span> 
+                    </div>
+                </div>
+                <div class="flex items-center  justify-center py-[0.3rem] w-[100%] border-t border-slate-500 border-opacity-30 ">
+                    <span class="font-semibold text-amber-600 text-[18px]">GHS 1,000</span> 
+                </div>
             </li>
-            <li class="py-[1rem] hover:bg-slate-50 transition duration-300 border-t border-rose-200 border-opacity-50">
-                <a href="invoice-detail.html" class="">
-                    <div class="flex justify-between items-center border-b border-slate-100 mb-1">
-                        <div class="text-sm font-medium text-slate-700">
-                            <p class="font-semibold">Christ Ambassadors</p>
-                            <p class="text-[14px]">To: <span class="text-slate-500">Henry Fletcher</span></p>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[13px]"></i>
+            <li class=" w-[100%]  rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
+                <div class="no-underline relative p-[0.5rem]">
+                    <div class="flex gap-[1rem] justify-between items-center my-[0.5rem]">
+                        <p class="flex gap-[0.5rem] items-center overflow-hidden">
+                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                Don Togbe:
+                            </span> 
+                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] truncate text-[13px]">AM - 6</a>
+                        </p>
+                        <p>
+                            <a href="invoice-detail.html" aria-label="view details" class="w-[30px] h-[30px]  hover:bg-slate-200 text-nowrap rounded-full flex justify-center items-center ">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[15px]"></i>
+                            </a>
+                        </p>
                     </div>
-                    <div class=" w-[100%]">
-                        <div class="flex items-center justify-between pb-[0.2rem]">
-                            <p class="text-sm text-slate-700 ">Books</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xs text-slate-700 ">Tax:</p>
-                            <p class="text-xs text-slate-700 ">0.00</p>
-                        </div>
-                        <div class="flex items-center justify-between ">
-                            <p class="text-xs text-slate-700">Amount: </p>
-                            <p class="text-xs text-nowrap text-slate-600">GHS 1,500.00
-                            </p>
-                        </div>
+                    <div class="capitalize my-[0.5rem] flex gap-[1rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">GYM Registration </span> 
                     </div>
-                </a>
+                    <div class="capitalize flex gap-[1rem] items-center my-[0.5rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">07-Sep-2024</span>
+                    </div>
+                </div>
+                <div class="flex items-center  justify-center py-[0.3rem] w-[100%] border-t border-slate-500 border-opacity-30 ">
+                    <span class="font-semibold text-amber-600 text-[18px]">GHS 1,000</span> 
+                </div>
             </li>
-            <li class="py-[1rem] hover:bg-slate-50 transition duration-300 border-t border-rose-200 border-opacity-50">
-                <a href="invoice-detail.html" class="bg-white">
-                    <div class="flex justify-between items-center border-b border-slate-100 mb-1">
-                        <div class="text-sm font-medium text-slate-700">
-                            <p class="font-semibold">Ghana Water Company</p>
-                            <p class="text-[14px]">To: <span class="text-slate-500">Henry Fletcher</span></p>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[13px]"></i>
+            <li class="w-[100%] rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm overflow-hidden">
+                <div class="no-underline relative p-[0.5rem]">
+                    <div class="flex gap-[1rem] justify-between items-center my-[0.5rem]">
+                        <p class="flex gap-[0.5rem] items-center overflow-hidden">
+                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 truncate text-[13px]">
+                                Ransford Otto:
+                            </span> 
+                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] text-nowrap text-[13px]">AM - 7</a>
+                        </p>
+                        <p>
+                            <a href="invoice-detail.html" aria-label="view details" class="w-[30px] h-[30px]  hover:bg-slate-200 text-nowrap rounded-full flex justify-center items-center ">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[15px]"></i>
+                            </a>
+                        </p>
                     </div>
-                    <div class=" w-[100%]">
-                        <div class="flex items-center justify-between pb-[0.2rem]">
-                            <p class="text-sm text-slate-700 ">Water Bill</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xs text-slate-700 ">Tax:</p>
-                            <p class="text-xs text-slate-700 ">0.00</p>
-                        </div>
-                        <div class="flex items-center justify-between ">
-                            <p class="text-xs text-slate-700">Amount: </p>
-                            <p class="text-xs text-nowrap text-slate-600">GHS 800.00
-                            </p>
-                        </div>
+                    <div class="capitalize flex gap-[1rem] my-[0.5rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">Electricity Bills </span> 
                     </div>
-                </a>
+                    <div class="uppercase flex gap-[1rem] items-center my-[0.5rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">07-Sep-2024</span> 
+                    </div>
+                </div>
+                <div class="flex items-center  justify-center py-[0.3rem] w-[100%] border-t border-slate-500 border-opacity-30 ">
+                    <span class="font-semibold text-amber-600 text-[18px]">GHS 1,000</span> 
+                </div>
             </li>
-            <li class="py-[1rem] hover:bg-slate-50 transition duration-300 border-t border-rose-200 border-opacity-50">
-                <a href="invoice-detail.html" class="bg-white">
-                    <div class="flex justify-between items-center border-b border-slate-100 mb-1">
-                        <div class="text-sm font-medium text-slate-700">
-                            <p class="font-semibold">KNUST Entry Registration</p>
-                            <p class="text-[14px]">To: <span class="text-slate-500">Alex Luthor</span></p>
-                        </div>
-                        <i class="fa-solid fa-chevron-right text-[13px]"></i>
+            <li class=" w-[100%]  rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
+                <div class="no-underline relative p-[0.5rem]">
+                    <div class="flex gap-[1rem] justify-between items-center my-[0.5rem]">
+                        <p class="flex gap-[0.5rem] items-center overflow-hidden">
+                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                Don Togbe:
+                            </span> 
+                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] truncate text-[13px]">AM - 8</a>
+                        </p>
+                        <p>
+                            <a href="invoice-detail.html" aria-label="view details" class="w-[30px] h-[30px]  hover:bg-slate-200 text-nowrap rounded-full flex justify-center items-center ">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[15px]"></i>
+                            </a>
+                        </p>
                     </div>
-                    <div class=" w-[100%]">
-                        <div class="flex items-center justify-between pb-[0.2rem]">
-                            <p class="text-sm text-slate-700 ">Tuition Fee</p>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <p class="text-xs text-slate-700 ">Tax:</p>
-                            <p class="text-xs text-slate-700 ">0.00</p>
-                        </div>
-                        <div class="flex items-center justify-between ">
-                            <p class="text-xs text-slate-700">Amount: </p>
-                            <p class="text-xs text-nowrap text-slate-600">GHS 800.00
-                            </p>
-                        </div>
+                    <div class="capitalize my-[0.5rem] flex gap-[1rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">GYM Registration </span> 
                     </div>
-                </a>
+                    <div class="capitalize flex gap-[1rem] items-center my-[0.5rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">07-Sep-2024</span>
+                    </div>
+                </div>
+                <div class="flex items-center  justify-center py-[0.3rem] w-[100%] border-t border-slate-500 border-opacity-30 ">
+                    <span class="font-semibold text-amber-600 text-[18px]">GHS 1,000</span> 
+                </div>
             </li>
+            <li class=" w-[100%]  rounded-[10px] border border-rose-500 border-opacity-20 shadow-sm ">
+                <div class="no-underline relative p-[0.5rem]">
+                    <div class="flex gap-[1rem] justify-between items-center my-[0.5rem]">
+                        <p class="flex gap-[0.5rem] items-center overflow-hidden">
+                            <span class="font-regular uppercase flex gap-[0.3rem] items-center text-slate-700 text-[13px]">
+                                Don Togbe:
+                            </span> 
+                            <a href="invoice-detail.html" class="uppercase font-semibold rounded-lg bg-slate-200 px-[0.5rem] text-[#3b5361] truncate text-[13px]">AM - 8</a>
+                        </p>
+                        <p>
+                            <a href="invoice-detail.html" aria-label="view details" class="w-[30px] h-[30px]  hover:bg-slate-200 text-nowrap rounded-full flex justify-center items-center ">
+                                <i class="fa-solid fa-arrow-up-right-from-square text-slate-600 text-[15px]"></i>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="capitalize my-[0.5rem] flex gap-[1rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">GYM Registration </span> 
+                    </div>
+                    <div class="capitalize flex gap-[1rem] items-center my-[0.5rem]">
+                        <span class="font-regular truncate text-slate-700 text-[13px]">07-Sep-2024</span>
+                    </div>
+                </div>
+                <div class="flex items-center  justify-center py-[0.3rem] w-[100%] border-t border-slate-500 border-opacity-30 ">
+                    <span class="font-semibold text-amber-600 text-[18px]">GHS 1,000</span> 
+                </div>
+            </li>
+            
         </ul>
 
         <!-- Floating pay Button -->
