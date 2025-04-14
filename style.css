@@ -144,6 +144,15 @@ html {
     z-index: 1;
     background: white;
 }
+.swiper-pagination-bullet {
+    background: #cbd5e1; /* inactive dot color */
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+.swiper-pagination-bullet-active {
+    background: #3b5361; /* active dot color */
+}
 .delete-overlay {
     position: absolute;
     right: 0;

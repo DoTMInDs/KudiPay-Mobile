@@ -24,13 +24,13 @@
         </article>
         <section class="">
             <div class="w-full h-[200px] bg-[#3b5361] bg-opacity-20 rounded-[10px] flex justify-center items-center border-2 border-slate-500">
-                <img src="files/banner-1.png" alt="banner" class="w-full h-[200px] object-center object-cover rounded-[10px]">
+                <img src="files/banner-1.png" alt="banner" class="w-full h-[200px]  object-center md:object-contain object-cover rounded-[10px]">
             </div>
             <div class="">
                 <h1 class="text-[#3b5361] font-medium md:text-[36px] text-[15px] ml-[0.3rem] mt-[1rem]">Happy Clients</h1>
-                <div class="">
-                    <div class="">
-                        <div class="shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
                             <div class="flex flex-col justfiy-center items-center w-full ">
                                 <div class="w-[80px] h-[40px] flex justify-center items-center">
                                     <img src="files/Christ-ambassor.png" alt="clients" class="w-[100%] object-center object-cover">
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
+                        <div class="swiper-slide shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
                             <div class="flex flex-col justfiy-center items-center w-full ">
                                 <div class="w-[80px] h-[40px] flex justify-center items-center">
                                     <img src="files/Christ-ambassor.png" alt="clients" class="w-[100%] object-center object-cover">
@@ -65,6 +65,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
             
@@ -156,7 +157,7 @@
     <script>
         const swiper = new Swiper('.mySwiper', {
             direction: 'horizontal',
-            loop: false,
+            loop: true,
             slidesPerView: 'auto',
             spaceBetween: 16,
             freeMode: {
@@ -165,6 +166,10 @@
             },
             mousewheel: true,
             touchRatio: 1,
+            pagination: {
+                clickable: true,
+                dynamicBullets: true,
+            },
             breakpoints: {
                 640: {
                     slidesPerView: 2,
