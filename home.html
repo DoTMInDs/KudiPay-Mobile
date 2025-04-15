@@ -28,15 +28,15 @@
             </div>
             <div class="">
                 <h1 class="text-[#3b5361] font-medium md:text-[36px] text-[15px] ml-[0.3rem] mt-[1rem]">Happy Clients</h1>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
+                <div class="swiper mySwiper pb-8">
+                    <div class="swiper-wrapper ">
                         <div class="swiper-slide shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
-                            <div class="flex flex-col justfiy-center items-center w-full ">
-                                <div class="w-[80px] h-[40px] flex justify-center items-center">
-                                    <img src="files/Christ-ambassor.png" alt="clients" class="w-[100%] object-center object-cover">
+                            <div class="flex items-start gap-4 w-full ">
+                                <div class="shrink-0 w-[80px] h-auto flex justify-center items-center">
+                                    <img src="files/Christ-ambassor.png" alt="clients" class="w-[100%] h-auto object-center object-cover">
                                 </div>
-                                <div class="flex flex-col justify-center items-center mt-[0.5rem]">
-                                    <p class="text-slate-500 text-[14px] text-center">
+                                <div class="flex flex-col justify-center">
+                                    <p class="text-slate-500 text-[14px]">
                                         We have been for a while now been
                                         looking for an app like this and 
                                         we are happy to be one of your 
@@ -48,12 +48,12 @@
                             </div>
                         </div>
                         <div class="swiper-slide shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
-                            <div class="flex flex-col justfiy-center items-center w-full ">
-                                <div class="w-[80px] h-[40px] flex justify-center items-center">
-                                    <img src="files/Christ-ambassor.png" alt="clients" class="w-[100%] object-center object-cover">
+                            <div class="flex items-start gap-4 w-full ">
+                                <div class="shrink-0 w-[80px] h-auto flex justify-center items-center">
+                                    <img src="files/Christ-ambassor.png" alt="clients" class="w-[100%] h-auto object-center object-cover">
                                 </div>
-                                <div class="flex flex-col justify-center items-center mt-[0.5rem]">
-                                    <p class="text-slate-500 text-[14px] text-center">
+                                <div class="flex flex-col justify-center">
+                                    <p class="text-slate-500 text-[14px]">
                                         We have been for a while now been
                                         looking for an app like this and 
                                         we are happy to be one of your 
@@ -65,13 +65,54 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination"></div>
+                    <div class="swiper-pagination mt-4"></div>
                 </div>
             </div>
-            
+            <div class="pb-[3rem]">
+                <h2 class="text-[15px]">Payment Methods</h2>
+                <div class="">
+                    <div class="flex gap-[6px] items-center mt-[1rem]">
+                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow border border-slate-200">
+                            <img src="files/mtn-momo.jpg" alt="visa" class="w-[150px] h-[80px] object-center object-contain">
+                        </div>
+                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow border border-slate-200">
+                            <img src="files/airteltigo.webp" alt="mastercard" class="w-[150px] h-[80px] object-center object-contain">
+                        </div>
+                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow border border-slate-200">
+                            <img src="files/T-Cash Red.png" alt="visa" class="w-[150px] h-[80px] object-center object-contain">
+                        </div>
+                    </div>
+                    <div class="flex gap-[6px] items-center mt-[6px]">
+                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow border border-slate-200">
+                            <img src="files/G-MONEY-Logo.png" alt="visa" class="w-[150px] h-[80px] object-center object-contain">
+                        </div>
+                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow border border-slate-200">
+                            <img src="files/airteltigo.webp" alt="mastercard" class="w-[150px] h-[80px] object-center object-contain">
+                        </div>
+                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow border border-slate-200">
+                            <img src="files/T-Cash Red.png" alt="visa" class="w-[150px] h-[80px] object-center object-contain">
+                        </div>
+                    </div>
+                </div>
+                <!--Open modal payment-->
+                <div onclick="closeMethods()" id="modalWrapper" class="fixed top-0 left-0 right-0 w-full h-screen bg-gray-500 bg-opacity-30 transition-all duration-300 ease-out opacity-0 invisible z-50"> 
+                    <div id="modalMethodContainer" class="p-4 absolute bottom-[5%] right-0 left-0 bg-white border-t-2 border-slate-200 w-full h-auto  rounded-t-[25px] z-50 transform transition-transform duration-300 ease-out translate-y-[100vh]">
+                        <p onclick="closeBtn()" class="close-btn flex justify-end cursor-pointer py-2">
+                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z" fill="#3b5362"/>
+                            </svg>
+                        </p>
+                        <p class="text-[#3b5362] text-[16px] font-regular text-center pt-2 pb-8">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Unde velit perspiciatis deleniti adipisci consequuntur 
+                            neque! Itaque, sunt officia. Porro ipsam amet incidunt 
+                        </p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-         <!-- Floating pay Button -->
+        <!-- Floating pay Button -->
         <section class="">
             <div id="payBtn" class="fixed bottom-[15%] right-[10%] bg-[#3b5361] rounded-[13px] p-[8px] shadow-lg cursor-pointer hover:bg-slate-500 transition duration-200 z-20">
                 <svg width="28" height="28" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -167,8 +208,9 @@
             mousewheel: true,
             touchRatio: 1,
             pagination: {
+                el: '.swiper-pagination',
                 clickable: true,
-                dynamicBullets: true,
+                dynamicBullets: false,
             },
             breakpoints: {
                 640: {
@@ -200,6 +242,25 @@
                 invoiceContainer.classList.add('opacity-0', 'invisible');
                 invoiceModalContent.classList.add('scale-95', 'opacity-0');
             }
+        });
+
+        const wrapper = document.getElementById('modalWrapper');
+        const content = document.getElementById('modalMethodContainer');
+        function openMethod() {
+            wrapper.classList.remove('opacity-0', 'invisible');
+            content.classList.remove('translate-y-[100vh]');
+        }
+        function closeBtn() {
+            wrapper.classList.add('opacity-0', 'invisible');
+            content.classList.add('translate-y-[100vh]');
+        }
+        // Close modal when clicking anywhere on wrapper
+        wrapper.addEventListener('click', () => {
+            closeBtn();
+        });
+        // Prevent clicks on content from closing modal
+        content.addEventListener('click', (e) => {
+            e.stopPropagation();
         });
 
     </script>
