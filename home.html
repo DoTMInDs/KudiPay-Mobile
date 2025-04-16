@@ -29,7 +29,7 @@
             <div class="">
                 <h1 class="text-[#3b5361] font-medium md:text-[36px] text-[15px] ml-[0.3rem] mt-[1rem]">Happy Clients</h1>
                 <div class="swiper mySwiper pb-8">
-                    <div class="swiper-wrapper ">
+                    <div class="swiper-wrapper flex w-full items-center">
                         <div class="swiper-slide w-[200px] h-auto shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
                             <div class="flex items-center justify-center gap-4 w-full ">
                                 <div class="w-[200px] h-[80px] flex justify-center items-center">
@@ -52,7 +52,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="swiper-pagination mt-4"></div>
+                    <div class="dot-pagination flex justify-center items-center mt-4"></div>
                 </div>
             </div>
             <div class="pb-[3rem]">
@@ -188,13 +188,13 @@
             slidesPerView: 'auto',
             spaceBetween: 10,
             freeMode: {
-                sticky: true,
-                momentumBounce: false
-            },
+               sticky: true,
+               momentumBounce: false
+           },
             mousewheel: true,
             touchRatio: 1,
             pagination: {
-                el: '.swiper-pagination',
+                el: '.dot-pagination',
                 clickable: true,
                 dynamicBullets: false,
             },
