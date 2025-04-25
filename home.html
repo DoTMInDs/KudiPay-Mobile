@@ -6,10 +6,8 @@
     <meta name="description" content="RPLPay homepage">
     <title>Home</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <script defer src="main.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
       <!--Nav-Section-->
@@ -23,78 +21,22 @@
             <h1 class="text-[#3b5361] font-medium md:text-[36px] text-[22px] ml-[0.3rem]">Welcome <span class="text-slate-400">@Big Esse</span></h1>
         </article>
         <section class="">
-            <div class="w-full h-[200px] bg-[#3b5361] bg-opacity-20 rounded-[10px] flex justify-center items-center border-2 border-slate-500 bg-clip-border">
-                <img src="files/Banner.png" alt="banner" class="w-full h-[200px]  object-center md:object-contain object-contain rounded-[10px]">
+            <div class="w-full h-[180px] bg-[#3b5361] bg-opacity-20 rounded-[10px] flex justify-center items-center border-2 border-slate-500 bg-clip-border">
+                <img src="files/banner-1.png" alt="banner" class="w-full h-[200px]  object-center md:object-contain object-contain rounded-[10px]">
             </div>
             <div class="">
                 <h1 class="text-[#3b5361] font-medium md:text-[36px] text-[15px] ml-[0.3rem] mt-[1rem]">Happy Clients</h1>
-                <div class="swiper mySwiper pb-8">
-                    <div class="swiper-wrapper flex w-full items-center">
-                        <div class="swiper-slide w-[200px] h-auto shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
-                            <div class="flex items-center justify-center gap-4 w-full ">
-                                <div class="w-[200px] h-[80px] flex justify-center items-center">
-                                    <img src="files/CASE-LOGO.png" alt="clients" class="w-[100%] h-[100%] object-center object-contain">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-[200px] h-auto shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
-                            <div class="flex items-center justify-center gap-4 w-full ">
-                                <div class="w-[200px] h-[80px] flex justify-center items-center">
-                                    <img src="files/1200x630wa (1).png" alt="clients" class="w-[100%] h-[100%] object-center object-contain">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide w-[200px] h-auto shadow border border-slate-200 rounded-[10px] bg-white p-[1rem] flex flex-wrap gap-[1rem] mt-[1rem]">
-                            <div class="flex items-center justify-center gap-4 w-full ">
-                                <div class="w-[200px] h-[80px] flex justify-center items-center">
-                                    <img src="files/ABSA_Group_Limited_Logo.svg.png" alt="clients" class="w-[100%] h-[100%] object-center object-contain">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-pagination mt-4"></div>
-                </div>
+                <img src="files/demo.gif" alt="banner" class="w-full h-[180px]  object-center object-contain rounded-[10px]">
             </div>
             <div class="pb-[3rem]">
-                <h2 class="text-[15px]">Payment Partners</h2>
-                <div class="">
-                    <div class="flex gap-[6px] items-center mt-[1rem]">
-                        <div onclick="openMethod()" class="w-[100%] h-[85px] flex justify-center items-center bg-[#FFFFFF]  hover:bg-slate-50 border border-slate-200 rounded-[10px]">
-                            <img src="files/mtn-momo.png" alt="visa" class="w-[150px] h-[80px] object-center object-contain">
-                        </div>
-                        <div onclick="openMethod()" class="w-[100%] h-[85px] flex justify-center items-center bg-[#FFFFFF]  hover:bg-slate-50 border border-slate-200 rounded-[10px]">
-                            <img src="files/airteltigo.png" alt="mastercard" class="w-[80px] h-[80px] object-center object-contain">
-                        </div>
-                        <div onclick="openMethod()" class="w-[100%] h-[85px] flex justify-center items-center bg-[#FFFFFF]  hover:bg-slate-50 border border-slate-200 rounded-[10px]">
-                            <img src="files/T-Cash Red.png" alt="visa" class="w-[100px] h-[80px] object-center object-contain">
-                        </div>
-                    </div>
-                    <div class="flex gap-[1rem] items-center mt-[6px] hidden ">
-                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow">
-                            <img src="files/G-MONEY-Logo.png" alt="visa" class="w-[100px] h-[80px] object-center object-contain">
-                        </div>
-                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow">
-                            <img src="files/airteltigo.webp" alt="mastercard" class="w-[100px] h-[80px] object-center object-contain">
-                        </div>
-                        <div onclick="openMethod()" class="w-auto h-[85px] flex justify-center items-center bg-[#FFFFFF] rounded-[10px] shadow">
-                            <img src="files/T-Cash Red.png" alt="visa" class="w-[100px] h-[80px] object-center object-contain">
-                        </div>
-                    </div>
-                </div>
-                <!--Open modal payment-->
-                <div onclick="closeMethods()" id="modalWrapper" class="fixed top-0 left-0 right-0 w-full h-screen bg-gray-500 bg-opacity-30 transition-all duration-300 ease-out opacity-0 invisible z-50"> 
-                    <div id="modalMethodContainer" class="p-4 absolute bottom-[60px] right-0 left-0 bg-white border-t-2 border-slate-200 w-full h-auto  rounded-t-[25px] z-50 transform transition-transform duration-300 ease-out translate-y-[100vh]">
-                        <p onclick="closeBtn()" class="close-btn flex justify-end cursor-pointer py-2">
-                            <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z" fill="#3b5362"/>
-                            </svg>
-                        </p>
-                        <p class="text-[#3b5362] text-[16px] font-regular text-center pt-2 pb-8">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                            Unde velit perspiciatis deleniti adipisci consequuntur 
-                            neque! Itaque, sunt officia. Porro ipsam amet incidunt 
-                        </p>
-                    </div>
+                <h2 class="text-[15px]">Quick Action</h2>
+                <div class="flex gap-[6px] items-center mt-[1rem]">
+                    <button class="w-[100%] h-[85px] flex justify-center items-center bg-[#FFFFFF] hover:bg-slate-50 border border-slate-200 rounded-[10px]">
+                        View Invoices
+                    </button>
+                    <button class="w-[100%] h-[85px] flex justify-center items-center bg-[#FFFFFF] hover:bg-slate-50 border border-slate-200 rounded-[10px]">
+                        Add Payment Method
+                    </button>
                 </div>
             </div>
         </section>
@@ -182,34 +124,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        const swiper = new Swiper('.mySwiper', {
-            direction: 'horizontal',
-            loop: true,
-            slidesPerView: 'auto',
-            spaceBetween: 10,
-            freeMode: {
-               sticky: true,
-               momentumBounce: false
-           },
-            mousewheel: true,
-            touchRatio: 1,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-                dynamicBullets: false,
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 10
-                },
-                1024: {
-                    slidesPerView: 'auto',
-                    spaceBetween: 32
-                }
-            },
-        });
-
         // Invoice number modal
         const payBtn = document.getElementById('payBtn');
         const invoiceContainer = document.getElementById('invoiceContainer');
@@ -229,27 +143,6 @@
                 invoiceModalContent.classList.add('scale-95', 'opacity-0');
             }
         });
-
-        // Close modal when clicking on close button
-        const wrapper = document.getElementById('modalWrapper');
-        const content = document.getElementById('modalMethodContainer');
-        function openMethod() {
-            wrapper.classList.remove('opacity-0', 'invisible');
-            content.classList.remove('translate-y-[100vh]');
-        }
-        function closeBtn() {
-            wrapper.classList.add('opacity-0', 'invisible');
-            content.classList.add('translate-y-[100vh]');
-        }
-        // Close modal when clicking anywhere on wrapper
-        wrapper.addEventListener('click', () => {
-            closeBtn();
-        });
-        // Prevent clicks on content from closing modal
-        content.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-
     </script>
 </body>
 </html>
