@@ -8,6 +8,21 @@
     <script defer src="main.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+    <style>
+        .loader {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #E9322A;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
 </head>
 <body>
     <nav class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] flex justify-between items-center w-full fixed top-0 right-0 left-0 py-[1rem] px-[1rem] z-[999]">
@@ -21,7 +36,7 @@
 
     <main class="w-[100%] md:w-[80%] m-auto md:px-0 px-[1rem] mt-[80px]">
        <section>
-            <form action="" method="get">
+            <form id="paymentForm" action="" method="">
                 <h1 class="text-[18px] font-semibold ml-[0.5rem] text-slate-600">Kemy Wallet</h1>
                 <div class="relative flex items-center">
                     <select name="wallet" id="wallet" class="w-[100%] text-[14px] text-[#3b5362] font-medium bg-transparent py-[0.7rem] px-[1rem] outline-none border border-slate-200 rounded-[35px] mt-[1rem]">
@@ -46,7 +61,10 @@
                     <input type="tel" name="phone" id="phone" class="w-[100%] text-[14px] font-medium bg-transparent py-[0.7rem] px-[2.5rem] outline-none border border-slate-200 rounded-[35px]" required placeholder="Enter your Number">
                 </div>
                 <div class="mt-[10px] ">
-                    <button type="submit" class="bg-[#E9322A] hover:bg-rose-500 hover:bg-rose-400 transition duration-300 text-slate-50 block w-[100%] m-auto rounded-full py-[0.8rem]">Add</button>
+                    <button type="submit" id="submitBtn" class="mt-[2rem] w-full h-[50px] bg-[#E9322A] hover:bg-red-500 rounded-full text-white font-semibold transition duration-200 flex justify-center items-center">
+                        <span id="btnText">Add</span>
+                        <div id="loader" class="loader hidden"></div>
+                    </button>
                 </div>
         </form>
        </section>
@@ -56,5 +74,26 @@
             <h1 class="text-[20px] font-semibold text-[#3b5361]">Kemy</h1>
         </section>
     </main>
+
+    <script>
+        document.getElementById('paymentForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent the default form submission
+            console.log('Form submitted');
+            // Show loading state
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = document.getElementById('btnText');
+            const loader = document.getElementById('loader');
+            
+            submitBtn.disabled = true;
+            btnText.textContent = '';
+            loader.classList.remove('hidden');
+            
+            // Simulate processing delay (3 seconds)
+            setTimeout(function() {
+                // Redirect to success page after delay
+                window.location.href = 'success.html';
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
