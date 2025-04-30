@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signup</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
+  <script src="js/form.js" defer></script>
+</head>
+<body class="bg-gray-100">
+  
+  <section class="bg-gray-100 flex items-center flex-col justify-center mt-[2rem] px-2 md:w-[600px] m-auto w-[100%]">
+      <form class="p-[1rem] w-full bg-white rounded-lg shadow-lg space-y-4 z-[999]" id="signup-form" onsubmit="return validateForm()">
+          <h1 id="signup-title" class="text-2xl text-center font-semibold text-gray-800">Sign-Up</h1>
+          <div class="relative">
+              <!-- <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label> -->
+              <i class="fa-solid fa-phone absolute top-[0.8rem] left-[1rem] text-slate-500"></i>
+              <input type="tel" id="phone" class=" block w-full pl-[2.5rem] pr-[1rem] py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your phone number" required>
+          </div>
+          
+          <div class="relative">
+              <!-- <label for="firstName" class="block text-sm font-medium text-gray-700">First Name*</label> -->
+              <i class="fa-solid fa-user absolute top-[0.8rem] left-[1rem] text-slate-500"></i>
+              <input type="text" id="firstName" class=" block w-full pl-[2.5rem] pr-[1rem] py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your first name" required>
+          </div>
+          
+          <div class="relative">
+              <!-- <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name*</label> -->
+              <i class="fa-solid fa-user absolute top-[0.8rem] left-[1rem] text-slate-500"></i>
+              <input type="text" id="lastName" class=" block w-full pl-[2.5rem] pr-[1rem] py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your last name" required>
+          </div>
+          
+            <div class="relative">
+              <!-- <label for="pin" class="block text-sm font-medium text-gray-700">Pin*</label> -->
+              <i class="fa-solid fa-lock absolute top-[0.8rem] left-[1rem] text-slate-500"></i>
+              <input type="password" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/\D/g,'')" id="pin" class=" block w-full pl-[2.5rem] pr-[1rem] py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Enter your 4 digit pin" pattern="[0-9]{4}" maxlength="4" required>
+              <i id="toggleEye1" class="fa-solid fa-eye-slash absolute top-[0.8rem] right-[1rem] text-slate-500" onclick="togglePinVisibility1()"></i>
+            </div>
+          
+          <div class="relative">
+              <!-- <label for="confirmPin" class="block text-sm font-medium text-gray-700">Confirm Pin*</label> -->
+              <i class="fa-solid fa-lock absolute top-[0.8rem] left-[1rem] text-slate-500"></i>
+              <input type="password" inputmode="numeric" pattern="[0-9]*" oninput="this.value = this.value.replace(/\D/g,'')" id="confirmPin" class=" block w-full pl-[2.5rem] pr-[1rem] py-2 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" placeholder="Confirm your 4 digit pin" pattern="[0-9]{4}" maxlength="4" required>
+              <i id="toggleEye2" class="fa-solid fa-eye-slash absolute top-[0.8rem] right-[1rem] text-slate-500" onclick="togglePinVisibility2()"></i>
+            </div>
+          
+          <div class="terms-checkbox flex items-center">
+              <input type="checkbox" id="terms" class="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded" required>
+              <label for="terms" class="ml-2 block text-sm text-gray-900">I agree to the
+                 <a href="#" class="text-gray-700 font-bold hover:text-gray-600">terms and conditions</a>
+              </label>
+          </div>
+          
+          <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-sm font-medium text-white bg-[#3D5362] hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+          
+          <div class="text-center text-sm text-gray-600">
+            Already have an account? <a href="login.html" class="font-medium text-red-400 hover:text-red-500">Login</a>
+          </div>
+      </form>
+      <section class="flex justify-center items-center fixed bottom-[20px] right-0 left-0">
+        <img src="files/rpl-logo-icon@4x (1).png" alt="" class="w-[30px] mr-[0.3rem]">
+        <h1 class="text-[28px] font-semibold text-[#3b5361]">Kemy<span class="text-rose-600">Pay</span></h1>
+      </section>
+  </section>
+
+
+  <script>
+    function validateForm() {
+        const phone = document.getElementById('phone').value;
+        const firstName = document.getElementById('firstName').value;
+        const lastName = document.getElementById('lastName').value;
+        const pin = document.getElementById('pin').value;
+        const confirmPin = document.getElementById('confirmPin').value;
+      
+        // Validate phone number (example: must be 10 digits)
+        const phonePattern = /^\d{10}$/;
+        if (!phonePattern.test(phone)) {
+            alert('Please enter a valid 10-digit phone number.');
+            return;
+        }
+        // Validate first name (example: must not be empty)
+        if (firstName.trim() === '') {
+            alert('Please enter your first name.');
+            return;
+        }
+        // Validate last name (example: must not be empty)
+        if (lastName.trim() === '') {
+            alert('Please enter your last name.');
+            return;
+        }
+        // Validate PIN (example: must be 4 digits)
+        const pinPattern = /^\d{4}$/;
+        if (!pinPattern.test(pin)) {
+            alert('Please enter a valid 4-digit PIN.');
+            return;
+        }
+        // Validate confirm PIN (must match PIN)
+        if (pin !== confirmPin) {
+            alert('Pins do not match!');
+            return ;
+        }
+        // Redirect to verification page
+        window.location.href = 'verification.html';
+            return false; // Prevent form submission
+    }
+
+    function togglePinVisibility1() {
+      const pinInput = document.getElementById('pin');
+      const eyeIcon1 = document.getElementById('toggleEye1');
+
+      if(pinInput.type == 'password') {
+          pinInput.type = 'text';
+          eyeIcon1.classList.remove('fa-eye-slash');
+          eyeIcon1.classList.add('fa-eye');
+      }else {
+          pinInput.type = 'password';
+          eyeIcon1.classList.remove('fa-eye');
+          eyeIcon1.classList.add('fa-eye-slash');
+      }
+  }
+    function togglePinVisibility2() {
+      const confirmInput = document.getElementById('confirmPin');
+      const eyeIcon2 = document.getElementById('toggleEye2');
+
+      if(confirmInput.type == 'password') {
+          confirmInput.type = 'text';
+          eyeIcon2.classList.remove('fa-eye-slash');
+          eyeIcon2.classList.add('fa-eye');
+      }else {
+          confirmInput.type = 'password';
+          eyeIcon2.classList.remove('fa-eye');
+          eyeIcon2.classList.add('fa-eye-slash');
+      }
+  }
+  </script>
+</body>
+</html>
