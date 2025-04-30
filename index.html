@@ -12,10 +12,27 @@
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <section class="w-full ">
-        <div class="bg-[#E9322A] w-full h-[100vh] flex items-center justify-center">
-            <h1 class="text-4xl text-white font-bold">K</h1>
+    <section class="w-full overflow-hidden">
+        <div class="bg-[#E9322A] w-full h-[100vh] flex flex-col items-center justify-center gap-8 pulse">
+            <div class="text-center">
+                <h1 class="text-6xl md:text-8xl text-white font-bold letter-animation">K<span>E</span><span>M</span><span>Y</span></h1>
+            </div>
+            <div class="absolute bottom-10">
+                <div class="w-8 h-8 border-4 border-white border-t-transparent rounded-full animate-spin"></div>
+            </div>
         </div>
     </section>
+
+    <script>
+        // Redirect after 4 seconds
+        setTimeout(function() {
+            window.location.href = "login.html"; 
+        }, 4000);
+        
+        // Add click-through in case user wants to proceed faster
+        document.querySelector('section').addEventListener('click', function() {
+            window.location.href = "login.html";
+        });
+    </script>
 </body>
 </html>
