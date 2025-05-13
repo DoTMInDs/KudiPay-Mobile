@@ -50,7 +50,7 @@
                     </p>
                     <label for="wallet" class="relative w-full h-[55px] border border-slate-200 rounded-[0px] p-[0.2rem]">
                         <label for="wallet" class="text-[13px] absolute top-[5px] mb-0 text-slate-500 capitalize">From</label>
-                        <select class="border-none outline-none capitalize w-full bg-transparent appearance-none pr-8 absolute bottom-[5px]" name="wallet" id="wallet">
+                        <select class="border-none outline-none capitalize w-full bg-transparent appearance-none pr-8 absolute bottom-[5px]" name="wallet" id="wallet" required>
                             <option value="" selected disabled hidden>Select payment wallet</option>
                             <option value="mobile-money">05578814721</option>
                             <option value="bank-transfer">0204751234</option>
@@ -80,27 +80,64 @@
             <img src="files/rpl-logo-icon@4x (1).png" alt="" class="w-[20px] mr-[0.3rem]">
             <h1 class="text-[20px] font-semibold text-[#3b5361]">Kemy</h1>
         </section>
+
+        <!-- Modal payment Directive -->
+        <div onclick="closeBtn()" id="popUpContainer" class="fixed bg-gray-500 bg-opacity-30 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible">
+            <div id="popUpContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
+                <div class="">
+                    <p onclick="closeBtn()"  class=" flex justify-end">
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z" fill="#3b5362"/>
+                        </svg>
+                    </p>
+                    <div class="flex flex-col justify-center items-center">
+                        <h1 class="text-[20px] font-semibold text-[#3b5361]">Payment Directives</h1>
+                        <p class="text-center text-slate-500 mt-[0.5rem]">Please wait for a pop up to confirm your payment for your invoice</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <script>
         document.getElementById('paymentForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent the default form submission
-            console.log('Form submitted');
-            // Show loading state
+            e.preventDefault();
+        
+            //  Get references to the button, loader, and modal elements
             const submitBtn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
             const loader = document.getElementById('loader');
-            
+            const popUpContainer = document.getElementById('popUpContainer');
+            const popUpContent = document.getElementById('popUpContent');
+        
+            //  Show loading state
             submitBtn.disabled = true;
             btnText.textContent = '';
             loader.classList.remove('hidden');
-            
-            // Simulate processing delay (3 seconds)
-            setTimeout(function() {
-                // Redirect to success page after delay
-                window.location.href = 'processing.html';
-            }, 2000);
+        
+            //  Simulate loading (replace with your actual loading logic)
+            setTimeout(() => {
+                //  Hide the loader and restore the button text
+                loader.classList.add('hidden');
+                btnText.textContent = 'Continue';
+                submitBtn.disabled = false;
+        
+                //  Show the modal
+                popUpContainer.classList.remove('opacity-0');
+                popUpContainer.classList.remove('invisible');
+                popUpContent.classList.remove('scale-95', 'opacity-0');
+            }, 2000);  //  Simulate 2 seconds of loading
         });
+        function closeBtn() {
+            const popUpContainer = document.getElementById('popUpContainer');
+            const popUpContent = document.getElementById('popUpContent');
+        
+            popUpContainer.classList.add('opacity-0');
+            popUpContainer.classList.add('invisible');
+            popUpContent.classList.add('scale-95', 'opacity-0');
+            window.location.href = "home.html"; 
+        }
+        
     </script>
 </body>
 </html>

@@ -134,27 +134,6 @@ html {
     background-size: 1.2em;
     padding-right: 2rem;
 }
-.swipe-container {
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-.swipe-content {
-    position: relative;
-    z-index: 1;
-    background: white;
-}
-.swiper-pagination {
-    position: relative; /* Bring dots into view */
-    margin-top: 1rem;
-}
-.swiper-pagination-bullet {
-    background: #cbd5e1 !important;
-    opacity: 1 !important;
-}
-.swiper-pagination-bullet-active {
-    background: #3b5361 !important;
-}
 .delete-overlay {
     position: absolute;
     right: 0;
