@@ -82,7 +82,7 @@
         </section>
 
         <!-- Modal payment Directive -->
-        <div onclick="closeBtn()" id="popUpContainer" class="fixed bg-gray-500 bg-opacity-30 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible">
+        <div onclick="closeBtn()" id="popUpContainer" class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible">
             <div id="popUpContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
                 <div class="">
                     <p onclick="closeBtn()"  class=" flex justify-end">
@@ -102,26 +102,22 @@
     <script>
         document.getElementById('paymentForm').addEventListener('submit', function(e) {
             e.preventDefault();
-        
             //  Get references to the button, loader, and modal elements
             const submitBtn = document.getElementById('submitBtn');
             const btnText = document.getElementById('btnText');
             const loader = document.getElementById('loader');
             const popUpContainer = document.getElementById('popUpContainer');
             const popUpContent = document.getElementById('popUpContent');
-        
             //  Show loading state
             submitBtn.disabled = true;
             btnText.textContent = '';
             loader.classList.remove('hidden');
-        
             //  Simulate loading (replace with your actual loading logic)
             setTimeout(() => {
                 //  Hide the loader and restore the button text
                 loader.classList.add('hidden');
                 btnText.textContent = 'Continue';
                 submitBtn.disabled = false;
-        
                 //  Show the modal
                 popUpContainer.classList.remove('opacity-0');
                 popUpContainer.classList.remove('invisible');
@@ -131,11 +127,12 @@
         function closeBtn() {
             const popUpContainer = document.getElementById('popUpContainer');
             const popUpContent = document.getElementById('popUpContent');
-        
             popUpContainer.classList.add('opacity-0');
             popUpContainer.classList.add('invisible');
             popUpContent.classList.add('scale-95', 'opacity-0');
-            window.location.href = "home.html"; 
+            setTimeout(() => {
+                window.location.href = "home.html"; 
+            }, 300); 
         }
         
     </script>
