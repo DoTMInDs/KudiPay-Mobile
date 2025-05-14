@@ -7,25 +7,251 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-<section class="flex items-center justify-center min-h-screen w-full">
-    <div class="text-center">
-        <div role="status">
-            <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
-                <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
-            </svg>
-            <span class="sr-only">Loading...</span>
+    <main>
+         <!-- Modal payment Directive -->
+        <div id="popUpContainer" class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out z-[999]">
+            <div id="popUpContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95">
+                <div class="">
+                    <div class="flex flex-col justify-center items-center">
+                        <h1 class="text-[20px] font-semibold text-[#3b5361]">Payment Directives</h1>
+                        <p class="text-center text-slate-500 mt-[0.5rem]">Please wait for a pop up to complete payment for your invoice on your phone</p>
+                    </div>
+                    <div class="mt-8 flex flex-col gap-3">
+                        <p id="confirmPayment" class="w-full text-center border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
+                            I have confirmed
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <h1 class="text-2xl">Processing</h1>
-    </div>
-</section>
-<script>
-    // Redirect to success page after 3 seconds (3000 milliseconds)
-    setTimeout(function() {
-        window.location.href = "success.html"; // Change this to your success page URL
-    }, 3000);
-</script>
+        <!-- Payment Processing -->
+        <div onclick="closeBtn()" id="processingContainer" class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible z-[999]">
+            <div id="processingContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
+                <div class="text-center">
+                    <div role="status">
+                        <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                        </svg>
+                        <span class="sr-only">Loading...</span>
+                    </div>
+                    <h1 class="text-2xl">Please wait....</h1>
+                </div>
+            </div>
+        </div>
+        <!-- Success -->
+        <div onclick="closeBtn()" id="successContainer" class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible z-[999]">
+            <div id="successContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
+                <div class="">
+                    <p onclick="closeBtn()"  class=" flex justify-end">
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z" fill="#3b5362"/>
+                        </svg>
+                    </p>
+                    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full ">
+                        <!-- Success Icon -->
+                        <div class="flex justify-center mb-6">
+                            <div class="w-20 h-20 bg-green-50 rounded-full flex items-center justify-center">
+                                <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="text-center space-y-4">
+                            <h1 class="text-3xl font-bold text-gray-900">Success!</h1>
+                            <p class="text-gray-600">
+                                Your action has been completed successfully.
+                            </p>
+                        </div>
+                        <!-- Actions -->
+                        <div class="mt-8 flex flex-col gap-3">
+                            <a href="home.html" class="w-full text-center border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
+                                Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- Failure -->
+        <div onclick="closeBtn()" id="failureContainer" class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible z-[999]">
+            <div id="failureContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
+                <div class="">
+                    <p onclick="closeBtn()"  class=" flex justify-end">
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z" fill="#3b5362"/>
+                        </svg>
+                    </p>
+                    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full ">
+                        <!-- Failure Icon -->
+                        <div class="flex justify-center mb-6">
+                            <div class="w-20 h-20 bg-red-50 rounded-full flex items-center justify-center">
+                                <svg class="w-12 h-12 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <!-- Content -->
+                        <div class="text-center space-y-4">
+                            <h1 class="text-3xl font-bold text-gray-900">Payment Failed!</h1>
+                            <p class="text-gray-600">
+                                We couldn't process your payment. Please try again.
+                            </p>
+                        </div>
+                        <!-- Actions -->
+                        <div class="mt-8 flex flex-col gap-3">
+                            <button onclick="closeBtn()" class="w-full text-center border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
+                                Try Again
+                            </button>
+                            <a href="home.html" class="w-full text-center bg-red-600 hover:bg-red-700 text-white font-medium py-2.5 rounded-lg transition-all">
+                                Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Pending -->
+        <div onclick="closeBtn()" id="pendingContainer"
+            class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible z-[999]">
+            <div id="pendingContent"
+                class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
+                <div class="">
+                    <p onclick="closeBtn()" class=" flex justify-end">
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z"
+                                fill="#3b5362" />
+                        </svg>
+                    </p>
+                    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full ">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center">
+                                <svg class="w-12 h-12 text-gray-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-center space-y-4">
+                            <h1 class="text-3xl font-bold text-gray-900">Payment Pending!</h1>
+                            <p class="text-gray-600">
+                                Your payment is currently pending. We will notify you of the status.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-col gap-3">
+                            <a href="home.html"
+                                class="w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
+                                Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Canceled -->
+        <div onclick="closeBtn()" id="canceledContainer"
+            class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible z-[999]">
+            <div id="canceledContent"
+                class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
+                <div class="">
+                    <p onclick="closeBtn()" class=" flex justify-end">
+                        <svg width="24" height="24" viewBox="0 0 16 16" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 1C4.1 1 1 4.1 1 8C1 11.9 4.1 15 8 15C11.9 15 15 11.9 15 8C15 4.1 11.9 1 8 1ZM10.7 11.5L8 8.8L5.3 11.5L4.5 10.7L7.2 8L4.5 5.3L5.3 4.5L8 7.2L10.7 4.5L11.5 5.3L8.8 8L11.5 10.7L10.7 11.5Z"
+                                fill="#3b5362" />
+                        </svg>
+                    </p>
+                    <div class="bg-white p-8 rounded-xl shadow-lg max-w-md w-full ">
+                        <div class="flex justify-center mb-6">
+                            <div class="w-20 h-20 bg-yellow-50 rounded-full flex items-center justify-center">
+                                <svg class="w-12 h-12 text-yellow-600" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="text-center space-y-4">
+                            <h1 class="text-3xl font-bold text-gray-900">Payment Canceled!</h1>
+                            <p class="text-gray-600">
+                                You have canceled the payment process.
+                            </p>
+                        </div>
+                        <div class="mt-8 flex flex-col gap-3">
+                            <button onclick="closeBtn()"
+                                class="w-full text-center border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
+                                Go Back
+                            </button>
+                            <a href="home.html"
+                                class="w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
+                                Back to Home
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        $(document).ready(function () {
+            $('#confirmPayment').click(function (event) {
+                event.preventDefault();  // Prevent the default link behavior
+
+                // Show the processing container
+                $('#popUpContainer').fadeOut(300, function () {
+                    $('#processingContainer').removeClass('opacity-0 invisible');
+                    $('#processingContainer').animate({ opacity: 1 }, 300);
+                    $('#processingContent').animate({ opacity: 1, scale: 1 }, 300);
+                });
+
+                // Simulate an AJAX request (replace with your actual AJAX call)
+                setTimeout(function () {
+                    // Simulate success, failure, cancel, or pending
+                    let result = Math.random();
+                    let isSuccess = result < 0.25;
+                    let isFailure = result < 0.5;
+                    let isCanceled = result < 0.75;
+                    let isPending = result < 1;
+
+                    $('#processingContainer').animate({ opacity: 0 }, 300, function () {
+                        $(this).addClass('opacity-0 invisible');
+                        $('#processingContent').css({ opacity: 0, scale: 0.95 });
+
+                        if (isSuccess) {
+                            $('#successContainer').removeClass('opacity-0 invisible');
+                            $('#successContainer').animate({ opacity: 1 }, 300);
+                            $('#successContent').animate({ opacity: 1, scale: 1 }, 300);
+                        } else if (isFailure) {
+                            $('#failureContainer').removeClass('opacity-0 invisible');
+                            $('#failureContainer').animate({ opacity: 1 }, 300);
+                            $('#failureContent').animate({ opacity: 1, scale: 1 }, 300);
+                        } else if (isCanceled) {
+                            $('#canceledContainer').removeClass('opacity-0 invisible');
+                            $('#canceledContainer').animate({ opacity: 1 }, 300);
+                            $('#canceledContent').animate({ opacity: 1, scale: 1 }, 300);
+                        } else if (isPending) {
+                            $('#pendingContainer').removeClass('opacity-0 invisible');
+                            $('#pendingContainer').animate({ opacity: 1 }, 300);
+                            $('#pendingContent').animate({ opacity: 1, scale: 1 }, 300);
+                        }
+                    });
+                }, 3000);  // Simulate 3 seconds of processing
+            });
+        });
+
+        function closeBtn() {
+            $('#successContainer, #failureContainer, #canceledContainer, #pendingContainer').animate({ opacity: 0 }, 300, function () {
+                $(this).addClass('opacity-0 invisible');
+                $('#successContent, #failureContent, #canceledContent, #pendingContent').css({ opacity: 0, scale: 0.95 });
+            });
+        }
+     </script>
 </body>
 </html>
