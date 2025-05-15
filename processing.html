@@ -7,41 +7,30 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://kit.fontawesome.com/1566b08547.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <main>
-         <!-- Modal payment Directive -->
-        <div id="popUpContainer" class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out z-[999]">
-            <div id="popUpContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95">
-                <div class="">
-                    <div class="flex flex-col justify-center items-center">
-                        <h1 class="text-[20px] font-semibold text-[#3b5361]">Payment Directives</h1>
-                        <p class="text-center text-slate-500 mt-[0.5rem]">Please wait for a pop up to complete payment for your invoice on your phone</p>
-                    </div>
-                    <div class="mt-8 flex flex-col gap-3">
-                        <p id="confirmPayment" class="w-full text-center border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
-                            I have confirmed
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!-- Payment Processing -->
-        <div onclick="closeBtn()" id="processingContainer" class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible z-[999]">
-            <div id="processingContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
-                <div class="text-center">
-                    <div role="status">
-                        <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
-                            <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
-                        </svg>
-                        <span class="sr-only">Loading...</span>
-                    </div>
-                    <h1 class="text-2xl">Please wait....</h1>
+        <div class="px-2 mt-[2rem]">
+            <div class="text-center">
+                <div role="status">
+                    <svg aria-hidden="true" class="inline w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                        <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                    </svg>
+                    <span class="sr-only">Loading...</span>
+                </div>
+                <div class="flex flex-col justify-center items-center">
+                    <p class="text-center text-slate-500 mt-[0.5rem]">Please wait for a pop up to complete payment for your invoice on your phone</p>
+                </div>
+                <div class="mt-8 flex flex-col gap-3">
+                    <p id="confirmPayment" class="w-full cursor-pointer text-center border border-gray-300 bg-slate-800 hover:bg-gray-50 hover:text-[#3b5362] text-slate-50 font-medium py-2.5 rounded-lg transition-all">
+                        I have confirmed
+                    </p>
                 </div>
             </div>
         </div>
+           
         <!-- Success -->
         <div onclick="closeBtn()" id="successContainer" class="fixed bg-gray-500 bg-opacity-80 top-0 right-0 w-full h-screen transition-all duration-300 ease-out opacity-0 invisible z-[999]">
             <div id="successContent" class="absolute top-[50%] left-[50%] md:w-[80%] w-[95%] rounded-[10px] m-auto p-[1rem] translate-x-[-50%] translate-y-[-50%] bg-white shadow border border-slate-100 transform transition-all duration-300 ease-out scale-95 opacity-0">
@@ -185,9 +174,9 @@
                             </p>
                         </div>
                         <div class="mt-8 flex flex-col gap-3">
-                            <button onclick="closeBtn()"
+                            <a href="invoice-detail.html" aria-label="invoice detail"
                                 class="w-full text-center border border-gray-300 hover:bg-gray-50 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
-                                Go Back
+                                View Invoice
                             </button>
                             <a href="home.html"
                                 class="w-full text-center bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2.5 rounded-lg transition-all">
@@ -199,59 +188,114 @@
             </div>
         </div>
     </main>
+   
     <script>
-        $(document).ready(function () {
-            $('#confirmPayment').click(function (event) {
-                event.preventDefault();  // Prevent the default link behavior
-
-                // Show the processing container
-                $('#popUpContainer').fadeOut(300, function () {
-                    $('#processingContainer').removeClass('opacity-0 invisible');
-                    $('#processingContainer').animate({ opacity: 1 }, 300);
-                    $('#processingContent').animate({ opacity: 1, scale: 1 }, 300);
-                });
-
-                // Simulate an AJAX request (replace with your actual AJAX call)
-                setTimeout(function () {
-                    // Simulate success, failure, cancel, or pending
-                    let result = Math.random();
-                    let isSuccess = result < 0.25;
-                    let isFailure = result < 0.5;
-                    let isCanceled = result < 0.75;
-                    let isPending = result < 1;
-
-                    $('#processingContainer').animate({ opacity: 0 }, 300, function () {
-                        $(this).addClass('opacity-0 invisible');
-                        $('#processingContent').css({ opacity: 0, scale: 0.95 });
-
-                        if (isSuccess) {
-                            $('#successContainer').removeClass('opacity-0 invisible');
-                            $('#successContainer').animate({ opacity: 1 }, 300);
-                            $('#successContent').animate({ opacity: 1, scale: 1 }, 300);
-                        } else if (isFailure) {
-                            $('#failureContainer').removeClass('opacity-0 invisible');
-                            $('#failureContainer').animate({ opacity: 1 }, 300);
-                            $('#failureContent').animate({ opacity: 1, scale: 1 }, 300);
-                        } else if (isCanceled) {
-                            $('#canceledContainer').removeClass('opacity-0 invisible');
-                            $('#canceledContainer').animate({ opacity: 1 }, 300);
-                            $('#canceledContent').animate({ opacity: 1, scale: 1 }, 300);
-                        } else if (isPending) {
-                            $('#pendingContainer').removeClass('opacity-0 invisible');
-                            $('#pendingContainer').animate({ opacity: 1 }, 300);
-                            $('#pendingContent').animate({ opacity: 1, scale: 1 }, 300);
-                        }
-                    });
-                }, 3000);  // Simulate 3 seconds of processing
-            });
-        });
-
+        // Function to close any modal
         function closeBtn() {
-            $('#successContainer, #failureContainer, #canceledContainer, #pendingContainer').animate({ opacity: 0 }, 300, function () {
-                $(this).addClass('opacity-0 invisible');
-                $('#successContent, #failureContent, #canceledContent, #pendingContent').css({ opacity: 0, scale: 0.95 });
+            const containers = ['successContainer', 'failureContainer', 'pendingContainer', 'canceledContainer'];
+            containers.forEach(id => {
+                const container = document.getElementById(id);
+                container.classList.add('opacity-0', 'invisible');
+                const content = document.getElementById(id.replace('Container', 'Content'));
+                content.classList.add('scale-95', 'opacity-0');
             });
         }
-     </script>
+
+        // Function to open a specific modal
+        function openModal(modalId) {
+            closeBtn(); // Close any open modals first
+            const container = document.getElementById(modalId);
+            const content = document.getElementById(modalId.replace('Container', 'Content'));
+            
+            container.classList.remove('opacity-0', 'invisible');
+            content.classList.remove('scale-95', 'opacity-0');
+        }
+
+        // Function to check payment status via AJAX
+        function checkPaymentStatus() {
+            // Show loading state (optional)
+            document.getElementById('confirmPayment').textContent = 'Checking...';
+            document.getElementById('confirmPayment').classList.add('opacity-75');
+            
+            // Create a new AJAX request
+            const xhr = new XMLHttpRequest();
+            
+            // Replace this URL with your actual endpoint
+            const url = 'https://your-api-endpoint.com/check-payment-status';
+            
+            // Set up the request
+            xhr.open('GET', url, true);
+            
+            // Set request headers if needed
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            // If you need authentication:
+            // xhr.setRequestHeader('Authorization', 'Bearer your-token-here');
+            
+            // Handle the response
+            xhr.onload = function() {
+                // Reset button state
+                document.getElementById('confirmPayment').textContent = 'I have confirmed';
+                document.getElementById('confirmPayment').classList.remove('opacity-75');
+                
+                if (xhr.status === 200) {
+                    // Parse the response
+                    const response = JSON.parse(xhr.responseText);
+                    
+                    // Determine which modal to show based on the status
+                    switch(response.status) {
+                        case 'success':
+                            openModal('successContainer');
+                            break;
+                        case 'failed':
+                            openModal('failureContainer');
+                            break;
+                        case 'pending':
+                            openModal('pendingContainer');
+                            break;
+                        case 'canceled':
+                            openModal('canceledContainer');
+                            break;
+                        default:
+                            console.error('Unknown payment status:', response.status);
+                            // Default to failure if status is unknown
+                            openModal('failureContainer');
+                    }
+                } else {
+                    // Handle errors
+                    console.error('Error checking payment status:', xhr.statusText);
+                    openModal('failureContainer');
+                }
+            };
+            
+            // Handle network errors
+            xhr.onerror = function() {
+                document.getElementById('confirmPayment').textContent = 'I have confirmed';
+                document.getElementById('confirmPayment').classList.remove('opacity-75');
+                console.error('Network error occurred');
+                openModal('failureContainer');
+            };
+            
+            // Send the request
+            xhr.send();
+        }
+
+        // Event listener for the confirm payment button
+        document.getElementById('confirmPayment').addEventListener('click', checkPaymentStatus);
+
+        // Optional: Polling function to automatically check status
+        // This would be useful if payments might take some time to process
+        function startPolling() {
+            // Check every 5 seconds (adjust as needed)
+            const pollInterval = setInterval(checkPaymentStatus, 5000);
+            
+            // Stop polling after 5 minutes (adjust as needed)
+            setTimeout(() => {
+                clearInterval(pollInterval);
+            }, 300000);
+        }
+
+        // Uncomment to start polling automatically when page loads
+        // startPolling();
+    </script>
 </body>
 </html>
